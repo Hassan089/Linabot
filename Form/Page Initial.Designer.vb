@@ -160,6 +160,7 @@ Partial Class Page_Initial
         Me.RichTextBox_Socket = New System.Windows.Forms.RichTextBox()
         Me.ImageList_Initial = New System.Windows.Forms.ImageList(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.GroupBox_Affiche_Personnage = New System.Windows.Forms.GroupBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage_Tchat.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -204,6 +205,7 @@ Partial Class Page_Initial
         Me.TabPage1.SuspendLayout()
         CType(Me.PictureBox_Inventaire_Affiche_Caractéristique, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage13.SuspendLayout()
+        Me.GroupBox_Affiche_Personnage.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -848,24 +850,8 @@ Partial Class Page_Initial
         'TabPage_Inventaire
         '
         Me.TabPage_Inventaire.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.TabPage_Inventaire.Controls.Add(Me.GroupBox_Affiche_Personnage)
         Me.TabPage_Inventaire.Controls.Add(Me.Button_Inventaire_Supprimer)
-        Me.TabPage_Inventaire.Controls.Add(Me.PictureBox_Dofus_5)
-        Me.TabPage_Inventaire.Controls.Add(Me.PictureBox_Dofus_6)
-        Me.TabPage_Inventaire.Controls.Add(Me.PictureBox_Dofus_3)
-        Me.TabPage_Inventaire.Controls.Add(Me.PictureBox_Dofus_4)
-        Me.TabPage_Inventaire.Controls.Add(Me.PictureBox_Cape)
-        Me.TabPage_Inventaire.Controls.Add(Me.PictureBox_Familier)
-        Me.TabPage_Inventaire.Controls.Add(Me.PictureBox_Anneaux_2)
-        Me.TabPage_Inventaire.Controls.Add(Me.PictureBox_CaC)
-        Me.TabPage_Inventaire.Controls.Add(Me.PictureBox_Coiffe)
-        Me.TabPage_Inventaire.Controls.Add(Me.PictureBox_Ceinture)
-        Me.TabPage_Inventaire.Controls.Add(Me.PictureBox_Bottes)
-        Me.TabPage_Inventaire.Controls.Add(Me.PictureBox_Dofus_1)
-        Me.TabPage_Inventaire.Controls.Add(Me.PictureBox_Dofus_2)
-        Me.TabPage_Inventaire.Controls.Add(Me.PictureBox_Anneaux_1)
-        Me.TabPage_Inventaire.Controls.Add(Me.PictureBox_Bouclier)
-        Me.TabPage_Inventaire.Controls.Add(Me.PictureBox_Amulette)
-        Me.TabPage_Inventaire.Controls.Add(Me.PictureBox1)
         Me.TabPage_Inventaire.Controls.Add(Me.GroupBox3)
         Me.TabPage_Inventaire.Controls.Add(Me.FlowLayoutPanel_Inventaire)
         Me.TabPage_Inventaire.ImageIndex = 1
@@ -892,7 +878,7 @@ Partial Class Page_Initial
         'PictureBox_Dofus_5
         '
         Me.PictureBox_Dofus_5.Image = CType(resources.GetObject("PictureBox_Dofus_5.Image"), System.Drawing.Image)
-        Me.PictureBox_Dofus_5.Location = New System.Drawing.Point(298, 351)
+        Me.PictureBox_Dofus_5.Location = New System.Drawing.Point(293, 364)
         Me.PictureBox_Dofus_5.Name = "PictureBox_Dofus_5"
         Me.PictureBox_Dofus_5.Size = New System.Drawing.Size(66, 63)
         Me.PictureBox_Dofus_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -902,7 +888,7 @@ Partial Class Page_Initial
         'PictureBox_Dofus_6
         '
         Me.PictureBox_Dofus_6.Image = CType(resources.GetObject("PictureBox_Dofus_6.Image"), System.Drawing.Image)
-        Me.PictureBox_Dofus_6.Location = New System.Drawing.Point(370, 351)
+        Me.PictureBox_Dofus_6.Location = New System.Drawing.Point(365, 364)
         Me.PictureBox_Dofus_6.Name = "PictureBox_Dofus_6"
         Me.PictureBox_Dofus_6.Size = New System.Drawing.Size(66, 63)
         Me.PictureBox_Dofus_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -912,7 +898,7 @@ Partial Class Page_Initial
         'PictureBox_Dofus_3
         '
         Me.PictureBox_Dofus_3.Image = CType(resources.GetObject("PictureBox_Dofus_3.Image"), System.Drawing.Image)
-        Me.PictureBox_Dofus_3.Location = New System.Drawing.Point(154, 351)
+        Me.PictureBox_Dofus_3.Location = New System.Drawing.Point(149, 364)
         Me.PictureBox_Dofus_3.Name = "PictureBox_Dofus_3"
         Me.PictureBox_Dofus_3.Size = New System.Drawing.Size(66, 63)
         Me.PictureBox_Dofus_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -922,7 +908,7 @@ Partial Class Page_Initial
         'PictureBox_Dofus_4
         '
         Me.PictureBox_Dofus_4.Image = CType(resources.GetObject("PictureBox_Dofus_4.Image"), System.Drawing.Image)
-        Me.PictureBox_Dofus_4.Location = New System.Drawing.Point(226, 351)
+        Me.PictureBox_Dofus_4.Location = New System.Drawing.Point(221, 364)
         Me.PictureBox_Dofus_4.Name = "PictureBox_Dofus_4"
         Me.PictureBox_Dofus_4.Size = New System.Drawing.Size(66, 63)
         Me.PictureBox_Dofus_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -932,7 +918,7 @@ Partial Class Page_Initial
         'PictureBox_Cape
         '
         Me.PictureBox_Cape.Image = CType(resources.GetObject("PictureBox_Cape.Image"), System.Drawing.Image)
-        Me.PictureBox_Cape.Location = New System.Drawing.Point(370, 213)
+        Me.PictureBox_Cape.Location = New System.Drawing.Point(365, 226)
         Me.PictureBox_Cape.Name = "PictureBox_Cape"
         Me.PictureBox_Cape.Size = New System.Drawing.Size(66, 63)
         Me.PictureBox_Cape.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -942,7 +928,7 @@ Partial Class Page_Initial
         'PictureBox_Familier
         '
         Me.PictureBox_Familier.Image = CType(resources.GetObject("PictureBox_Familier.Image"), System.Drawing.Image)
-        Me.PictureBox_Familier.Location = New System.Drawing.Point(370, 282)
+        Me.PictureBox_Familier.Location = New System.Drawing.Point(365, 295)
         Me.PictureBox_Familier.Name = "PictureBox_Familier"
         Me.PictureBox_Familier.Size = New System.Drawing.Size(66, 63)
         Me.PictureBox_Familier.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -952,7 +938,7 @@ Partial Class Page_Initial
         'PictureBox_Anneaux_2
         '
         Me.PictureBox_Anneaux_2.Image = CType(resources.GetObject("PictureBox_Anneaux_2.Image"), System.Drawing.Image)
-        Me.PictureBox_Anneaux_2.Location = New System.Drawing.Point(370, 144)
+        Me.PictureBox_Anneaux_2.Location = New System.Drawing.Point(365, 157)
         Me.PictureBox_Anneaux_2.Name = "PictureBox_Anneaux_2"
         Me.PictureBox_Anneaux_2.Size = New System.Drawing.Size(66, 63)
         Me.PictureBox_Anneaux_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -962,7 +948,7 @@ Partial Class Page_Initial
         'PictureBox_CaC
         '
         Me.PictureBox_CaC.Image = CType(resources.GetObject("PictureBox_CaC.Image"), System.Drawing.Image)
-        Me.PictureBox_CaC.Location = New System.Drawing.Point(370, 75)
+        Me.PictureBox_CaC.Location = New System.Drawing.Point(365, 88)
         Me.PictureBox_CaC.Name = "PictureBox_CaC"
         Me.PictureBox_CaC.Size = New System.Drawing.Size(66, 63)
         Me.PictureBox_CaC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -972,7 +958,7 @@ Partial Class Page_Initial
         'PictureBox_Coiffe
         '
         Me.PictureBox_Coiffe.Image = CType(resources.GetObject("PictureBox_Coiffe.Image"), System.Drawing.Image)
-        Me.PictureBox_Coiffe.Location = New System.Drawing.Point(370, 6)
+        Me.PictureBox_Coiffe.Location = New System.Drawing.Point(365, 19)
         Me.PictureBox_Coiffe.Name = "PictureBox_Coiffe"
         Me.PictureBox_Coiffe.Size = New System.Drawing.Size(66, 63)
         Me.PictureBox_Coiffe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -982,7 +968,7 @@ Partial Class Page_Initial
         'PictureBox_Ceinture
         '
         Me.PictureBox_Ceinture.Image = CType(resources.GetObject("PictureBox_Ceinture.Image"), System.Drawing.Image)
-        Me.PictureBox_Ceinture.Location = New System.Drawing.Point(10, 213)
+        Me.PictureBox_Ceinture.Location = New System.Drawing.Point(5, 226)
         Me.PictureBox_Ceinture.Name = "PictureBox_Ceinture"
         Me.PictureBox_Ceinture.Size = New System.Drawing.Size(66, 63)
         Me.PictureBox_Ceinture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -992,7 +978,7 @@ Partial Class Page_Initial
         'PictureBox_Bottes
         '
         Me.PictureBox_Bottes.Image = CType(resources.GetObject("PictureBox_Bottes.Image"), System.Drawing.Image)
-        Me.PictureBox_Bottes.Location = New System.Drawing.Point(10, 282)
+        Me.PictureBox_Bottes.Location = New System.Drawing.Point(5, 295)
         Me.PictureBox_Bottes.Name = "PictureBox_Bottes"
         Me.PictureBox_Bottes.Size = New System.Drawing.Size(66, 63)
         Me.PictureBox_Bottes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1002,7 +988,7 @@ Partial Class Page_Initial
         'PictureBox_Dofus_1
         '
         Me.PictureBox_Dofus_1.Image = CType(resources.GetObject("PictureBox_Dofus_1.Image"), System.Drawing.Image)
-        Me.PictureBox_Dofus_1.Location = New System.Drawing.Point(10, 351)
+        Me.PictureBox_Dofus_1.Location = New System.Drawing.Point(5, 364)
         Me.PictureBox_Dofus_1.Name = "PictureBox_Dofus_1"
         Me.PictureBox_Dofus_1.Size = New System.Drawing.Size(66, 63)
         Me.PictureBox_Dofus_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1012,7 +998,7 @@ Partial Class Page_Initial
         'PictureBox_Dofus_2
         '
         Me.PictureBox_Dofus_2.Image = CType(resources.GetObject("PictureBox_Dofus_2.Image"), System.Drawing.Image)
-        Me.PictureBox_Dofus_2.Location = New System.Drawing.Point(82, 351)
+        Me.PictureBox_Dofus_2.Location = New System.Drawing.Point(77, 364)
         Me.PictureBox_Dofus_2.Name = "PictureBox_Dofus_2"
         Me.PictureBox_Dofus_2.Size = New System.Drawing.Size(66, 63)
         Me.PictureBox_Dofus_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1022,7 +1008,7 @@ Partial Class Page_Initial
         'PictureBox_Anneaux_1
         '
         Me.PictureBox_Anneaux_1.Image = CType(resources.GetObject("PictureBox_Anneaux_1.Image"), System.Drawing.Image)
-        Me.PictureBox_Anneaux_1.Location = New System.Drawing.Point(10, 144)
+        Me.PictureBox_Anneaux_1.Location = New System.Drawing.Point(5, 157)
         Me.PictureBox_Anneaux_1.Name = "PictureBox_Anneaux_1"
         Me.PictureBox_Anneaux_1.Size = New System.Drawing.Size(66, 63)
         Me.PictureBox_Anneaux_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1032,7 +1018,7 @@ Partial Class Page_Initial
         'PictureBox_Bouclier
         '
         Me.PictureBox_Bouclier.Image = CType(resources.GetObject("PictureBox_Bouclier.Image"), System.Drawing.Image)
-        Me.PictureBox_Bouclier.Location = New System.Drawing.Point(10, 75)
+        Me.PictureBox_Bouclier.Location = New System.Drawing.Point(5, 88)
         Me.PictureBox_Bouclier.Name = "PictureBox_Bouclier"
         Me.PictureBox_Bouclier.Size = New System.Drawing.Size(66, 63)
         Me.PictureBox_Bouclier.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1042,7 +1028,7 @@ Partial Class Page_Initial
         'PictureBox_Amulette
         '
         Me.PictureBox_Amulette.Image = CType(resources.GetObject("PictureBox_Amulette.Image"), System.Drawing.Image)
-        Me.PictureBox_Amulette.Location = New System.Drawing.Point(10, 6)
+        Me.PictureBox_Amulette.Location = New System.Drawing.Point(5, 19)
         Me.PictureBox_Amulette.Name = "PictureBox_Amulette"
         Me.PictureBox_Amulette.Size = New System.Drawing.Size(66, 63)
         Me.PictureBox_Amulette.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1052,7 +1038,7 @@ Partial Class Page_Initial
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(82, 6)
+        Me.PictureBox1.Location = New System.Drawing.Point(77, 19)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(282, 339)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1275,6 +1261,33 @@ Partial Class Page_Initial
         Me.ToolTip1.InitialDelay = 1
         Me.ToolTip1.ReshowDelay = 100
         '
+        'GroupBox_Affiche_Personnage
+        '
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Amulette)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox1)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Dofus_5)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Bouclier)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Dofus_6)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Anneaux_1)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Dofus_3)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Dofus_2)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Dofus_4)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Dofus_1)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Cape)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Bottes)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Familier)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Ceinture)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Anneaux_2)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Coiffe)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_CaC)
+        Me.GroupBox_Affiche_Personnage.ForeColor = System.Drawing.Color.White
+        Me.GroupBox_Affiche_Personnage.Location = New System.Drawing.Point(3, 6)
+        Me.GroupBox_Affiche_Personnage.Name = "GroupBox_Affiche_Personnage"
+        Me.GroupBox_Affiche_Personnage.Size = New System.Drawing.Size(436, 433)
+        Me.GroupBox_Affiche_Personnage.TabIndex = 356
+        Me.GroupBox_Affiche_Personnage.TabStop = False
+        Me.GroupBox_Affiche_Personnage.Text = "Personnage"
+        '
         'Page_Initial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1327,6 +1340,7 @@ Partial Class Page_Initial
         Me.TabPage1.ResumeLayout(False)
         CType(Me.PictureBox_Inventaire_Affiche_Caractéristique, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage13.ResumeLayout(False)
+        Me.GroupBox_Affiche_Personnage.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1423,4 +1437,5 @@ Partial Class Page_Initial
     Friend WithEvents Label_Inventaire_Affiche_Nom As RedemptionLabel
     Friend WithEvents PictureBox_Inventaire_Affiche_Caractéristique As PictureBox
     Friend WithEvents Button_Inventaire_Supprimer As Button
+    Friend WithEvents GroupBox_Affiche_Personnage As GroupBox
 End Class

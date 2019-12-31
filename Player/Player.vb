@@ -527,7 +527,7 @@ Public Class Player
                                                 Separation = Split(Separation(10), ";")
 
                                                 'Puis j'ajoute les Items.
-                                                Items_Ajoute_FlowLayout(_Index, Separation, _User.FlowLayoutPanel_Inventaire)
+                                                Items_Ajoute_FlowLayout(_Index, Separation, _User.FlowLayoutPanel_Inventaire, _User.ListView_Inventaire_Affiche_Caractéristique)
 
                                                 EcritureMessage(_Index, "[Inventaire]", "Fin de la réception de l'inventaire.", Color.Green)
 

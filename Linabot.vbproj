@@ -141,6 +141,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Statut\Statut_Information.vb" />
+    <Compile Include="Tchat\Tchat_Information.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form\Ajouter - Charger - Supprimer un compte\Ajouter Un Compte.resx">

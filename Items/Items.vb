@@ -85,8 +85,7 @@
                         If Separation_Information(3) <> Nothing Then
 
                             'Information
-                            Equipement_Equipé(Index, Separation_Information(1), .Cells(3).Value, Convert.ToInt64(Separation_Information(3), 16))
-
+                            Equipement_Equipé(Index, Separation_Information(1), Convert.ToInt64(Separation_Information(0), 16), Convert.ToInt64(Separation_Information(3), 16))
 
                         End If
 
@@ -306,53 +305,55 @@
 
                         Case "320" 'Point de vie +
 
+                            '320#5      #48     #7
+                            'pdv#Inconnu#Inconnu#Point de vie
                             La_Listview.Items.Add("+" & Convert.ToInt64(Separation_Info(1), 16) & " Point de vie", La_ImageList.Images.Keys.IndexOf("Point de vie.png"))
-
-
-'A REFAIRE
 
                         Case "32" 'Inconnu
 
                             'Familier
 
-                        Case "320"
-                            '320#5      #48     #7
-                            'pdv#Inconnu#Inconnu#Point de vie
-                            Caractéristique &= Dico_Caractéristique(Separation_Info(0)) & Convert.ToInt64(Separation_Info(3), 16) & vbCrLf
-
                         Case "326" 'Repas et Corpulence 
+
                             '326#1      #0            #64
-                            '   #Inconnu#Repas en trop#Repas Manquant                   
+                            '   #Inconnu#Repas en trop#Repas Manquant   
+
                             Separation_Info(3) = Convert.ToInt64(Separation_Info(3), 16) 'Repas
                             Separation_Info(2) = Convert.ToInt64(Separation_Info(2), 16) 'Corpulence
 
                             If CInt(Separation_Info(3)) >= 7 Then
 
-                                Caractéristique &= "Repas Manquant : " & Separation_Info(3) & vbCrLf
-                                Caractéristique &= "Corpulence : Maigrichon" & vbCrLf
+                                La_Listview.Items.Add("-" & Separation_Info(3) & " Repas", La_ImageList.Images.Keys.IndexOf("Repas.png"))
+                                La_Listview.Items.Add("Corpulence : Maigrichon", La_ImageList.Images.Keys.IndexOf("Corpulence.png"))
 
                             ElseIf CInt(Separation_Info(2)) >= 7 Then
 
-                                Caractéristique &= "Repas en trop : " & Separation_Info(2) & vbCrLf
-                                Caractéristique &= "Corpulence : Obése" & vbCrLf
+                                La_Listview.Items.Add("+" & Separation_Info(3) & " Repas", La_ImageList.Images.Keys.IndexOf("Repas.png"))
+                                La_Listview.Items.Add("Corpulence : Obése", La_ImageList.Images.Keys.IndexOf("Corpulence.png"))
 
                             Else
 
-                                Caractéristique &= "Corpulence : Normal" & vbCrLf
+                                La_Listview.Items.Add("Corpulence : Normal", La_ImageList.Images.Keys.IndexOf("Corpulence.png"))
 
                             End If
 
 
-                        Case "327" ' Dernier Repas (objet use)
+                        Case "327" ' Dernier Repas (objet utilisé)
 
                             Select Case Separation_Info(3)
 
                                 Case "842"
-                                    Caractéristique &= "Dernier repas : Aliment Inconnu" & vbCrLf
+
+                                    La_Listview.Items.Add("Dernier repas : Aliment Inconnu", La_ImageList.Images.Keys.IndexOf("Dernier Repas.png"))
+
                                 Case "0"
-                                    Caractéristique &= "Dernier repas : Aucun" & vbCrLf
+
+                                    La_Listview.Items.Add("Dernier repas : Aucun", La_ImageList.Images.Keys.IndexOf("Dernier Repas.png"))
+
                                 Case Else
-                                    Caractéristique &= "Dernier repas : " & Liste_Des_Objets(Convert.ToInt64(Separation_Info(3), 16)).GetValue(1) & vbCrLf
+
+                                    La_Listview.Items.Add("Dernier repas : " & Liste_Des_Objets(Convert.ToInt64(Separation_Info(3), 16)).GetValue(1), La_ImageList.Images.Keys.IndexOf("Dernier Repas.png"))
+
                             End Select
 
                         Case "328" 'Date / Heure  
@@ -362,7 +363,7 @@
                             Dim Année As Integer = Convert.ToInt64(Separation_Info(1), 16) + 1370
                             Dim Mois As String = Convert.ToInt64(Separation_Info(2), 16)
                             Dim Jour As Integer
-                            Dim Heure As String = "00:00"
+                            Dim Heure As String = Convert.ToInt64(Separation_Info(3), 16)
 
                             Select Case Mois.Length
                                 Case 1
@@ -380,49 +381,66 @@
 
                             If Mois.Length = 1 Then Mois = "0" & Mois
 
-                            Caractéristique &= "Date : " & Jour & "/" & Mois & "/" & Année & vbCrLf
-
-                            Heure = Convert.ToInt64(Separation_Info(3), 16)
+                            La_Listview.Items.Add("Date : " & Jour & "/" & Mois & "/" & Année, La_ImageList.Images.Keys.IndexOf("Date.png"))
 
                             Select Case Heure.Length
-                                Case 0, 1 : Caractéristique &= "Heure : 00:0" & Heure & vbCrLf
-                                Case 2 : Caractéristique &= "Heure : 00" & Heure.Insert(0, ":") & vbCrLf
-                                Case 3 : Caractéristique &= "Heure : 0" & Heure.Insert(1, ":") & vbCrLf
-                                Case 4 : Caractéristique &= "Heure : " & Heure.Insert(2, ":") & vbCrLf
+
+                                Case 0, 1
+
+                                    La_Listview.Items.Add("Heure : 00:0" & Heure, La_ImageList.Images.Keys.IndexOf("Heure.png"))
+
+                                Case 2
+
+                                    La_Listview.Items.Add("Heure : 00" & Heure.Insert(0, ":"), La_ImageList.Images.Keys.IndexOf("Heure.png"))
+
+                                Case 3
+
+                                    La_Listview.Items.Add("Heure : 0" & Heure.Insert(1, ":"), La_ImageList.Images.Keys.IndexOf("Heure.png"))
+
+                                Case 4
+
+                                    La_Listview.Items.Add("Heure : " & Heure.Insert(2, ":"), La_ImageList.Images.Keys.IndexOf("Heure.png"))
+
                             End Select
 
                         Case "3ac" 'Capacité accrue Familier
 
-                            Caractéristique &= "Capacité accrue : Oui" & vbCrLf
+                            La_Listview.Items.Add("Capacité accrue : Oui", La_ImageList.Images.Keys.IndexOf("Capacité accrue.png"))
 
                             'Dragodinde
                         Case "3e3" ' ID de la dragodinde pour avoir les caractéristiques (quand elle se trouve dans l'inventaire)
 
-                            Caractéristique &= "ID Dragodinde : " & Convert.ToInt64(Separation_Info(1), 16) & "|" & Convert.ToInt64(Separation_Info(2), 16) & vbCrLf
+                            La_Listview.Items.Add("ID Dragodinde : " & Convert.ToInt64(Separation_Info(1), 16) & "|" & Convert.ToInt64(Separation_Info(2), La_ImageList.Images.Keys.IndexOf("Dragodinde.png")))
 
-                            If Separation.Length < 4 Then Caractéristique &= "Nom Dragodinde : Inconnu" & vbCrLf
+                            If Separation.Length < 4 Then
+
+                                La_Listview.Items.Add("Nom Dragodinde : Inconnu", La_ImageList.Images.Keys.IndexOf("Dragodinde.png"))
+
+                            End If
 
                         Case "3e4" 'Nom du joueur qui posséde la dragodinde.
 
-                            Caractéristique &= "¨Dragodinde (Possesseur) : " & Separation_Info(4) & vbCrLf
+                            La_Listview.Items.Add("Dragodinde (Possesseur) : " & Separation_Info(4), La_ImageList.Images.Keys.IndexOf("Dragodinde.png"))
 
                         Case "3e5" 'Nom de la dragodinde
 
-                            Caractéristique &= "Nom Dragodinde : " & Separation_Info(4) & vbCrLf
+                            La_Listview.Items.Add("Nom Dragodinde : " & Separation_Info(4), La_ImageList.Images.Keys.IndexOf("Dragodinde.png"))
 
                         Case "3e6" ' Jour/ heure / minute restant.
 
-                            Caractéristique &= "Dragodinde Validité : " & Convert.ToInt64(Separation_Info(1), 16) & "j" & Convert.ToInt64(Separation_Info(2), 16) & "h" & Convert.ToInt64(Separation_Info(3), 16) & "m" & vbCrLf
+                            La_Listview.Items.Add("Dragodinde Validité : " & Convert.ToInt64(Separation_Info(1), 16) & "j" & Convert.ToInt64(Separation_Info(2), 16) & "h" & Convert.ToInt64(Separation_Info(3), 16) & "m", La_ImageList.Images.Keys.IndexOf("Dragodinde.png"))
 
                         Case "325" 'Divers
 
-                            Caractéristique &= "Certificat Dopeul" & vbCrLf
+                            La_Listview.Items.Add("Certificat Dopeul", La_ImageList.Images.Keys.IndexOf("Certificat Dopeul.png"))
 
                         Case "26f" 'Pierre d'âme 
 
-                            Caractéristique &= "Pierre d'âme : " & Liste_Des_Mobs(Convert.ToInt64(Separation_Info(3), 16))(0).GetValue(0) & vbCrLf
+                            La_Listview.Items.Add("Pierre d'âme : " & Liste_Des_Mobs(Convert.ToInt64(Separation_Info(3), 16))(0).GetValue(0), La_ImageList.Images.Keys.IndexOf("Pierre d'âme.png"))
 
                     End Select
+
+                    ' If Liste_Familier_ID.Contains(ID_Objet) Then Calcul_Jour_Restant_Familier(Convert.ToInt64(Separation_Info(1), 16), ID_Objet)
 
                 Next
 
@@ -506,5 +524,90 @@
 
     End Function
 
+    Public Sub Equipement_Equipé(ByVal Index As Integer, ByVal ID_Objet As Integer, ByVal ID_Unique As Integer, ByVal Catégorie As String)
+
+        With Comptes(Index)._User
+
+            Try
+
+                Select Case Liste_Des_Objets(ID_Objet).GetValue(2)
+
+                    Case 16 'Coiffe 
+
+                        .PictureBox_Coiffe.Load(Application.StartupPath & "\Image\Coiffe/" & ID_Objet)
+                        .PictureBox_Coiffe.Name = ID_Unique
+
+                    Case 17 'Cape
+
+                        .PictureBox_Cape.Load(Application.StartupPath & "\Image\Cape/" & ID_Objet)
+                        .PictureBox_Cape.Name = ID_Unique
+
+                    Case 9 'Anneaux
+
+                        If Catégorie = 2 Then
+
+                            .PictureBox_Anneaux_1.Load(Application.StartupPath & "\Image\Anneaux/" & ID_Objet)
+                            .PictureBox_Anneaux_1.Name = ID_Unique
+
+                        Else
+
+                            .PictureBox_Anneaux_2.Load(Application.StartupPath & "\Image\Anneaux/" & ID_Objet)
+                            .PictureBox_Anneaux_2.Name = ID_Unique
+
+                        End If
+
+                    Case 1 'Amulette
+
+                        .PictureBox_Amulette.Load(Application.StartupPath & "\Image\Amulette/" & ID_Objet)
+                        .PictureBox_Amulette.Name = ID_Unique
+
+                    Case 11 'Botte  
+
+                        .PictureBox_Bottes.Load(Application.StartupPath & "\Image\Botte/" & ID_Objet)
+                        .PictureBox_Bottes.Name = ID_Unique
+
+                    Case 10 'Ceinture    
+
+                        .PictureBox_Ceinture.Load(Application.StartupPath & "\Image\Ceinture/" & ID_Objet)
+                        .PictureBox_Ceinture.Name = ID_Unique
+
+                    Case 5, 19, 8, 22, 7, 3, 4, 6, 20, 83 'Arme
+
+                        .PictureBox_CaC.Load(Application.StartupPath & "\Image\Arme/" & ID_Objet)
+                        .PictureBox_CaC.Name = ID_Unique
+
+                    Case 18 'Familier 
+
+                        .PictureBox_Familier.Load(Application.StartupPath & "\Image\Familier/" & ID_Objet)
+                        .PictureBox_Familier.Name = ID_Unique
+
+                    Case 23 'Dofus 9,10,11,12,13,14
+
+                        Dim Picture() As PictureBox = { .PictureBox_Dofus_1, .PictureBox_Dofus_2,
+                                                        .PictureBox_Dofus_3, .PictureBox_Dofus_4,
+                                                        .PictureBox_Dofus_5, .PictureBox_Dofus_6}
+
+                        For i = 9 To 14
+
+                            If i = Catégorie Then
+
+                                Picture(i - 9).Load(Application.StartupPath & "\Image\Dofus/" & ID_Objet)
+                                Picture(i - 9).Name = ID_Unique
+
+                            End If
+
+                        Next
+
+                End Select
+
+            Catch ex As Exception
+
+                Erreur_Fichier(0, "Liste_Equipement_Sur_Moi", ex.Message)
+
+            End Try
+
+        End With
+
+    End Sub 'FINI
 
 End Module
