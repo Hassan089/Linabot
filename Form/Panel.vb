@@ -50,6 +50,14 @@ Public Class Panel
 
         Load_Information_Personnage()
 
+        Load_Items()
+
+        Load_PNJ_Réponse()
+
+        Load_Mobs()
+
+
+
     End Sub
 
 #End Region

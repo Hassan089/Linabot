@@ -28,3 +28,7 @@ C:\Users\Linaculer\Desktop\Linabot\Linabot\obj\Debug\Linabot.vbproj.CoreCompileI
 C:\Users\Linaculer\Desktop\Linabot\Linabot\obj\Debug\Linabot.exe
 C:\Users\Linaculer\Desktop\Linabot\Linabot\obj\Debug\Linabot.xml
 C:\Users\Linaculer\Desktop\Linabot\Linabot\obj\Debug\Linabot.pdb
+C:\Users\Linaculer\Desktop\Linabot\Linabot\bin\Debug\Linabot.exe.config
+C:\Users\Linaculer\Desktop\Linabot\Linabot\bin\Debug\Linabot.exe
+C:\Users\Linaculer\Desktop\Linabot\Linabot\bin\Debug\Linabot.pdb
+C:\Users\Linaculer\Desktop\Linabot\Linabot\bin\Debug\Linabot.xml

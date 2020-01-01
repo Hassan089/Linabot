@@ -151,12 +151,12 @@ Public Class Player
 
         With _User
 
-            .DataGridView_Craft_Recette.Rows.Clear()
-            .DataGridView_Craft_Paiement.Rows.Clear()
-            .DataGridView_Craft_Prime_Si_Réussite.Rows.Clear()
-            .RedemptionTextBox_Craft_Paiement.Text = "0"
-            .RedemptionTextBox_Craft_Paiement_Si_Réussite.Text = "0"
-            .RedemptionTextBox_Craft_Quantité.Text = "0"
+            '.DataGridView_Craft_Recette.Rows.Clear()
+            '.DataGridView_Craft_Paiement.Rows.Clear()
+            '.DataGridView_Craft_Prime_Si_Réussite.Rows.Clear()
+            '.RedemptionTextBox_Craft_Paiement.Text = "0"
+            '.RedemptionTextBox_Craft_Paiement_Si_Réussite.Text = "0"
+            '.RedemptionTextBox_Craft_Quantité.Text = "0"
 
         End With
 
@@ -174,6 +174,12 @@ Public Class Player
 
         'Enclo
         _En_Enclos = False
+
+        'Déplacement
+        _En_Déplacement = False
+
+        'Tchat
+        _En_Tchat = False
 
     End Sub
 
@@ -274,6 +280,8 @@ Public Class Player
                                     Select Case Mid(e.Message, 3, 1)
 
                                         Case 1 'Af1|2|0||-1  
+
+                                        Case 0 'Af0|0|0|1|601
 
                                         Case Else
 
@@ -480,7 +488,9 @@ Public Class Player
                                     'AQ Question secréte
 
                                     'Je remplace les "+" par un espace.
-                                    EcritureMessage(_Index, "(Dofus)", "Question secréte : " & AsciiDecoder(Mid(e.Message.Replace("+", " "), 3)), Color.Green)
+                                    If e.Message.Length > 2 Then
+                                        EcritureMessage(_Index, "(Dofus)", "Question secréte : " & AsciiDecoder(Mid(e.Message.Replace("+", " "), 3)), Color.Green)
+                                    End If
 
                                 Case "q" 'Aq
 
@@ -535,8 +545,8 @@ Public Class Player
                                                 Socket.Envoyer("GC1")
 
                                                 'Je change la valeur des variables.
-                                                _Connecté = 1
-                                                _En_Connexion = 0
+                                                _Connecté = True
+                                                _En_Connexion = False
 
                                                 EcritureMessage(_Index, "(Info)", "Connecté !.", Color.Green)
 
@@ -652,7 +662,7 @@ Public Class Player
                                             Dim Separation() As String = Split(e.Message, "|")
 
                                             'J'ajoute à la date actuel le nbr de seconde d'abonnemenbt restant indiqué par dofus. (Vu qu'il s'agit de milliseconde, je divise par 1000 pour l'avoir en seconde.)
-                                            _User.Label_Abonnement_Dofus.Text = "Abonné jusqu'au : " & DateAdd("s", Mid(Separation(0), 4, Separation(0)) \ 1000, Date.Now) 's = seconde
+                                            _User.Label_Abonnement_Dofus.Text = "Abonné jusqu'au : " & DateAdd("s", CInt(Mid(Separation(0), 4, Separation(0).Length)) \ 1000, Date.Now) 's = seconde
 
                                             For i = 1 To Separation.Count - 1
 
@@ -717,7 +727,108 @@ Public Class Player
 
                         Case "B"
 
-                            Information_Inconnu(_Index, "Unknow", e.Message)
+                            Select Case Mid(e.Message, 2, 1)
+
+                                Case "T" 'BT1555752084620  = 'Inconnu 
+
+                                Case "D" ' BD649|5|27  = Année 649 + 1370 = 2019 | 5 = le mois, faut rajouter +1 pour 6 = juin | 27 = le jour actuel
+
+                                Case "p" 'Bp = Inconnu
+
+                                Case "N" 'BN
+
+                                Case "X"
+
+                                    Select Case Mid(e.Message, 3, 1)
+
+                                        Case "|"
+
+                                            Select Case Mid(e.Message, 4, 1)
+
+
+                                                Case "+" 'BX|+Cellule;?;?;ID_Joueur;Nom_Personnage;Level;Classe;?;?,?,?,ID_Autre_Joueur;Couleur1;Couleur2;Couleur3;Cac,Coiffe,Cape,Familier,?;?;?;?;?;?;?;?;
+
+                                                Case "-" 'BX|-ID_Joueur
+
+                                                Case Else
+
+                                                    Information_Inconnu(_Index, "Unknow", e.Message)
+
+                                            End Select
+
+                                        Case "0" 'BX0;1;ID_Joueur;Path
+
+                                        Case "1" 'BX1 ID_Joueur
+
+                                        Case ";"
+
+                                            Information_Inconnu(_Index, "Unknow", e.Message)
+
+                                        Case Else
+
+                                            Information_Inconnu(_Index, "Unknow", e.Message)
+
+                                    End Select
+
+                                Case "Z"
+
+                                    Select Case Mid(e.Message, 3, 1)
+
+                                        Case "|"
+
+                                            Select Case Mid(e.Message, 4, 1)
+
+                                                Case "+" 'BZ|+Cellule;?;?;ID_Joueur;Nom_Personnage;Level;Classe;?;?,?,?,ID_Autre_Joueur;Couleur1;Couleur2;Couleur3;Cac,Coiffe,Cape,Familier,?;?;?;?;?;?;?;?;
+
+                                                Case "-" 'BZ|-ID_Joueur
+
+                                                Case Else
+
+                                                    Information_Inconnu(_Index, "Unknow", e.Message)
+
+                                            End Select
+
+                                        Case "0" 'BZ0;1;ID_Joueur;Path
+
+                                            Select Case Mid(e.Message, 4, 1)
+
+                                                Case "1" 'BZ0188;Nom_Personnage
+
+                                                Case Else
+
+                                                    Information_Inconnu(_Index, "Unknow", e.Message)
+
+                                            End Select
+
+                                        Case "K" 'BZK|1|Nom_Personnage
+
+                                        Case ";"
+
+                                            Select Case Mid(e.Message, 4, 1)
+
+                                                Case "9" 'BZ;903;ID_Joueur;t
+
+                                                Case Else
+
+                                                    Information_Inconnu(_Index, "Unknow", e.Message)
+
+                                            End Select
+
+                                        Case Else
+
+                                            Information_Inconnu(_Index, "Unknow", e.Message)
+
+                                    End Select
+
+                                Case "S" 'BS4
+
+                                    Socket.Envoyer("cS" & _ID_Unique & "|" & Mid(e.Message, 3, 1))
+
+                                Case Else
+
+                                    Information_Inconnu(_Index, "Unknow", e.Message)
+
+                            End Select
 
                         Case "b"
 
@@ -732,6 +843,7 @@ Public Class Player
                             Select Case Mid(e.Message, 2, 1)
 
                                 Case "M" 'cM
+
                                     Select Case Mid(e.Message, 3, 1)
 
                                         Case "K" 'cMK%|ID_Joueur|Nom_Personnage|Message|
@@ -821,7 +933,7 @@ Public Class Player
 
                                 Case "a" 'Ea
 
-                                    Craft_Information_Fin_Du_Craft(_Index, e.Message)
+                                    'Craft_Information_Fin_Du_Craft(_Index, e.Message)
 
                                 Case "b" 'Eb
 
@@ -871,7 +983,7 @@ Public Class Player
 
                                         Case "K" 'ECK
 
-                                            Interraction_Information_Action_En_Jeu(_Index, e.Message)
+                                            'Interraction_Information_Action_En_Jeu(_Index, e.Message)
 
                                         Case Else
 
@@ -887,7 +999,7 @@ Public Class Player
 
                                         Case "K" 'EcK
 
-                                            Craft_Information_Craft_Réussi(_Index, e.Message)
+                                            'Craft_Information_Craft_Réussi(_Index, e.Message)
 
                                         Case "E" 'EcE
 
@@ -914,7 +1026,7 @@ Public Class Player
                                     End Select
 
                                     'Vu que les Objets on disparue, je vide toutes les pictureboxs dans le craft.
-                                    Dim Groupe_Box() As GroupBox = {_User.GroupBox_Craft_Combiner_Moi, _User.GroupBox_Craft_Combiner_Lui}
+                                    Dim Groupe_Box() As GroupBox '= {_User.GroupBox_Craft_Combiner_Moi, _User.GroupBox_Craft_Combiner_Lui}
 
                                     For i = 0 To 1
 
@@ -936,7 +1048,7 @@ Public Class Player
 
                                     Next
 
-                                    _User.PictureBox_Craft_Combiner.Load(Application.StartupPath & "\Image/Point d'Interrogation.png")
+                                   ' _User.PictureBox_Craft_Combiner.Load(Application.StartupPath & "\Image/Point d'Interrogation.png")
 
                                 Case "e" 'Ee
 
@@ -946,15 +1058,15 @@ Public Class Player
 
                                         Case "+" 'Ee+
 
-                                            Dragodinde_Information_All(_Index, e.Message.Replace("Ee+", ""), _User.DataGridView_Dragodinde_Etable)
+                                           ' Dragodinde_Information_All(_Index, e.Message.Replace("Ee+", ""), _User.DataGridView_Dragodinde_Etable)
 
                                         Case "-" 'Ee-
 
-                                            Dragodinde_Information_Retire_Etable_Enclo(_Index, Mid(e.Message, 4), _User.DataGridView_Dragodinde_Etable)
+                                           ' Dragodinde_Information_Retire_Etable_Enclo(_Index, Mid(e.Message, 4), _User.DataGridView_Dragodinde_Etable)
 
                                         Case "~" 'Ee~
 
-                                            Dragodinde_Information_All(_Index, e.Message.Replace("Ee~", ""), _User.DataGridView_Dragodinde_Etable)
+                                          '  Dragodinde_Information_All(_Index, e.Message.Replace("Ee~", ""), _User.DataGridView_Dragodinde_Etable)
 
                                         Case "E" 'EeE
 
@@ -1023,11 +1135,11 @@ Public Class Player
 
                                         Case 0 'EK0
 
-                                            Craft_Information_Active_Désactive_Button_Combiner(_Index, e.Message)
+                                           ' Craft_Information_Active_Désactive_Button_Combiner(_Index, e.Message)
 
                                         Case 1 'EK1
 
-                                            Craft_Information_Active_Désactive_Button_Combiner(_Index, e.Message)
+                                            'Craft_Information_Active_Désactive_Button_Combiner(_Index, e.Message)
 
                                         Case Else
 
@@ -1143,11 +1255,11 @@ Public Class Player
 
                                                         Case "G" 'Ep1KG
 
-                                                            Craft_Information_Argent_Mis_Dans_Le_Paiement(_Index, e.Message)
+                                                           ' Craft_Information_Argent_Mis_Dans_Le_Paiement(_Index, e.Message)
 
                                                         Case "O" 'Ep1KO
 
-                                                            Craft_Information_Item_Déposer_Retire_Dans_Paiement(_Index, e.Message)
+                                                            '  Craft_Information_Item_Déposer_Retire_Dans_Paiement(_Index, e.Message)
 
                                                         Case Else
 
@@ -1171,11 +1283,11 @@ Public Class Player
 
                                                         Case "G" 'Ep2KG
 
-                                                            Craft_Information_Argent_Mis_Dans_Le_Paiement(_Index, e.Message)
+                                                            'Craft_Information_Argent_Mis_Dans_Le_Paiement(_Index, e.Message)
 
                                                         Case "O" 'Ep2KO
 
-                                                            Craft_Information_Item_Déposer_Retire_Dans_Paiement(_Index, e.Message)
+                                                            ' Craft_Information_Item_Déposer_Retire_Dans_Paiement(_Index, e.Message)
 
                                                         Case Else
 
@@ -1217,7 +1329,7 @@ Public Class Player
 
                                                 Case "O" 'ErKO
 
-                                                    Craft_Information_Item_Crafté_Via_Invitation(_Index, e.Message)
+                                                    'Craft_Information_Item_Crafté_Via_Invitation(_Index, e.Message)
 
 
                                             End Select
@@ -1271,12 +1383,12 @@ Public Class Player
 
                                     With _User
 
-                                        .DataGridView_Craft_Recette.Rows.Clear()
-                                        .DataGridView_Craft_Paiement.Rows.Clear()
-                                        .DataGridView_Craft_Prime_Si_Réussite.Rows.Clear()
-                                        .RedemptionTextBox_Craft_Paiement.Text = "0"
-                                        .RedemptionTextBox_Craft_Paiement_Si_Réussite.Text = "0"
-                                        .RedemptionTextBox_Craft_Quantité.Text = "0"
+                                        '.DataGridView_Craft_Recette.Rows.Clear()
+                                        '.DataGridView_Craft_Paiement.Rows.Clear()
+                                        '.DataGridView_Craft_Prime_Si_Réussite.Rows.Clear()
+                                        '.RedemptionTextBox_Craft_Paiement.Text = "0"
+                                        '.RedemptionTextBox_Craft_Paiement_Si_Réussite.Text = "0"
+                                        '.RedemptionTextBox_Craft_Quantité.Text = "0"
 
                                     End With
 

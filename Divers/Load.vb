@@ -10,6 +10,8 @@ Module Load
     Public Dico_Serveur As New Dictionary(Of String, String())
     Public Liste_Des_Objets As New Dictionary(Of Integer, String())
     Public Liste_Des_Mobs As New Dictionary(Of Integer, Dictionary(Of Integer, String()))
+    Public liste_Des_Réponses_PNJs(10000) As String
+    Public liste_Des_Dialogues_PNJs(10000) As String
 
 
     Public Sub Load_Information_Serveur()
@@ -65,7 +67,7 @@ Module Load
     End Sub
 
 
-    Public Sub LoadItems()
+    Public Sub Load_Items()
 
         Try
 
@@ -96,7 +98,7 @@ Module Load
 
     End Sub
 
-    Public Sub LoadMobs()
+    Public Sub Load_Mobs()
         Try
             Liste_Des_Mobs.Clear()
             Dim monStreamReader As New StreamReader("Data/Mobs.txt")
@@ -135,6 +137,22 @@ Module Load
             monStreamReader.Close()
         Catch ex As Exception
             ' Erreur_Fichier(0, "LoadMobs", ex.Message)
+        End Try
+    End Sub
+
+    Public Sub Load_PNJ_Réponse()
+        Try
+            Dim monStreamReader As New StreamReader("Data/PNJ-Réponse.txt")
+            Do Until monStreamReader.EndOfStream
+                Dim Ligne As String = monStreamReader.ReadLine
+                If Ligne <> "" Then
+                    Dim Separation() As String = Split(Ligne, "=")
+                    liste_Des_Réponses_PNJs(Separation(0)) = Separation(1)
+                End If
+            Loop
+            monStreamReader.Close()
+        Catch ex As Exception
+            '  Erreur_Fichier(0, "LoadPNJ", ex.Message)
         End Try
     End Sub
 

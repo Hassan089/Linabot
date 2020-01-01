@@ -11,20 +11,20 @@
         DoubleBuffered = True
         BackColor = Back_Color 'Color.FromArgb(43, 44, 48)
         SizeMode = PictureBoxSizeMode.Zoom
-        Size = New Size(80, 80)
+        Size = New Size(60, 60)
 
         'Je donne l'ID unique de l'item comme nom
         Name = ID_Unique
 
         'Je charge l'image qui correspond à l'ID de l'objet
-        Load(Application.StartupPath & "\" & ID_Objet & ".png")
+        Load(Application.StartupPath & "\Image/" & ID_Objet & ".png")
 
         AddHandler MouseMove, Sub(Sender As Object, E As MouseEventArgs)
-                                  BackColor = Color.Red
+                                  BackColor = Color.FromArgb(43, 44, 48)
                               End Sub
 
         AddHandler MouseLeave, Sub(Sender As Object, E As EventArgs)
-                                   BackColor = Color.FromArgb(43, 44, 48)
+                                   BackColor = Back_Color
                                End Sub
 
         AddHandler Click, Sub() Item_Affiche_Inventaire_Click(Index, Nom_Item, ID_Objet, ID_Unique, Quantité, Caractéristique, La_ListView)

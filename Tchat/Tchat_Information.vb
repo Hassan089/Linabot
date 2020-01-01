@@ -68,11 +68,17 @@ Module Tchat_Information
 
                 Select Case Message(0)
 
-                    Case "cMK" : EcritureMessage(Index, "[General]", "[" & Message(1) & "] " & Message(2) & " : " & Message(3), Color.White)  'General
+                    Case "cMK"
 
-                    Case "cMK$" : EcritureMessage(Index, "[Groupe]", "[" & Message(1) & "] " & Message(2) & " : " & Message(3), Color.Cyan)  'Groupe
+                        EcritureMessage(Index, "[General]", "[" & Message(1) & "] " & Message(2) & " : " & Message(3), Color.White)  'General
 
-                    Case "cMK#" : EcritureMessage(Index, "[Equipe]", "[" & Message(1) & "] " & Message(2) & " : " & Message(3), Color.Cyan)  'Equipe
+                    Case "cMK$"
+
+                        EcritureMessage(Index, "[Groupe]", "[" & Message(1) & "] " & Message(2) & " : " & Message(3), Color.Cyan)  'Groupe
+
+                    Case "cMK#"
+
+                        EcritureMessage(Index, "[Equipe]", "[" & Message(1) & "] " & Message(2) & " : " & Message(3), Color.Cyan)  'Equipe
 
                     Case "cMKF"
 
@@ -84,15 +90,25 @@ Module Tchat_Information
                         EcritureMessage(Index, "[Privée à]", "[" & Message(1) & "] " & Message(2) & " : " & Message(3), Color.Cyan)  'Privée à
                         Enregistre_MP_Reçu(Index, Message(2), Message(3))
 
-                    Case "cMK%" : EcritureMessage(Index, "[Guilde]", "[" & Message(1) & "] " & Message(2) & " : " & Message(3), Color.DarkViolet) 'Guilde
+                    Case "cMK%"
 
-                    Case "cMK!" : EcritureMessage(Index, "[Alignement]", "[" & Message(1) & "] " & Message(2) & " : " & Message(3), Color.DarkOrange)  'Alignement
+                        EcritureMessage(Index, "[Guilde]", "[" & Message(1) & "] " & Message(2) & " : " & Message(3), Color.DarkViolet) 'Guilde
 
-                    Case "cMK?" : EcritureMessage(Index, "[Recrutement]", "[" & Message(1) & "] " & Message(2) & " : " & Message(3), Color.Gray)  'Recrutement
+                    Case "cMK!"
 
-                    Case "cMK:" : EcritureMessage(Index, "[Commerce]", "[" & Message(1) & "] " & Message(2) & " : " & Message(3), Color.Brown)  'Commerce
+                        EcritureMessage(Index, "[Alignement]", "[" & Message(1) & "] " & Message(2) & " : " & Message(3), Color.DarkOrange)  'Alignement
+
+                    Case "cMK?"
+
+                        EcritureMessage(Index, "[Recrutement]", "[" & Message(1) & "] " & Message(2) & " : " & Message(3), Color.Gray)  'Recrutement
+
+                    Case "cMK:"
+
+                        EcritureMessage(Index, "[Commerce]", "[" & Message(1) & "] " & Message(2) & " : " & Message(3), Color.Brown)  'Commerce
 
                 End Select
+
+                If Message(1) = ._ID_Unique Then ._En_Tchat = False
 
             Catch ex As Exception
 

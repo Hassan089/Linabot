@@ -22,7 +22,47 @@ Linabot
   les recherches de ressources à l'aide de cette classe de ressource fortement typée.
 </summary>
 </member>
+<member name="P:Linabot.My.Resources.Resources._1292">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Linabot.My.Resources.Resources._652">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Linabot.My.Resources.Resources._7__2_">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Linabot.My.Resources.Resources._Option">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Linabot.My.Resources.Resources.Energie">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Linabot.My.Resources.Resources.icons8_email_send_48">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Linabot.My.Resources.Resources.Logo_Dofus">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Linabot.My.Resources.Resources.moins">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Linabot.My.Resources.Resources.Muscles_icon">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
@@ -32,10 +72,63 @@ Linabot
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Linabot.My.Resources.Resources.Poubelle">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Linabot.My.Resources.Resources.téléchargement">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Linabot.My.Resources.Resources.user_group_8">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
+</member>
+<member name="M:Linabot.All_CallBack.Connexion_Game(System.Boolean)">
+ <summary>
+ Se connecte / Se deconnecte
+ </summary>
+ <param name="Active">Active ou desactive la socket</param>
+ <remarks>METHODE A REVOIR</remarks>
+</member>
+<member name="M:Linabot.All_CallBack.CallBackConnect(System.IAsyncResult)">
+ <summary>
+ Callback de connexion vers le serveur
+ </summary>
+ <param name="async"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Linabot.All_CallBack.CallBackDisconnect(System.IAsyncResult)">
+ <summary>
+ Callback declenché à la deconnexion
+ </summary>
+ <param name="async"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Linabot.All_CallBack.CallBackSender(System.IAsyncResult)">
+ <summary>
+ Callback d'envoi des données
+ </summary>
+ <param name="async"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Linabot.All_CallBack.#ctor(System.String,System.Int32)">
+ <summary>
+ Constructeur par defaut
+ </summary>
+ <param name="Hote"></param>
+ <param name="Port"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Linabot.All_CallBack.Dispose(System.Boolean)">
+ <summary>
+ IDisposable
+ </summary>
+ <param name="disposing"></param>
+ <remarks></remarks>
 </member>
 </members>
 </doc>

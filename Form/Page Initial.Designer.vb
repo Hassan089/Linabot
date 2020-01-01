@@ -68,6 +68,8 @@ Partial Class Page_Initial
         Dim ListViewItem42 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Résistance feu (% - PVM)", "0", "0", "0", "0", "0"}, 11)
         Dim ListViewItem43 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Résistance feu (Fixe - PVP)", "0", "0", "0", "0", "0"}, 17)
         Dim ListViewItem44 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Résistance feu (% - PVP)", "0", "0", "0", "0", "0"}, 17)
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage_Tchat = New System.Windows.Forms.TabPage()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -91,7 +93,8 @@ Partial Class Page_Initial
         Me.Toggle_Connexion = New Linabot.RedemptionToggle()
         Me.Button_Option_Tchat = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ComboBox_Tchat = New Linabot.RedemptionComboBox()
+        Me.Button_Tchat_Envoyer = New System.Windows.Forms.Button()
         Me.CheckBox_Canal_Groupe_2 = New Linabot.RedemptionCheckBox()
         Me.CheckBox_Canal_Communs_1 = New Linabot.RedemptionCheckBox()
         Me.CheckBox_Canal_Commerce_6 = New Linabot.RedemptionCheckBox()
@@ -99,14 +102,12 @@ Partial Class Page_Initial
         Me.CheckBox_Canal_Recrutement_5 = New Linabot.RedemptionCheckBox()
         Me.CheckBox_Canal_Guilde_3 = New Linabot.RedemptionCheckBox()
         Me.CheckBox_Canal_Information_0 = New Linabot.RedemptionCheckBox()
-        Me.RedemptionTextBox1 = New Linabot.RedemptionTextBox()
+        Me.TextBox_Tchat = New Linabot.RedemptionTextBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.RichTextBox_Tchat = New System.Windows.Forms.RichTextBox()
         Me.TabPage_Caractéristique = New System.Windows.Forms.TabPage()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
-        Me.Label_Caractéristique_Capital = New Linabot.RedemptionLabel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.ListView_Caractéristique = New System.Windows.Forms.ListView()
         Me.Caractéristique_Caractéristique = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -116,29 +117,30 @@ Partial Class Page_Initial
         Me.Caractéristique_Boost = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Caractéristique_Total = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ImageList_Caractéristique = New System.Windows.Forms.ImageList(Me.components)
+        Me.Label_Caractéristique_Capital = New Linabot.RedemptionLabel()
         Me.TabPage_Sort = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
         Me.Label_Sort_Capital = New Linabot.RedemptionLabel()
         Me.TabPage_Inventaire = New System.Windows.Forms.TabPage()
-        Me.Button_Inventaire_Supprimer = New System.Windows.Forms.Button()
-        Me.PictureBox_Dofus_5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox_Dofus_6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox_Dofus_3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox_Dofus_4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox_Cape = New System.Windows.Forms.PictureBox()
-        Me.PictureBox_Familier = New System.Windows.Forms.PictureBox()
-        Me.PictureBox_Anneaux_2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox_CaC = New System.Windows.Forms.PictureBox()
-        Me.PictureBox_Coiffe = New System.Windows.Forms.PictureBox()
-        Me.PictureBox_Ceinture = New System.Windows.Forms.PictureBox()
-        Me.PictureBox_Bottes = New System.Windows.Forms.PictureBox()
-        Me.PictureBox_Dofus_1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox_Dofus_2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox_Anneaux_1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox_Bouclier = New System.Windows.Forms.PictureBox()
+        Me.GroupBox_Affiche_Personnage = New System.Windows.Forms.GroupBox()
         Me.PictureBox_Amulette = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Dofus_5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Bouclier = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Dofus_6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Anneaux_1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Dofus_3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Dofus_2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Dofus_4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Dofus_1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Cape = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Bottes = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Familier = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Ceinture = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Anneaux_2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Coiffe = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_CaC = New System.Windows.Forms.PictureBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -148,7 +150,15 @@ Partial Class Page_Initial
         Me.Label_Inventaire_Affiche_Nom = New Linabot.RedemptionLabel()
         Me.PictureBox_Inventaire_Affiche_Caractéristique = New System.Windows.Forms.PictureBox()
         Me.FlowLayoutPanel_Inventaire = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Button_Inventaire_Supprimer = New System.Windows.Forms.Button()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.DataGridView_Map = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
         Me.TabPage7 = New System.Windows.Forms.TabPage()
         Me.TabPage8 = New System.Windows.Forms.TabPage()
@@ -160,7 +170,6 @@ Partial Class Page_Initial
         Me.RichTextBox_Socket = New System.Windows.Forms.RichTextBox()
         Me.ImageList_Initial = New System.Windows.Forms.ImageList(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.GroupBox_Affiche_Personnage = New System.Windows.Forms.GroupBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage_Tchat.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -175,7 +184,6 @@ Partial Class Page_Initial
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage_Caractéristique.SuspendLayout()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -183,29 +191,31 @@ Partial Class Page_Initial
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage_Inventaire.SuspendLayout()
-        CType(Me.PictureBox_Dofus_5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox_Dofus_6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox_Dofus_3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox_Dofus_4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox_Cape, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox_Familier, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox_Anneaux_2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox_CaC, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox_Coiffe, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox_Ceinture, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox_Bottes, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox_Dofus_1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox_Dofus_2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox_Anneaux_1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox_Bouclier, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox_Affiche_Personnage.SuspendLayout()
         CType(Me.PictureBox_Amulette, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Dofus_5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Bouclier, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Dofus_6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Anneaux_1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Dofus_3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Dofus_2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Dofus_4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Dofus_1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Cape, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Bottes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Familier, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Ceinture, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Anneaux_2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Coiffe, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_CaC, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         Me.TabControl2.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.PictureBox_Inventaire_Affiche_Caractéristique, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage5.SuspendLayout()
+        CType(Me.DataGridView_Map, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage13.SuspendLayout()
-        Me.GroupBox_Affiche_Personnage.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -296,7 +306,7 @@ Partial Class Page_Initial
         'PictureBox11
         '
         Me.PictureBox11.Image = Global.Linabot.My.Resources.Resources.Muscles_icon
-        Me.PictureBox11.Location = New System.Drawing.Point(6, 191)
+        Me.PictureBox11.Location = New System.Drawing.Point(6, 167)
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.Size = New System.Drawing.Size(60, 23)
         Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -308,7 +318,7 @@ Partial Class Page_Initial
         Me.RedemptionLabel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.RedemptionLabel2.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
         Me.RedemptionLabel2.ForeColor = System.Drawing.Color.White
-        Me.RedemptionLabel2.Location = New System.Drawing.Point(72, 191)
+        Me.RedemptionLabel2.Location = New System.Drawing.Point(72, 167)
         Me.RedemptionLabel2.Name = "RedemptionLabel2"
         Me.RedemptionLabel2.Size = New System.Drawing.Size(246, 23)
         Me.RedemptionLabel2.TabIndex = 20
@@ -477,7 +487,8 @@ Partial Class Page_Initial
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.ComboBox_Tchat)
+        Me.GroupBox1.Controls.Add(Me.Button_Tchat_Envoyer)
         Me.GroupBox1.Controls.Add(Me.CheckBox_Canal_Groupe_2)
         Me.GroupBox1.Controls.Add(Me.CheckBox_Canal_Communs_1)
         Me.GroupBox1.Controls.Add(Me.CheckBox_Canal_Commerce_6)
@@ -485,10 +496,9 @@ Partial Class Page_Initial
         Me.GroupBox1.Controls.Add(Me.CheckBox_Canal_Recrutement_5)
         Me.GroupBox1.Controls.Add(Me.CheckBox_Canal_Guilde_3)
         Me.GroupBox1.Controls.Add(Me.CheckBox_Canal_Information_0)
-        Me.GroupBox1.Controls.Add(Me.RedemptionTextBox1)
+        Me.GroupBox1.Controls.Add(Me.TextBox_Tchat)
         Me.GroupBox1.Controls.Add(Me.PictureBox3)
         Me.GroupBox1.Controls.Add(Me.PictureBox2)
-        Me.GroupBox1.Controls.Add(Me.PictureBox4)
         Me.GroupBox1.Controls.Add(Me.RichTextBox_Tchat)
         Me.GroupBox1.Location = New System.Drawing.Point(6, 6)
         Me.GroupBox1.Name = "GroupBox1"
@@ -496,16 +506,31 @@ Partial Class Page_Initial
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         '
-        'Button1
+        'ComboBox_Tchat
         '
-        Me.Button1.BackgroundImage = Global.Linabot.My.Resources.Resources.moins
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Location = New System.Drawing.Point(643, 586)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(25, 28)
-        Me.Button1.TabIndex = 5
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ComboBox_Tchat.BackColor = System.Drawing.Color.Transparent
+        Me.ComboBox_Tchat.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.ComboBox_Tchat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_Tchat.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.ComboBox_Tchat.ForeColor = System.Drawing.Color.FromArgb(CType(CType(182, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(171, Byte), Integer))
+        Me.ComboBox_Tchat.FormattingEnabled = True
+        Me.ComboBox_Tchat.ItemHeight = 18
+        Me.ComboBox_Tchat.Items.AddRange(New Object() {"Défaut", "Equipe", "Message Privée", "Groupe", "Guilde", "Alignement", "Recrutement", "Commerce"})
+        Me.ComboBox_Tchat.Location = New System.Drawing.Point(6, 586)
+        Me.ComboBox_Tchat.Name = "ComboBox_Tchat"
+        Me.ComboBox_Tchat.Size = New System.Drawing.Size(151, 24)
+        Me.ComboBox_Tchat.TabIndex = 12
+        '
+        'Button_Tchat_Envoyer
+        '
+        Me.Button_Tchat_Envoyer.BackgroundImage = Global.Linabot.My.Resources.Resources.icons8_email_send_48
+        Me.Button_Tchat_Envoyer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button_Tchat_Envoyer.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button_Tchat_Envoyer.Location = New System.Drawing.Point(643, 586)
+        Me.Button_Tchat_Envoyer.Name = "Button_Tchat_Envoyer"
+        Me.Button_Tchat_Envoyer.Size = New System.Drawing.Size(25, 28)
+        Me.Button_Tchat_Envoyer.TabIndex = 5
+        Me.Button_Tchat_Envoyer.UseVisualStyleBackColor = True
         '
         'CheckBox_Canal_Groupe_2
         '
@@ -584,20 +609,19 @@ Partial Class Page_Initial
         Me.CheckBox_Canal_Information_0.Size = New System.Drawing.Size(25, 19)
         Me.CheckBox_Canal_Information_0.TabIndex = 5
         '
-        'RedemptionTextBox1
+        'TextBox_Tchat
         '
-        Me.RedemptionTextBox1.BackColor = System.Drawing.Color.Transparent
-        Me.RedemptionTextBox1.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.RedemptionTextBox1.ForeColor = System.Drawing.Color.White
-        Me.RedemptionTextBox1.Location = New System.Drawing.Point(48, 586)
-        Me.RedemptionTextBox1.MaxLength = 32767
-        Me.RedemptionTextBox1.MultiLine = False
-        Me.RedemptionTextBox1.Name = "RedemptionTextBox1"
-        Me.RedemptionTextBox1.Size = New System.Drawing.Size(589, 28)
-        Me.RedemptionTextBox1.TabIndex = 4
-        Me.RedemptionTextBox1.Text = "RedemptionTextBox1"
-        Me.RedemptionTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.RedemptionTextBox1.UseSystemPasswordChar = False
+        Me.TextBox_Tchat.BackColor = System.Drawing.Color.Transparent
+        Me.TextBox_Tchat.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.TextBox_Tchat.ForeColor = System.Drawing.Color.White
+        Me.TextBox_Tchat.Location = New System.Drawing.Point(163, 586)
+        Me.TextBox_Tchat.MaxLength = 32767
+        Me.TextBox_Tchat.MultiLine = False
+        Me.TextBox_Tchat.Name = "TextBox_Tchat"
+        Me.TextBox_Tchat.Size = New System.Drawing.Size(474, 28)
+        Me.TextBox_Tchat.TabIndex = 4
+        Me.TextBox_Tchat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.TextBox_Tchat.UseSystemPasswordChar = False
         '
         'PictureBox3
         '
@@ -619,16 +643,6 @@ Partial Class Page_Initial
         Me.PictureBox2.TabIndex = 3
         Me.PictureBox2.TabStop = False
         '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(6, 586)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(36, 28)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 3
-        Me.PictureBox4.TabStop = False
-        '
         'RichTextBox_Tchat
         '
         Me.RichTextBox_Tchat.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(48, Byte), Integer))
@@ -643,8 +657,8 @@ Partial Class Page_Initial
         Me.TabPage_Caractéristique.AutoScroll = True
         Me.TabPage_Caractéristique.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.TabPage_Caractéristique.Controls.Add(Me.PictureBox13)
-        Me.TabPage_Caractéristique.Controls.Add(Me.Label_Caractéristique_Capital)
         Me.TabPage_Caractéristique.Controls.Add(Me.Panel1)
+        Me.TabPage_Caractéristique.Controls.Add(Me.Label_Caractéristique_Capital)
         Me.TabPage_Caractéristique.ImageIndex = 2
         Me.TabPage_Caractéristique.Location = New System.Drawing.Point(4, 47)
         Me.TabPage_Caractéristique.Name = "TabPage_Caractéristique"
@@ -662,17 +676,6 @@ Partial Class Page_Initial
         Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox13.TabIndex = 340
         Me.PictureBox13.TabStop = False
-        '
-        'Label_Caractéristique_Capital
-        '
-        Me.Label_Caractéristique_Capital.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label_Caractéristique_Capital.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label_Caractéristique_Capital.ForeColor = System.Drawing.Color.White
-        Me.Label_Caractéristique_Capital.Location = New System.Drawing.Point(504, 9)
-        Me.Label_Caractéristique_Capital.Name = "Label_Caractéristique_Capital"
-        Me.Label_Caractéristique_Capital.Size = New System.Drawing.Size(75, 23)
-        Me.Label_Caractéristique_Capital.TabIndex = 339
-        Me.Label_Caractéristique_Capital.Text = "Capital : 0"
         '
         'Panel1
         '
@@ -786,22 +789,34 @@ Partial Class Page_Initial
         Me.ImageList_Caractéristique.Images.SetKeyName(6, "PA.png")
         Me.ImageList_Caractéristique.Images.SetKeyName(7, "1153.png")
         Me.ImageList_Caractéristique.Images.SetKeyName(8, "PM.png")
-        Me.ImageList_Caractéristique.Images.SetKeyName(9, "1157.png")
-        Me.ImageList_Caractéristique.Images.SetKeyName(10, "1159.png")
-        Me.ImageList_Caractéristique.Images.SetKeyName(11, "Rés pk1161.png")
-        Me.ImageList_Caractéristique.Images.SetKeyName(12, "%1163.png")
-        Me.ImageList_Caractéristique.Images.SetKeyName(13, "1165.png")
+        Me.ImageList_Caractéristique.Images.SetKeyName(9, "Résistance Air.png")
+        Me.ImageList_Caractéristique.Images.SetKeyName(10, "Résistance Terre.png")
+        Me.ImageList_Caractéristique.Images.SetKeyName(11, "Résistance Feu.png")
+        Me.ImageList_Caractéristique.Images.SetKeyName(12, "Résistance Eau.png")
+        Me.ImageList_Caractéristique.Images.SetKeyName(13, "Résistance Neutre.png")
         Me.ImageList_Caractéristique.Images.SetKeyName(14, "1582.png")
         Me.ImageList_Caractéristique.Images.SetKeyName(15, "2172.png")
         Me.ImageList_Caractéristique.Images.SetKeyName(16, "2174.png")
         Me.ImageList_Caractéristique.Images.SetKeyName(17, "2176.png")
         Me.ImageList_Caractéristique.Images.SetKeyName(18, "2178.png")
         Me.ImageList_Caractéristique.Images.SetKeyName(19, "2180.png")
-        Me.ImageList_Caractéristique.Images.SetKeyName(20, "2182.png")
-        Me.ImageList_Caractéristique.Images.SetKeyName(21, "2184.png")
+        Me.ImageList_Caractéristique.Images.SetKeyName(20, "Sagesse.png")
+        Me.ImageList_Caractéristique.Images.SetKeyName(21, "Initiative.png")
         Me.ImageList_Caractéristique.Images.SetKeyName(22, "2186.png")
-        Me.ImageList_Caractéristique.Images.SetKeyName(23, "2188.png")
+        Me.ImageList_Caractéristique.Images.SetKeyName(23, "Vitalité.png")
         Me.ImageList_Caractéristique.Images.SetKeyName(24, "invocation.png")
+        Me.ImageList_Caractéristique.Images.SetKeyName(25, "Corps à Corps.png")
+        '
+        'Label_Caractéristique_Capital
+        '
+        Me.Label_Caractéristique_Capital.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label_Caractéristique_Capital.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label_Caractéristique_Capital.ForeColor = System.Drawing.Color.White
+        Me.Label_Caractéristique_Capital.Location = New System.Drawing.Point(504, 9)
+        Me.Label_Caractéristique_Capital.Name = "Label_Caractéristique_Capital"
+        Me.Label_Caractéristique_Capital.Size = New System.Drawing.Size(75, 23)
+        Me.Label_Caractéristique_Capital.TabIndex = 339
+        Me.Label_Caractéristique_Capital.Text = "Capital : 0"
         '
         'TabPage_Sort
         '
@@ -851,9 +866,9 @@ Partial Class Page_Initial
         '
         Me.TabPage_Inventaire.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.TabPage_Inventaire.Controls.Add(Me.GroupBox_Affiche_Personnage)
-        Me.TabPage_Inventaire.Controls.Add(Me.Button_Inventaire_Supprimer)
         Me.TabPage_Inventaire.Controls.Add(Me.GroupBox3)
         Me.TabPage_Inventaire.Controls.Add(Me.FlowLayoutPanel_Inventaire)
+        Me.TabPage_Inventaire.Controls.Add(Me.Button_Inventaire_Supprimer)
         Me.TabPage_Inventaire.ImageIndex = 1
         Me.TabPage_Inventaire.Location = New System.Drawing.Point(4, 47)
         Me.TabPage_Inventaire.Name = "TabPage_Inventaire"
@@ -862,168 +877,32 @@ Partial Class Page_Initial
         Me.TabPage_Inventaire.TabIndex = 3
         Me.TabPage_Inventaire.Text = "Inventaire"
         '
-        'Button_Inventaire_Supprimer
+        'GroupBox_Affiche_Personnage
         '
-        Me.Button_Inventaire_Supprimer.BackgroundImage = Global.Linabot.My.Resources.Resources.Poubelle
-        Me.Button_Inventaire_Supprimer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button_Inventaire_Supprimer.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button_Inventaire_Supprimer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Inventaire_Supprimer.ForeColor = System.Drawing.Color.White
-        Me.Button_Inventaire_Supprimer.Location = New System.Drawing.Point(1263, 569)
-        Me.Button_Inventaire_Supprimer.Name = "Button_Inventaire_Supprimer"
-        Me.Button_Inventaire_Supprimer.Size = New System.Drawing.Size(53, 57)
-        Me.Button_Inventaire_Supprimer.TabIndex = 355
-        Me.Button_Inventaire_Supprimer.UseVisualStyleBackColor = True
-        '
-        'PictureBox_Dofus_5
-        '
-        Me.PictureBox_Dofus_5.Image = CType(resources.GetObject("PictureBox_Dofus_5.Image"), System.Drawing.Image)
-        Me.PictureBox_Dofus_5.Location = New System.Drawing.Point(293, 364)
-        Me.PictureBox_Dofus_5.Name = "PictureBox_Dofus_5"
-        Me.PictureBox_Dofus_5.Size = New System.Drawing.Size(66, 63)
-        Me.PictureBox_Dofus_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox_Dofus_5.TabIndex = 353
-        Me.PictureBox_Dofus_5.TabStop = False
-        '
-        'PictureBox_Dofus_6
-        '
-        Me.PictureBox_Dofus_6.Image = CType(resources.GetObject("PictureBox_Dofus_6.Image"), System.Drawing.Image)
-        Me.PictureBox_Dofus_6.Location = New System.Drawing.Point(365, 364)
-        Me.PictureBox_Dofus_6.Name = "PictureBox_Dofus_6"
-        Me.PictureBox_Dofus_6.Size = New System.Drawing.Size(66, 63)
-        Me.PictureBox_Dofus_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox_Dofus_6.TabIndex = 352
-        Me.PictureBox_Dofus_6.TabStop = False
-        '
-        'PictureBox_Dofus_3
-        '
-        Me.PictureBox_Dofus_3.Image = CType(resources.GetObject("PictureBox_Dofus_3.Image"), System.Drawing.Image)
-        Me.PictureBox_Dofus_3.Location = New System.Drawing.Point(149, 364)
-        Me.PictureBox_Dofus_3.Name = "PictureBox_Dofus_3"
-        Me.PictureBox_Dofus_3.Size = New System.Drawing.Size(66, 63)
-        Me.PictureBox_Dofus_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox_Dofus_3.TabIndex = 351
-        Me.PictureBox_Dofus_3.TabStop = False
-        '
-        'PictureBox_Dofus_4
-        '
-        Me.PictureBox_Dofus_4.Image = CType(resources.GetObject("PictureBox_Dofus_4.Image"), System.Drawing.Image)
-        Me.PictureBox_Dofus_4.Location = New System.Drawing.Point(221, 364)
-        Me.PictureBox_Dofus_4.Name = "PictureBox_Dofus_4"
-        Me.PictureBox_Dofus_4.Size = New System.Drawing.Size(66, 63)
-        Me.PictureBox_Dofus_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox_Dofus_4.TabIndex = 350
-        Me.PictureBox_Dofus_4.TabStop = False
-        '
-        'PictureBox_Cape
-        '
-        Me.PictureBox_Cape.Image = CType(resources.GetObject("PictureBox_Cape.Image"), System.Drawing.Image)
-        Me.PictureBox_Cape.Location = New System.Drawing.Point(365, 226)
-        Me.PictureBox_Cape.Name = "PictureBox_Cape"
-        Me.PictureBox_Cape.Size = New System.Drawing.Size(66, 63)
-        Me.PictureBox_Cape.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox_Cape.TabIndex = 349
-        Me.PictureBox_Cape.TabStop = False
-        '
-        'PictureBox_Familier
-        '
-        Me.PictureBox_Familier.Image = CType(resources.GetObject("PictureBox_Familier.Image"), System.Drawing.Image)
-        Me.PictureBox_Familier.Location = New System.Drawing.Point(365, 295)
-        Me.PictureBox_Familier.Name = "PictureBox_Familier"
-        Me.PictureBox_Familier.Size = New System.Drawing.Size(66, 63)
-        Me.PictureBox_Familier.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox_Familier.TabIndex = 348
-        Me.PictureBox_Familier.TabStop = False
-        '
-        'PictureBox_Anneaux_2
-        '
-        Me.PictureBox_Anneaux_2.Image = CType(resources.GetObject("PictureBox_Anneaux_2.Image"), System.Drawing.Image)
-        Me.PictureBox_Anneaux_2.Location = New System.Drawing.Point(365, 157)
-        Me.PictureBox_Anneaux_2.Name = "PictureBox_Anneaux_2"
-        Me.PictureBox_Anneaux_2.Size = New System.Drawing.Size(66, 63)
-        Me.PictureBox_Anneaux_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox_Anneaux_2.TabIndex = 347
-        Me.PictureBox_Anneaux_2.TabStop = False
-        '
-        'PictureBox_CaC
-        '
-        Me.PictureBox_CaC.Image = CType(resources.GetObject("PictureBox_CaC.Image"), System.Drawing.Image)
-        Me.PictureBox_CaC.Location = New System.Drawing.Point(365, 88)
-        Me.PictureBox_CaC.Name = "PictureBox_CaC"
-        Me.PictureBox_CaC.Size = New System.Drawing.Size(66, 63)
-        Me.PictureBox_CaC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox_CaC.TabIndex = 346
-        Me.PictureBox_CaC.TabStop = False
-        '
-        'PictureBox_Coiffe
-        '
-        Me.PictureBox_Coiffe.Image = CType(resources.GetObject("PictureBox_Coiffe.Image"), System.Drawing.Image)
-        Me.PictureBox_Coiffe.Location = New System.Drawing.Point(365, 19)
-        Me.PictureBox_Coiffe.Name = "PictureBox_Coiffe"
-        Me.PictureBox_Coiffe.Size = New System.Drawing.Size(66, 63)
-        Me.PictureBox_Coiffe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox_Coiffe.TabIndex = 345
-        Me.PictureBox_Coiffe.TabStop = False
-        '
-        'PictureBox_Ceinture
-        '
-        Me.PictureBox_Ceinture.Image = CType(resources.GetObject("PictureBox_Ceinture.Image"), System.Drawing.Image)
-        Me.PictureBox_Ceinture.Location = New System.Drawing.Point(5, 226)
-        Me.PictureBox_Ceinture.Name = "PictureBox_Ceinture"
-        Me.PictureBox_Ceinture.Size = New System.Drawing.Size(66, 63)
-        Me.PictureBox_Ceinture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox_Ceinture.TabIndex = 344
-        Me.PictureBox_Ceinture.TabStop = False
-        '
-        'PictureBox_Bottes
-        '
-        Me.PictureBox_Bottes.Image = CType(resources.GetObject("PictureBox_Bottes.Image"), System.Drawing.Image)
-        Me.PictureBox_Bottes.Location = New System.Drawing.Point(5, 295)
-        Me.PictureBox_Bottes.Name = "PictureBox_Bottes"
-        Me.PictureBox_Bottes.Size = New System.Drawing.Size(66, 63)
-        Me.PictureBox_Bottes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox_Bottes.TabIndex = 343
-        Me.PictureBox_Bottes.TabStop = False
-        '
-        'PictureBox_Dofus_1
-        '
-        Me.PictureBox_Dofus_1.Image = CType(resources.GetObject("PictureBox_Dofus_1.Image"), System.Drawing.Image)
-        Me.PictureBox_Dofus_1.Location = New System.Drawing.Point(5, 364)
-        Me.PictureBox_Dofus_1.Name = "PictureBox_Dofus_1"
-        Me.PictureBox_Dofus_1.Size = New System.Drawing.Size(66, 63)
-        Me.PictureBox_Dofus_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox_Dofus_1.TabIndex = 342
-        Me.PictureBox_Dofus_1.TabStop = False
-        '
-        'PictureBox_Dofus_2
-        '
-        Me.PictureBox_Dofus_2.Image = CType(resources.GetObject("PictureBox_Dofus_2.Image"), System.Drawing.Image)
-        Me.PictureBox_Dofus_2.Location = New System.Drawing.Point(77, 364)
-        Me.PictureBox_Dofus_2.Name = "PictureBox_Dofus_2"
-        Me.PictureBox_Dofus_2.Size = New System.Drawing.Size(66, 63)
-        Me.PictureBox_Dofus_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox_Dofus_2.TabIndex = 341
-        Me.PictureBox_Dofus_2.TabStop = False
-        '
-        'PictureBox_Anneaux_1
-        '
-        Me.PictureBox_Anneaux_1.Image = CType(resources.GetObject("PictureBox_Anneaux_1.Image"), System.Drawing.Image)
-        Me.PictureBox_Anneaux_1.Location = New System.Drawing.Point(5, 157)
-        Me.PictureBox_Anneaux_1.Name = "PictureBox_Anneaux_1"
-        Me.PictureBox_Anneaux_1.Size = New System.Drawing.Size(66, 63)
-        Me.PictureBox_Anneaux_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox_Anneaux_1.TabIndex = 340
-        Me.PictureBox_Anneaux_1.TabStop = False
-        '
-        'PictureBox_Bouclier
-        '
-        Me.PictureBox_Bouclier.Image = CType(resources.GetObject("PictureBox_Bouclier.Image"), System.Drawing.Image)
-        Me.PictureBox_Bouclier.Location = New System.Drawing.Point(5, 88)
-        Me.PictureBox_Bouclier.Name = "PictureBox_Bouclier"
-        Me.PictureBox_Bouclier.Size = New System.Drawing.Size(66, 63)
-        Me.PictureBox_Bouclier.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox_Bouclier.TabIndex = 339
-        Me.PictureBox_Bouclier.TabStop = False
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Amulette)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox1)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Dofus_5)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Bouclier)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Dofus_6)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Anneaux_1)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Dofus_3)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Dofus_2)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Dofus_4)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Dofus_1)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Cape)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Bottes)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Familier)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Ceinture)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Anneaux_2)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Coiffe)
+        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_CaC)
+        Me.GroupBox_Affiche_Personnage.ForeColor = System.Drawing.Color.White
+        Me.GroupBox_Affiche_Personnage.Location = New System.Drawing.Point(3, 6)
+        Me.GroupBox_Affiche_Personnage.Name = "GroupBox_Affiche_Personnage"
+        Me.GroupBox_Affiche_Personnage.Size = New System.Drawing.Size(436, 433)
+        Me.GroupBox_Affiche_Personnage.TabIndex = 356
+        Me.GroupBox_Affiche_Personnage.TabStop = False
+        Me.GroupBox_Affiche_Personnage.Text = "Personnage"
         '
         'PictureBox_Amulette
         '
@@ -1044,6 +923,156 @@ Partial Class Page_Initial
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 337
         Me.PictureBox1.TabStop = False
+        '
+        'PictureBox_Dofus_5
+        '
+        Me.PictureBox_Dofus_5.Image = CType(resources.GetObject("PictureBox_Dofus_5.Image"), System.Drawing.Image)
+        Me.PictureBox_Dofus_5.Location = New System.Drawing.Point(293, 364)
+        Me.PictureBox_Dofus_5.Name = "PictureBox_Dofus_5"
+        Me.PictureBox_Dofus_5.Size = New System.Drawing.Size(66, 63)
+        Me.PictureBox_Dofus_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Dofus_5.TabIndex = 353
+        Me.PictureBox_Dofus_5.TabStop = False
+        '
+        'PictureBox_Bouclier
+        '
+        Me.PictureBox_Bouclier.Image = CType(resources.GetObject("PictureBox_Bouclier.Image"), System.Drawing.Image)
+        Me.PictureBox_Bouclier.Location = New System.Drawing.Point(5, 88)
+        Me.PictureBox_Bouclier.Name = "PictureBox_Bouclier"
+        Me.PictureBox_Bouclier.Size = New System.Drawing.Size(66, 63)
+        Me.PictureBox_Bouclier.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox_Bouclier.TabIndex = 339
+        Me.PictureBox_Bouclier.TabStop = False
+        '
+        'PictureBox_Dofus_6
+        '
+        Me.PictureBox_Dofus_6.Image = CType(resources.GetObject("PictureBox_Dofus_6.Image"), System.Drawing.Image)
+        Me.PictureBox_Dofus_6.Location = New System.Drawing.Point(365, 364)
+        Me.PictureBox_Dofus_6.Name = "PictureBox_Dofus_6"
+        Me.PictureBox_Dofus_6.Size = New System.Drawing.Size(66, 63)
+        Me.PictureBox_Dofus_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Dofus_6.TabIndex = 352
+        Me.PictureBox_Dofus_6.TabStop = False
+        '
+        'PictureBox_Anneaux_1
+        '
+        Me.PictureBox_Anneaux_1.Image = CType(resources.GetObject("PictureBox_Anneaux_1.Image"), System.Drawing.Image)
+        Me.PictureBox_Anneaux_1.Location = New System.Drawing.Point(5, 157)
+        Me.PictureBox_Anneaux_1.Name = "PictureBox_Anneaux_1"
+        Me.PictureBox_Anneaux_1.Size = New System.Drawing.Size(66, 63)
+        Me.PictureBox_Anneaux_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox_Anneaux_1.TabIndex = 340
+        Me.PictureBox_Anneaux_1.TabStop = False
+        '
+        'PictureBox_Dofus_3
+        '
+        Me.PictureBox_Dofus_3.Image = CType(resources.GetObject("PictureBox_Dofus_3.Image"), System.Drawing.Image)
+        Me.PictureBox_Dofus_3.Location = New System.Drawing.Point(149, 364)
+        Me.PictureBox_Dofus_3.Name = "PictureBox_Dofus_3"
+        Me.PictureBox_Dofus_3.Size = New System.Drawing.Size(66, 63)
+        Me.PictureBox_Dofus_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Dofus_3.TabIndex = 351
+        Me.PictureBox_Dofus_3.TabStop = False
+        '
+        'PictureBox_Dofus_2
+        '
+        Me.PictureBox_Dofus_2.Image = CType(resources.GetObject("PictureBox_Dofus_2.Image"), System.Drawing.Image)
+        Me.PictureBox_Dofus_2.Location = New System.Drawing.Point(77, 364)
+        Me.PictureBox_Dofus_2.Name = "PictureBox_Dofus_2"
+        Me.PictureBox_Dofus_2.Size = New System.Drawing.Size(66, 63)
+        Me.PictureBox_Dofus_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Dofus_2.TabIndex = 341
+        Me.PictureBox_Dofus_2.TabStop = False
+        '
+        'PictureBox_Dofus_4
+        '
+        Me.PictureBox_Dofus_4.Image = CType(resources.GetObject("PictureBox_Dofus_4.Image"), System.Drawing.Image)
+        Me.PictureBox_Dofus_4.Location = New System.Drawing.Point(221, 364)
+        Me.PictureBox_Dofus_4.Name = "PictureBox_Dofus_4"
+        Me.PictureBox_Dofus_4.Size = New System.Drawing.Size(66, 63)
+        Me.PictureBox_Dofus_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Dofus_4.TabIndex = 350
+        Me.PictureBox_Dofus_4.TabStop = False
+        '
+        'PictureBox_Dofus_1
+        '
+        Me.PictureBox_Dofus_1.Image = CType(resources.GetObject("PictureBox_Dofus_1.Image"), System.Drawing.Image)
+        Me.PictureBox_Dofus_1.Location = New System.Drawing.Point(5, 364)
+        Me.PictureBox_Dofus_1.Name = "PictureBox_Dofus_1"
+        Me.PictureBox_Dofus_1.Size = New System.Drawing.Size(66, 63)
+        Me.PictureBox_Dofus_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Dofus_1.TabIndex = 342
+        Me.PictureBox_Dofus_1.TabStop = False
+        '
+        'PictureBox_Cape
+        '
+        Me.PictureBox_Cape.Image = CType(resources.GetObject("PictureBox_Cape.Image"), System.Drawing.Image)
+        Me.PictureBox_Cape.Location = New System.Drawing.Point(365, 226)
+        Me.PictureBox_Cape.Name = "PictureBox_Cape"
+        Me.PictureBox_Cape.Size = New System.Drawing.Size(66, 63)
+        Me.PictureBox_Cape.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox_Cape.TabIndex = 349
+        Me.PictureBox_Cape.TabStop = False
+        '
+        'PictureBox_Bottes
+        '
+        Me.PictureBox_Bottes.Image = CType(resources.GetObject("PictureBox_Bottes.Image"), System.Drawing.Image)
+        Me.PictureBox_Bottes.Location = New System.Drawing.Point(5, 295)
+        Me.PictureBox_Bottes.Name = "PictureBox_Bottes"
+        Me.PictureBox_Bottes.Size = New System.Drawing.Size(66, 63)
+        Me.PictureBox_Bottes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox_Bottes.TabIndex = 343
+        Me.PictureBox_Bottes.TabStop = False
+        '
+        'PictureBox_Familier
+        '
+        Me.PictureBox_Familier.Image = CType(resources.GetObject("PictureBox_Familier.Image"), System.Drawing.Image)
+        Me.PictureBox_Familier.Location = New System.Drawing.Point(365, 295)
+        Me.PictureBox_Familier.Name = "PictureBox_Familier"
+        Me.PictureBox_Familier.Size = New System.Drawing.Size(66, 63)
+        Me.PictureBox_Familier.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox_Familier.TabIndex = 348
+        Me.PictureBox_Familier.TabStop = False
+        '
+        'PictureBox_Ceinture
+        '
+        Me.PictureBox_Ceinture.Image = CType(resources.GetObject("PictureBox_Ceinture.Image"), System.Drawing.Image)
+        Me.PictureBox_Ceinture.Location = New System.Drawing.Point(5, 226)
+        Me.PictureBox_Ceinture.Name = "PictureBox_Ceinture"
+        Me.PictureBox_Ceinture.Size = New System.Drawing.Size(66, 63)
+        Me.PictureBox_Ceinture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox_Ceinture.TabIndex = 344
+        Me.PictureBox_Ceinture.TabStop = False
+        '
+        'PictureBox_Anneaux_2
+        '
+        Me.PictureBox_Anneaux_2.Image = CType(resources.GetObject("PictureBox_Anneaux_2.Image"), System.Drawing.Image)
+        Me.PictureBox_Anneaux_2.Location = New System.Drawing.Point(365, 157)
+        Me.PictureBox_Anneaux_2.Name = "PictureBox_Anneaux_2"
+        Me.PictureBox_Anneaux_2.Size = New System.Drawing.Size(66, 63)
+        Me.PictureBox_Anneaux_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox_Anneaux_2.TabIndex = 347
+        Me.PictureBox_Anneaux_2.TabStop = False
+        '
+        'PictureBox_Coiffe
+        '
+        Me.PictureBox_Coiffe.Image = CType(resources.GetObject("PictureBox_Coiffe.Image"), System.Drawing.Image)
+        Me.PictureBox_Coiffe.Location = New System.Drawing.Point(365, 19)
+        Me.PictureBox_Coiffe.Name = "PictureBox_Coiffe"
+        Me.PictureBox_Coiffe.Size = New System.Drawing.Size(66, 63)
+        Me.PictureBox_Coiffe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox_Coiffe.TabIndex = 345
+        Me.PictureBox_Coiffe.TabStop = False
+        '
+        'PictureBox_CaC
+        '
+        Me.PictureBox_CaC.Image = CType(resources.GetObject("PictureBox_CaC.Image"), System.Drawing.Image)
+        Me.PictureBox_CaC.Location = New System.Drawing.Point(365, 88)
+        Me.PictureBox_CaC.Name = "PictureBox_CaC"
+        Me.PictureBox_CaC.Size = New System.Drawing.Size(66, 63)
+        Me.PictureBox_CaC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox_CaC.TabIndex = 346
+        Me.PictureBox_CaC.TabStop = False
         '
         'GroupBox3
         '
@@ -1144,15 +1173,99 @@ Partial Class Page_Initial
         Me.FlowLayoutPanel_Inventaire.Size = New System.Drawing.Size(344, 557)
         Me.FlowLayoutPanel_Inventaire.TabIndex = 0
         '
+        'Button_Inventaire_Supprimer
+        '
+        Me.Button_Inventaire_Supprimer.BackgroundImage = Global.Linabot.My.Resources.Resources.Poubelle
+        Me.Button_Inventaire_Supprimer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button_Inventaire_Supprimer.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button_Inventaire_Supprimer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button_Inventaire_Supprimer.ForeColor = System.Drawing.Color.White
+        Me.Button_Inventaire_Supprimer.Location = New System.Drawing.Point(1263, 569)
+        Me.Button_Inventaire_Supprimer.Name = "Button_Inventaire_Supprimer"
+        Me.Button_Inventaire_Supprimer.Size = New System.Drawing.Size(53, 57)
+        Me.Button_Inventaire_Supprimer.TabIndex = 355
+        Me.Button_Inventaire_Supprimer.UseVisualStyleBackColor = True
+        '
         'TabPage5
         '
         Me.TabPage5.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.TabPage5.Controls.Add(Me.DataGridView_Map)
         Me.TabPage5.Location = New System.Drawing.Point(4, 47)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage5.Size = New System.Drawing.Size(1322, 632)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "TabPage5"
+        '
+        'DataGridView_Map
+        '
+        Me.DataGridView_Map.AllowUserToAddRows = False
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView_Map.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        Me.DataGridView_Map.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView_Map.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView_Map.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(48, Byte), Integer))
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView_Map.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        Me.DataGridView_Map.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView_Map.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewImageColumn2, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewImageColumn})
+        Me.DataGridView_Map.GridColor = System.Drawing.Color.Black
+        Me.DataGridView_Map.Location = New System.Drawing.Point(6, 6)
+        Me.DataGridView_Map.Name = "DataGridView_Map"
+        Me.DataGridView_Map.RowHeadersWidth = 4
+        Me.DataGridView_Map.Size = New System.Drawing.Size(1089, 535)
+        Me.DataGridView_Map.TabIndex = 298
+        '
+        'DataGridViewImageColumn2
+        '
+        Me.DataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewImageColumn2.HeaderText = "Classe"
+        Me.DataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
+        Me.DataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Cellule"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn2.HeaderText = "ID Unique"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Nom"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Information"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewImageColumn
+        '
+        Me.DataGridViewImageColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewImageColumn.HeaderText = "Alignement"
+        Me.DataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.DataGridViewImageColumn.Name = "DataGridViewImageColumn"
+        Me.DataGridViewImageColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         '
         'TabPage6
         '
@@ -1261,33 +1374,6 @@ Partial Class Page_Initial
         Me.ToolTip1.InitialDelay = 1
         Me.ToolTip1.ReshowDelay = 100
         '
-        'GroupBox_Affiche_Personnage
-        '
-        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Amulette)
-        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox1)
-        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Dofus_5)
-        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Bouclier)
-        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Dofus_6)
-        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Anneaux_1)
-        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Dofus_3)
-        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Dofus_2)
-        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Dofus_4)
-        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Dofus_1)
-        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Cape)
-        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Bottes)
-        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Familier)
-        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Ceinture)
-        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Anneaux_2)
-        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_Coiffe)
-        Me.GroupBox_Affiche_Personnage.Controls.Add(Me.PictureBox_CaC)
-        Me.GroupBox_Affiche_Personnage.ForeColor = System.Drawing.Color.White
-        Me.GroupBox_Affiche_Personnage.Location = New System.Drawing.Point(3, 6)
-        Me.GroupBox_Affiche_Personnage.Name = "GroupBox_Affiche_Personnage"
-        Me.GroupBox_Affiche_Personnage.Size = New System.Drawing.Size(436, 433)
-        Me.GroupBox_Affiche_Personnage.TabIndex = 356
-        Me.GroupBox_Affiche_Personnage.TabStop = False
-        Me.GroupBox_Affiche_Personnage.Text = "Personnage"
-        '
         'Page_Initial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1310,7 +1396,6 @@ Partial Class Page_Initial
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage_Caractéristique.ResumeLayout(False)
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
@@ -1318,29 +1403,31 @@ Partial Class Page_Initial
         Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage_Inventaire.ResumeLayout(False)
-        CType(Me.PictureBox_Dofus_5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox_Dofus_6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox_Dofus_3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox_Dofus_4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox_Cape, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox_Familier, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox_Anneaux_2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox_CaC, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox_Coiffe, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox_Ceinture, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox_Bottes, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox_Dofus_1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox_Dofus_2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox_Anneaux_1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox_Bouclier, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox_Affiche_Personnage.ResumeLayout(False)
         CType(Me.PictureBox_Amulette, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Dofus_5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Bouclier, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Dofus_6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Anneaux_1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Dofus_3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Dofus_2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Dofus_4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Dofus_1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Cape, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Bottes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Familier, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Ceinture, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Anneaux_2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Coiffe, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_CaC, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.TabControl2.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         CType(Me.PictureBox_Inventaire_Affiche_Caractéristique, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage5.ResumeLayout(False)
+        CType(Me.DataGridView_Map, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage13.ResumeLayout(False)
-        Me.GroupBox_Affiche_Personnage.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1361,10 +1448,9 @@ Partial Class Page_Initial
     Friend WithEvents TabPage13 As TabPage
     Friend WithEvents ImageList_Initial As ImageList
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents RedemptionTextBox1 As RedemptionTextBox
+    Friend WithEvents TextBox_Tchat As RedemptionTextBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents RichTextBox_Tchat As RichTextBox
     Friend WithEvents CheckBox_Canal_Groupe_2 As RedemptionCheckBox
     Friend WithEvents CheckBox_Canal_Communs_1 As RedemptionCheckBox
@@ -1373,7 +1459,7 @@ Partial Class Page_Initial
     Friend WithEvents CheckBox_Canal_Recrutement_5 As RedemptionCheckBox
     Friend WithEvents CheckBox_Canal_Guilde_3 As RedemptionCheckBox
     Friend WithEvents CheckBox_Canal_Information_0 As RedemptionCheckBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Button_Tchat_Envoyer As Button
     Friend WithEvents Button_Option_Tchat As Button
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label_Statut As RedemptionLabel
@@ -1438,4 +1524,12 @@ Partial Class Page_Initial
     Friend WithEvents PictureBox_Inventaire_Affiche_Caractéristique As PictureBox
     Friend WithEvents Button_Inventaire_Supprimer As Button
     Friend WithEvents GroupBox_Affiche_Personnage As GroupBox
+    Friend WithEvents DataGridView_Map As DataGridView
+    Friend WithEvents DataGridViewImageColumn2 As DataGridViewImageColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewImageColumn As DataGridViewImageColumn
+    Friend WithEvents ComboBox_Tchat As RedemptionComboBox
 End Class

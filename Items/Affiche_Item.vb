@@ -14,7 +14,7 @@
             .Label_Inventaire_Affiche_Nom.Text = Nom_Item
 
             'J'affiche l'mage de l'item.
-            .PictureBox_Inventaire_Affiche_Caractéristique.Load(Application.StartupPath & "\" & ID_Objet & ".png")
+            .PictureBox_Inventaire_Affiche_Caractéristique.Load(Application.StartupPath & "\Image/" & ID_Objet & ".png")
 
             'Je mets les informations dans la ListView choisi
             Objet_Caractéristiques(ID_Objet, Caractéristique, La_ListView, .ImageList_Caractéristique)

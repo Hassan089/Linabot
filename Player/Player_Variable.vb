@@ -14,7 +14,7 @@
     Dim Tab_Perso As New TabPage
 
     'Connexion
-    Public _En_Connexion, _Connecté As Boolean
+    Public _En_Connexion, _Connecté As New Boolean
 
     'Les Sockets
     Public Socket_Authentification, Socket As All_CallBack
@@ -66,7 +66,11 @@
     'Enclos
     Public _En_Enclos As Boolean
 
+    'Déplacement
+    Public _En_Déplacement As Boolean
 
+    'En Tchat
+    Public _En_Tchat As Boolean
 
 #Region "Initialise"
 

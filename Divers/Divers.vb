@@ -59,10 +59,10 @@ Module Divers
                 If Not Directory.Exists("Erreur") Then Directory.CreateDirectory("Erreur")
 
                 EcritureMessage(Index, "[ERREUR]", "Une erreur c'est produite, veuillez envoyer le fichier créer dans 'Linabot\Fichier\Erreur\" & Name_Erreur & "' à Linaculer le roi des enculés", Color.Red)
-                ' Dim sw As New StreamWriter(Application.StartupPath + "\Erreur/" & .Nom_Personnage & "_" & Name_Erreur & "_" & Mid(Panel.Text.Replace(".", ""), 13) & "_" & .Tab_Personnage.Number_Erreur & "_" & ".txt")
-                '  .Tab_Personnage.Number_Erreur += 1
-                '  sw.Write(Erreur)
-                '  sw.Close()
+                Dim sw As New StreamWriter(Application.StartupPath + "\Erreur/" & ._Nom_Du_Personnage & "_" & Name_Erreur & "_" & Mid(Panel.Text.Replace(".", ""), 13) & "_" & TimeOfDay & "_" & ".txt")
+
+                sw.Write(Erreur)
+                sw.Close()
             Catch ex As Exception
                 MsgBox("Erreur fichier, impossible de créer le fichier erreur : " & Name_Erreur & vbCrLf & ex.ToString)
             End Try
@@ -243,4 +243,30 @@ Module Divers
     End Function
 
 #End Region
+
+
+
+#Region "Vérification"
+
+    'Le bot va vérifier certaines informations avant de valider l'action à faire.
+    Public Function Vérification_Boolean(ByVal _True() As Boolean, ByVal _False() As Boolean) As Boolean
+
+        For i As Integer = 0 To _True.Count - 1
+
+            If _True(i) = False Then Return False
+
+        Next
+
+        For i As Integer = 0 To _False.Count - 1
+
+            If _False(i) Then Return False
+
+        Next
+
+        Return True
+
+    End Function
+
+#End Region
+
 End Module

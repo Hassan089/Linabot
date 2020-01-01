@@ -18,5 +18,58 @@
 
     End Sub
 
+#Region "Tchat"
+
+    Private Sub Canal_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox_Canal_Information_0.MouseDown, CheckBox_Canal_Communs_1.MouseDown, CheckBox_Canal_Groupe_2.MouseDown, CheckBox_Canal_Guilde_3.MouseDown, CheckBox_Canal_Alignement_4.MouseDown, CheckBox_Canal_Recrutement_5.MouseDown, CheckBox_Canal_Commerce_6.MouseDown
+
+        'MouseDown = Evite de changer la case "Checked" en "true" ou "false", tant que le bot n'a pas reçu l'information 
+        'comme quoi l'action de la personne est bien pris en compte par le jeu..
+
+        With Comptes(Index)
+
+            'Je vérifie être connecté avant.
+            If ._Connecté Then
+
+                'J'enregistre les informations selon le canal dans une variable qui sera un tableau.
+                Dim Canaux() As String = {
+                                          "i", 'Information
+                                          "*", 'Défaut
+                                          "#$p", 'Groupe/Equipe/Message privée
+                                          "%", 'Guilde
+                                          "!", 'Alignement
+                                          "?", 'Recrutement
+                                          ":" 'Commerce
+                                         }
+
+                'Je vérifie si la personne active le canal ou non.
+                If sender.checked Then
+
+                    'Puis j'envoie l'information, pour ça j'envoie l'information qui se trouve dans la variable "Canaux".
+                    'Pour avoir le canal, je prend alors le chiffre qui se trouve à la fin du "Name" du canal actuellement sélectionné.
+                    .Socket.Envoyer("cC+" & Canaux(Mid(sender.Name, Len(sender.Name), 1)))
+
+                Else
+
+                    .Socket.Envoyer("cC-" & Canaux(Mid(sender.Name, Len(sender.Name), 1)))
+
+                End If
+
+                'Réduction du code.
+                '.Socket.Envoyer("cC" & If(sender.checked, "+", "-") & Canaux(Mid(sender.Name, Len(sender.Name), 1)))
+
+            End If
+
+        End With
+
+    End Sub 'FINI
+
+    Private Sub Button_Tchat_Envoyer_Click(sender As Object, e As EventArgs) Handles Button_Tchat_Envoyer.Click
+
+        Envoie_Tchat(Index, ComboBox_Tchat.Text, TextBox_Tchat.Text)
+
+    End Sub
+
+#End Region
+
 
 End Class

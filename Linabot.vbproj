@@ -137,10 +137,12 @@
     <Compile Include="Player\ElgSocketEventArgs.vb" />
     <Compile Include="Player\Player.vb" />
     <Compile Include="Player\Player_Variable.vb" />
+    <Compile Include="PNJ\PNJ_Information.vb" />
     <Compile Include="Redemption.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Statut\Statut_Information.vb" />
+    <Compile Include="Tchat\Tchat.vb" />
     <Compile Include="Tchat\Tchat_Information.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -225,6 +227,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Poubelle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-email-send-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

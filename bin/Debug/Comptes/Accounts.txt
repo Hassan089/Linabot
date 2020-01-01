@@ -1,3 +1,0 @@
-Nom de compte|Mot de passe|Nom du personnage|Ayuto|21
-1|2|3|Nabur|60
-54|88|764552|Algathe|10

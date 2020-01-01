@@ -8,7 +8,7 @@
 
                 Case "CONNEXION"
 
-                    If False = ._En_Connexion Like ._Connecté Then
+                    If ._En_Connexion = False AndAlso ._Connecté = False Then
 
                         EcritureMessage(Index, "[Bot]", "Le bot va connecter le compte.", Color.Green)
 
