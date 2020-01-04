@@ -1,5 +1,6 @@
 ﻿Module Tchat
 
+
     Public Sub Envoie_Tchat(ByVal Index As Integer, ByVal Canal As String, ByVal Message As String)
 
         With Comptes(Index)
@@ -96,5 +97,7 @@
         End With
 
     End Sub
+
+
 
 End Module

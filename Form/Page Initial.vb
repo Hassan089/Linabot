@@ -69,6 +69,20 @@
 
     End Sub
 
+    Private Sub PictureBox_Smiley_1_Click(sender As Object, e As EventArgs) Handles PictureBox_Smiley_1.Click, PictureBox_Smiley_2.Click, PictureBox_Smiley_3.Click, PictureBox_Smiley_4.Click, PictureBox_Smiley_5.Click, PictureBox_Smiley_6.Click, PictureBox_Smiley_7.Click, PictureBox_Smiley_8.Click, PictureBox_Smiley_9.Click, PictureBox_Smiley_10.Click, PictureBox_Smiley_11.Click, PictureBox_Smiley_12.Click, PictureBox_Smiley_13.Click, PictureBox_Smiley_14.Click, PictureBox_Smiley_15.Click
+
+        With Comptes(Index)
+
+            .Socket.Envoyer("BS" & Mid(sender.Name, Len(sender.Name)))
+
+        End With
+
+    End Sub
+
+    Private Sub Canal_CheckedChanged(sender As Object, e As MouseEventArgs) Handles CheckBox_Canal_Recrutement_5.MouseDown, CheckBox_Canal_Information_0.MouseDown, CheckBox_Canal_Guilde_3.MouseDown, CheckBox_Canal_Groupe_2.MouseDown, CheckBox_Canal_Communs_1.MouseDown, CheckBox_Canal_Commerce_6.MouseDown, CheckBox_Canal_Alignement_4.MouseDown
+
+    End Sub
+
 #End Region
 
 

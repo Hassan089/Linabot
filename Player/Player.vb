@@ -151,6 +151,23 @@ Public Class Player
 
         With _User
 
+            .PictureBox_Emoticône_2.Visible = False
+            .PictureBox_Emoticône_3.Visible = False
+            .PictureBox_Emoticône_4.Visible = False
+            .PictureBox_Emoticône_5.Visible = False
+            .PictureBox_Emoticône_6.Visible = False
+            .PictureBox_Emoticône_7.Visible = False
+            .PictureBox_Emoticône_8.Visible = False
+            .PictureBox_Emoticône_9.Visible = False
+            .PictureBox_Emoticône_10.Visible = False
+            .PictureBox_Emoticône_11.Visible = False
+            .PictureBox_Emoticône_12.Visible = False
+            .PictureBox_Emoticône_13.Visible = False
+            .PictureBox_Emoticône_14.Visible = False
+            .PictureBox_Emoticône_15.Visible = False
+            .PictureBox_Emoticône_19.Visible = False
+            .PictureBox_Emoticône_21.Visible = False
+
             '.DataGridView_Craft_Recette.Rows.Clear()
             '.DataGridView_Craft_Paiement.Rows.Clear()
             '.DataGridView_Craft_Prime_Si_Réussite.Rows.Clear()
@@ -661,8 +678,12 @@ Public Class Player
                                             'J'obtient le temps d'abonnement restant en milliseconde ainsi que le nombre de personnage sur X serveur.
                                             Dim Separation() As String = Split(e.Message, "|")
 
+                                            Dim _Chiffre As String = Mid(Separation(0), 4, Separation(0).Length)
+
+                                            Dim _Date As Date = DateAdd("s", _Chiffre \ 1000, Date.Now) 's = seconde
+
                                             'J'ajoute à la date actuel le nbr de seconde d'abonnemenbt restant indiqué par dofus. (Vu qu'il s'agit de milliseconde, je divise par 1000 pour l'avoir en seconde.)
-                                            _User.Label_Abonnement_Dofus.Text = "Abonné jusqu'au : " & DateAdd("s", CInt(Mid(Separation(0), 4, Separation(0).Length)) \ 1000, Date.Now) 's = seconde
+                                            _User.Label_Abonnement_Dofus.Text = "Abonné jusqu'au : " & _Date
 
                                             For i = 1 To Separation.Count - 1
 
@@ -860,6 +881,10 @@ Public Class Player
 
                                     'Permet de savoir les canaux ouvert ou fermé sur dofus.
                                     Canaux_Dofus(_Index, e.Message)
+
+                                Case "S" 'cS
+
+                                    Smiley(_Index, e.Message)
 
                                 Case Else
 
@@ -1444,10 +1469,49 @@ Public Class Player
 
                         Case "e"
 
+                            Select Case Mid(e.Message, 2, 1)
+
+                                Case "U" 'eU
+
+                                    Select Case Mid(e.Message, 3, 1)
+
+                                        Case "K" 'eUK
+
+                                            Emoticône(_Index, e.Message)
+
+                                        Case "E" 'eUE
+
+                                            EcritureMessage(_Index, "[Dofus]", "Votre personnage ne connaît pas cette attitude !", Color.Red)
+
+                                        Case Else
+
+                                            Information_Inconnu(_Index, "Unknow", e.Message)
+
+                                    End Select
+
+                                Case "L" 'eL
+
+                                    Emoticône_Actuel(_Index, e.Message)
+
+                                Case "A" 'eA
+
+                                    Emoticône_Obtenue(_Index, e.Message)
+
+                                Case Else
+
+                                    Information_Inconnu(_Index, "Unknow", e.Message)
+
+                            End Select
+
+
+
                         Case "F"
                         Case "f"
 
                         Case "G"
+
+                            If Mid(e.Message, 1, 3) = "GDM" Then Socket.Envoyer("GI")
+
                         Case "g"
 
                         Case "H"

@@ -231,5 +231,101 @@
   <ItemGroup>
     <None Include="Resources\icons8-email-send-48.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\^^%27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blessé.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Confus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enervé.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MDR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pas content.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pleure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sérieux.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Souris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tir la langue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Applaudir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ciseaux.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Colère.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Croiser les bras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Envoyer un baiser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Faire un signe de la main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Feuille.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jouer de la flûte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Montrer du doigt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Montrer sa Peur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Montrer son arme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pierre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S%27allonger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saluer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S%27asseoir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vent de panique.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Champion.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

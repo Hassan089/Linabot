@@ -59,7 +59,7 @@ Module Divers
                 If Not Directory.Exists("Erreur") Then Directory.CreateDirectory("Erreur")
 
                 EcritureMessage(Index, "[ERREUR]", "Une erreur c'est produite, veuillez envoyer le fichier créer dans 'Linabot\Fichier\Erreur\" & Name_Erreur & "' à Linaculer le roi des enculés", Color.Red)
-                Dim sw As New StreamWriter(Application.StartupPath + "\Erreur/" & ._Nom_Du_Personnage & "_" & Name_Erreur & "_" & Mid(Panel.Text.Replace(".", ""), 13) & "_" & TimeOfDay & "_" & ".txt")
+                Dim sw As New StreamWriter(Application.StartupPath + "\Erreur/" & ._Nom_Du_Personnage & "_" & Name_Erreur & "_" & Mid(Panel.Text.Replace(".", ""), 13) & "_" & "_" & ".txt")
 
                 sw.Write(Erreur)
                 sw.Close()

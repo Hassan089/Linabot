@@ -68,42 +68,53 @@ Partial Class Page_Initial
         Dim ListViewItem42 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Résistance feu (% - PVM)", "0", "0", "0", "0", "0"}, 11)
         Dim ListViewItem43 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Résistance feu (Fixe - PVP)", "0", "0", "0", "0", "0"}, 17)
         Dim ListViewItem44 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Résistance feu (% - PVP)", "0", "0", "0", "0", "0"}, 17)
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage_Tchat = New System.Windows.Forms.TabPage()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
-        Me.Label_Abonnement_Dofus = New Linabot.RedemptionLabel()
-        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
-        Me.RedemptionLabel2 = New Linabot.RedemptionLabel()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-        Me.Label_Kamas = New Linabot.RedemptionLabel()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.ProgressBar_Vitalité = New Linabot.RedemptionProgressBar()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.ProgressBar_Energie = New Linabot.RedemptionProgressBar()
-        Me.ProgressBar_Pods = New Linabot.RedemptionProgressBar()
-        Me.ProgressBar_Expérience = New Linabot.RedemptionProgressBar()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.Label_Niveau = New Linabot.RedemptionLabel()
-        Me.Label_Statut = New Linabot.RedemptionLabel()
-        Me.Toggle_Connexion = New Linabot.RedemptionToggle()
         Me.Button_Option_Tchat = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox_Tchat = New Linabot.RedemptionComboBox()
+        Me.PictureBox_Emoticône_21 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Smiley_15 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Smiley_14 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Emoticône_9 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Emoticône_15 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Smiley_9 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Emoticône_19 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Smiley_13 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Smiley_8 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Emoticône_13 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Emoticône_14 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Emoticône_12 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Smiley_12 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Emoticône_11 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Emoticône_5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Emoticône_3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Smiley_7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Emoticône_10 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Emoticône_8 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Emoticône_6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Smiley_11 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Emoticône_7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Smiley_6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Smiley_10 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Smiley_5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Smiley_4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Smiley_3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Emoticône_4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Smiley_2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Smiley_1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Emoticône_1 = New System.Windows.Forms.PictureBox()
         Me.Button_Tchat_Envoyer = New System.Windows.Forms.Button()
-        Me.CheckBox_Canal_Groupe_2 = New Linabot.RedemptionCheckBox()
-        Me.CheckBox_Canal_Communs_1 = New Linabot.RedemptionCheckBox()
-        Me.CheckBox_Canal_Commerce_6 = New Linabot.RedemptionCheckBox()
-        Me.CheckBox_Canal_Alignement_4 = New Linabot.RedemptionCheckBox()
-        Me.CheckBox_Canal_Recrutement_5 = New Linabot.RedemptionCheckBox()
-        Me.CheckBox_Canal_Guilde_3 = New Linabot.RedemptionCheckBox()
-        Me.CheckBox_Canal_Information_0 = New Linabot.RedemptionCheckBox()
-        Me.TextBox_Tchat = New Linabot.RedemptionTextBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_Emoticône_2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.RichTextBox_Tchat = New System.Windows.Forms.RichTextBox()
         Me.TabPage_Caractéristique = New System.Windows.Forms.TabPage()
@@ -117,11 +128,9 @@ Partial Class Page_Initial
         Me.Caractéristique_Boost = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Caractéristique_Total = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ImageList_Caractéristique = New System.Windows.Forms.ImageList(Me.components)
-        Me.Label_Caractéristique_Capital = New Linabot.RedemptionLabel()
         Me.TabPage_Sort = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
-        Me.Label_Sort_Capital = New Linabot.RedemptionLabel()
         Me.TabPage_Inventaire = New System.Windows.Forms.TabPage()
         Me.GroupBox_Affiche_Personnage = New System.Windows.Forms.GroupBox()
         Me.PictureBox_Amulette = New System.Windows.Forms.PictureBox()
@@ -146,8 +155,6 @@ Partial Class Page_Initial
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.ListView_Inventaire_Affiche_Caractéristique = New System.Windows.Forms.ListView()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Label_Inventaire_Affiche_Level = New Linabot.RedemptionLabel()
-        Me.Label_Inventaire_Affiche_Nom = New Linabot.RedemptionLabel()
         Me.PictureBox_Inventaire_Affiche_Caractéristique = New System.Windows.Forms.PictureBox()
         Me.FlowLayoutPanel_Inventaire = New System.Windows.Forms.FlowLayoutPanel()
         Me.Button_Inventaire_Supprimer = New System.Windows.Forms.Button()
@@ -170,11 +177,32 @@ Partial Class Page_Initial
         Me.RichTextBox_Socket = New System.Windows.Forms.RichTextBox()
         Me.ImageList_Initial = New System.Windows.Forms.ImageList(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Label_Abonnement_Dofus = New Linabot.RedemptionLabel()
+        Me.Label_Kamas = New Linabot.RedemptionLabel()
+        Me.ProgressBar_Vitalité = New Linabot.RedemptionProgressBar()
+        Me.ProgressBar_Energie = New Linabot.RedemptionProgressBar()
+        Me.ProgressBar_Pods = New Linabot.RedemptionProgressBar()
+        Me.ProgressBar_Expérience = New Linabot.RedemptionProgressBar()
+        Me.Label_Niveau = New Linabot.RedemptionLabel()
+        Me.Label_Statut = New Linabot.RedemptionLabel()
+        Me.Toggle_Connexion = New Linabot.RedemptionToggle()
+        Me.ComboBox_Tchat = New Linabot.RedemptionComboBox()
+        Me.CheckBox_Canal_Groupe_2 = New Linabot.RedemptionCheckBox()
+        Me.CheckBox_Canal_Communs_1 = New Linabot.RedemptionCheckBox()
+        Me.CheckBox_Canal_Commerce_6 = New Linabot.RedemptionCheckBox()
+        Me.CheckBox_Canal_Alignement_4 = New Linabot.RedemptionCheckBox()
+        Me.CheckBox_Canal_Recrutement_5 = New Linabot.RedemptionCheckBox()
+        Me.CheckBox_Canal_Guilde_3 = New Linabot.RedemptionCheckBox()
+        Me.CheckBox_Canal_Information_0 = New Linabot.RedemptionCheckBox()
+        Me.TextBox_Tchat = New Linabot.RedemptionTextBox()
+        Me.Label_Caractéristique_Capital = New Linabot.RedemptionLabel()
+        Me.Label_Sort_Capital = New Linabot.RedemptionLabel()
+        Me.Label_Inventaire_Affiche_Level = New Linabot.RedemptionLabel()
+        Me.Label_Inventaire_Affiche_Nom = New Linabot.RedemptionLabel()
         Me.TabControl1.SuspendLayout()
         Me.TabPage_Tchat.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -182,7 +210,38 @@ Partial Class Page_Initial
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Emoticône_21, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Smiley_15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Smiley_14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Emoticône_9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Emoticône_15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Smiley_9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Emoticône_19, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Smiley_13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Smiley_8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Emoticône_13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Emoticône_14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Emoticône_12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Smiley_12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Emoticône_11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Emoticône_5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Emoticône_3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Smiley_7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Emoticône_10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Emoticône_8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Emoticône_6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Smiley_11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Emoticône_7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Smiley_6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Smiley_10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Smiley_5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Smiley_4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Smiley_3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Emoticône_4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Smiley_2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Smiley_1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Emoticône_1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_Emoticône_2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage_Caractéristique.SuspendLayout()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -258,8 +317,6 @@ Partial Class Page_Initial
         '
         Me.GroupBox2.Controls.Add(Me.PictureBox12)
         Me.GroupBox2.Controls.Add(Me.Label_Abonnement_Dofus)
-        Me.GroupBox2.Controls.Add(Me.PictureBox11)
-        Me.GroupBox2.Controls.Add(Me.RedemptionLabel2)
         Me.GroupBox2.Controls.Add(Me.PictureBox10)
         Me.GroupBox2.Controls.Add(Me.Label_Kamas)
         Me.GroupBox2.Controls.Add(Me.PictureBox9)
@@ -292,38 +349,6 @@ Partial Class Page_Initial
         Me.PictureBox12.TabIndex = 23
         Me.PictureBox12.TabStop = False
         '
-        'Label_Abonnement_Dofus
-        '
-        Me.Label_Abonnement_Dofus.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label_Abonnement_Dofus.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label_Abonnement_Dofus.ForeColor = System.Drawing.Color.White
-        Me.Label_Abonnement_Dofus.Location = New System.Drawing.Point(72, 130)
-        Me.Label_Abonnement_Dofus.Name = "Label_Abonnement_Dofus"
-        Me.Label_Abonnement_Dofus.Size = New System.Drawing.Size(246, 31)
-        Me.Label_Abonnement_Dofus.TabIndex = 22
-        Me.Label_Abonnement_Dofus.Text = "Abonné jusqu'au : "
-        '
-        'PictureBox11
-        '
-        Me.PictureBox11.Image = Global.Linabot.My.Resources.Resources.Muscles_icon
-        Me.PictureBox11.Location = New System.Drawing.Point(6, 167)
-        Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(60, 23)
-        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox11.TabIndex = 21
-        Me.PictureBox11.TabStop = False
-        '
-        'RedemptionLabel2
-        '
-        Me.RedemptionLabel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.RedemptionLabel2.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.RedemptionLabel2.ForeColor = System.Drawing.Color.White
-        Me.RedemptionLabel2.Location = New System.Drawing.Point(72, 167)
-        Me.RedemptionLabel2.Name = "RedemptionLabel2"
-        Me.RedemptionLabel2.Size = New System.Drawing.Size(246, 23)
-        Me.RedemptionLabel2.TabIndex = 20
-        Me.RedemptionLabel2.Text = "Niveaux : 0"
-        '
         'PictureBox10
         '
         Me.PictureBox10.Image = Global.Linabot.My.Resources.Resources._652
@@ -333,17 +358,6 @@ Partial Class Page_Initial
         Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox10.TabIndex = 19
         Me.PictureBox10.TabStop = False
-        '
-        'Label_Kamas
-        '
-        Me.Label_Kamas.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label_Kamas.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label_Kamas.ForeColor = System.Drawing.Color.White
-        Me.Label_Kamas.Location = New System.Drawing.Point(72, 93)
-        Me.Label_Kamas.Name = "Label_Kamas"
-        Me.Label_Kamas.Size = New System.Drawing.Size(246, 31)
-        Me.Label_Kamas.TabIndex = 18
-        Me.Label_Kamas.Text = "Kamas : 0"
         '
         'PictureBox9
         '
@@ -375,17 +389,6 @@ Partial Class Page_Initial
         Me.PictureBox7.TabIndex = 15
         Me.PictureBox7.TabStop = False
         '
-        'ProgressBar_Vitalité
-        '
-        Me.ProgressBar_Vitalité.BackColor = System.Drawing.Color.Transparent
-        Me.ProgressBar_Vitalité.Location = New System.Drawing.Point(369, 19)
-        Me.ProgressBar_Vitalité.Maximum = 100
-        Me.ProgressBar_Vitalité.Name = "ProgressBar_Vitalité"
-        Me.ProgressBar_Vitalité.Size = New System.Drawing.Size(255, 31)
-        Me.ProgressBar_Vitalité.TabIndex = 10
-        Me.ProgressBar_Vitalité.Text = "RedemptionProgressBar1"
-        Me.ProgressBar_Vitalité.Value = 0
-        '
         'PictureBox6
         '
         Me.PictureBox6.Image = Global.Linabot.My.Resources.Resources._7__2_
@@ -396,39 +399,6 @@ Partial Class Page_Initial
         Me.PictureBox6.TabIndex = 14
         Me.PictureBox6.TabStop = False
         '
-        'ProgressBar_Energie
-        '
-        Me.ProgressBar_Energie.BackColor = System.Drawing.Color.Transparent
-        Me.ProgressBar_Energie.Location = New System.Drawing.Point(369, 130)
-        Me.ProgressBar_Energie.Maximum = 100
-        Me.ProgressBar_Energie.Name = "ProgressBar_Energie"
-        Me.ProgressBar_Energie.Size = New System.Drawing.Size(255, 31)
-        Me.ProgressBar_Energie.TabIndex = 13
-        Me.ProgressBar_Energie.Text = "RedemptionProgressBar4"
-        Me.ProgressBar_Energie.Value = 0
-        '
-        'ProgressBar_Pods
-        '
-        Me.ProgressBar_Pods.BackColor = System.Drawing.Color.Transparent
-        Me.ProgressBar_Pods.Location = New System.Drawing.Point(369, 93)
-        Me.ProgressBar_Pods.Maximum = 100
-        Me.ProgressBar_Pods.Name = "ProgressBar_Pods"
-        Me.ProgressBar_Pods.Size = New System.Drawing.Size(255, 31)
-        Me.ProgressBar_Pods.TabIndex = 12
-        Me.ProgressBar_Pods.Text = "RedemptionProgressBar3"
-        Me.ProgressBar_Pods.Value = 0
-        '
-        'ProgressBar_Expérience
-        '
-        Me.ProgressBar_Expérience.BackColor = System.Drawing.Color.Transparent
-        Me.ProgressBar_Expérience.Location = New System.Drawing.Point(369, 56)
-        Me.ProgressBar_Expérience.Maximum = 100
-        Me.ProgressBar_Expérience.Name = "ProgressBar_Expérience"
-        Me.ProgressBar_Expérience.Size = New System.Drawing.Size(255, 31)
-        Me.ProgressBar_Expérience.TabIndex = 11
-        Me.ProgressBar_Expérience.Text = "RedemptionProgressBar2"
-        Me.ProgressBar_Expérience.Value = 0
-        '
         'PictureBox5
         '
         Me.PictureBox5.Image = Global.Linabot.My.Resources.Resources.Muscles_icon
@@ -438,39 +408,6 @@ Partial Class Page_Initial
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox5.TabIndex = 9
         Me.PictureBox5.TabStop = False
-        '
-        'Label_Niveau
-        '
-        Me.Label_Niveau.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label_Niveau.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label_Niveau.ForeColor = System.Drawing.Color.White
-        Me.Label_Niveau.Location = New System.Drawing.Point(72, 56)
-        Me.Label_Niveau.Name = "Label_Niveau"
-        Me.Label_Niveau.Size = New System.Drawing.Size(246, 31)
-        Me.Label_Niveau.TabIndex = 8
-        Me.Label_Niveau.Text = "Niveaux : 0"
-        '
-        'Label_Statut
-        '
-        Me.Label_Statut.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label_Statut.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label_Statut.ForeColor = System.Drawing.Color.Red
-        Me.Label_Statut.Location = New System.Drawing.Point(72, 19)
-        Me.Label_Statut.Name = "Label_Statut"
-        Me.Label_Statut.Size = New System.Drawing.Size(246, 31)
-        Me.Label_Statut.TabIndex = 7
-        Me.Label_Statut.Text = "Déconnecté"
-        '
-        'Toggle_Connexion
-        '
-        Me.Toggle_Connexion.BackColor = System.Drawing.Color.Transparent
-        Me.Toggle_Connexion.Checked = False
-        Me.Toggle_Connexion.ForeColor = System.Drawing.Color.White
-        Me.Toggle_Connexion.Location = New System.Drawing.Point(6, 21)
-        Me.Toggle_Connexion.Name = "Toggle_Connexion"
-        Me.Toggle_Connexion.Size = New System.Drawing.Size(60, 26)
-        Me.Toggle_Connexion.TabIndex = 6
-        Me.Toggle_Connexion.Text = "RedemptionToggle1"
         '
         'Button_Option_Tchat
         '
@@ -487,8 +424,40 @@ Partial Class Page_Initial
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Emoticône_21)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Smiley_15)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Smiley_14)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Emoticône_9)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Emoticône_15)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Smiley_9)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Emoticône_19)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Smiley_13)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Smiley_8)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Emoticône_13)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Emoticône_14)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Emoticône_12)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Smiley_12)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Emoticône_11)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Emoticône_5)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Emoticône_3)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Smiley_7)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Emoticône_10)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Emoticône_8)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Emoticône_6)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Smiley_11)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Emoticône_7)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Smiley_6)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Smiley_10)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Smiley_5)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Smiley_4)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Smiley_3)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Emoticône_4)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Smiley_2)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Smiley_1)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Emoticône_1)
         Me.GroupBox1.Controls.Add(Me.ComboBox_Tchat)
         Me.GroupBox1.Controls.Add(Me.Button_Tchat_Envoyer)
+        Me.GroupBox1.Controls.Add(Me.PictureBox_Emoticône_2)
         Me.GroupBox1.Controls.Add(Me.CheckBox_Canal_Groupe_2)
         Me.GroupBox1.Controls.Add(Me.CheckBox_Canal_Communs_1)
         Me.GroupBox1.Controls.Add(Me.CheckBox_Canal_Commerce_6)
@@ -497,7 +466,6 @@ Partial Class Page_Initial
         Me.GroupBox1.Controls.Add(Me.CheckBox_Canal_Guilde_3)
         Me.GroupBox1.Controls.Add(Me.CheckBox_Canal_Information_0)
         Me.GroupBox1.Controls.Add(Me.TextBox_Tchat)
-        Me.GroupBox1.Controls.Add(Me.PictureBox3)
         Me.GroupBox1.Controls.Add(Me.PictureBox2)
         Me.GroupBox1.Controls.Add(Me.RichTextBox_Tchat)
         Me.GroupBox1.Location = New System.Drawing.Point(6, 6)
@@ -506,20 +474,346 @@ Partial Class Page_Initial
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         '
-        'ComboBox_Tchat
+        'PictureBox_Emoticône_21
         '
-        Me.ComboBox_Tchat.BackColor = System.Drawing.Color.Transparent
-        Me.ComboBox_Tchat.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.ComboBox_Tchat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_Tchat.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.ComboBox_Tchat.ForeColor = System.Drawing.Color.FromArgb(CType(CType(182, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(171, Byte), Integer))
-        Me.ComboBox_Tchat.FormattingEnabled = True
-        Me.ComboBox_Tchat.ItemHeight = 18
-        Me.ComboBox_Tchat.Items.AddRange(New Object() {"Défaut", "Equipe", "Message Privée", "Groupe", "Guilde", "Alignement", "Recrutement", "Commerce"})
-        Me.ComboBox_Tchat.Location = New System.Drawing.Point(6, 586)
-        Me.ComboBox_Tchat.Name = "ComboBox_Tchat"
-        Me.ComboBox_Tchat.Size = New System.Drawing.Size(151, 24)
-        Me.ComboBox_Tchat.TabIndex = 12
+        Me.PictureBox_Emoticône_21.Image = Global.Linabot.My.Resources.Resources.Champion
+        Me.PictureBox_Emoticône_21.Location = New System.Drawing.Point(581, 514)
+        Me.PictureBox_Emoticône_21.Name = "PictureBox_Emoticône_21"
+        Me.PictureBox_Emoticône_21.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Emoticône_21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Emoticône_21.TabIndex = 39
+        Me.PictureBox_Emoticône_21.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox_Emoticône_21, "Attitude du champion (/champ)")
+        Me.PictureBox_Emoticône_21.Visible = False
+        '
+        'PictureBox_Smiley_15
+        '
+        Me.PictureBox_Smiley_15.Image = Global.Linabot.My.Resources.Resources.Souris
+        Me.PictureBox_Smiley_15.Location = New System.Drawing.Point(510, 478)
+        Me.PictureBox_Smiley_15.Name = "PictureBox_Smiley_15"
+        Me.PictureBox_Smiley_15.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Smiley_15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Smiley_15.TabIndex = 20
+        Me.PictureBox_Smiley_15.TabStop = False
+        '
+        'PictureBox_Smiley_14
+        '
+        Me.PictureBox_Smiley_14.Image = Global.Linabot.My.Resources.Resources.XD
+        Me.PictureBox_Smiley_14.Location = New System.Drawing.Point(474, 478)
+        Me.PictureBox_Smiley_14.Name = "PictureBox_Smiley_14"
+        Me.PictureBox_Smiley_14.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Smiley_14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Smiley_14.TabIndex = 19
+        Me.PictureBox_Smiley_14.TabStop = False
+        '
+        'PictureBox_Emoticône_9
+        '
+        Me.PictureBox_Emoticône_9.Image = Global.Linabot.My.Resources.Resources.saluer
+        Me.PictureBox_Emoticône_9.Location = New System.Drawing.Point(294, 514)
+        Me.PictureBox_Emoticône_9.Name = "PictureBox_Emoticône_9"
+        Me.PictureBox_Emoticône_9.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Emoticône_9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Emoticône_9.TabIndex = 38
+        Me.PictureBox_Emoticône_9.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox_Emoticône_9, "Saluer (/hi)")
+        Me.PictureBox_Emoticône_9.Visible = False
+        '
+        'PictureBox_Emoticône_15
+        '
+        Me.PictureBox_Emoticône_15.Image = Global.Linabot.My.Resources.Resources.Montrer_du_doigt
+        Me.PictureBox_Emoticône_15.Location = New System.Drawing.Point(510, 514)
+        Me.PictureBox_Emoticône_15.Name = "PictureBox_Emoticône_15"
+        Me.PictureBox_Emoticône_15.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Emoticône_15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Emoticône_15.TabIndex = 32
+        Me.PictureBox_Emoticône_15.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox_Emoticône_15, "Montrer du doigt (/point)")
+        Me.PictureBox_Emoticône_15.Visible = False
+        '
+        'PictureBox_Smiley_9
+        '
+        Me.PictureBox_Smiley_9.Image = Global.Linabot.My.Resources.Resources.Mort
+        Me.PictureBox_Smiley_9.Location = New System.Drawing.Point(294, 478)
+        Me.PictureBox_Smiley_9.Name = "PictureBox_Smiley_9"
+        Me.PictureBox_Smiley_9.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Smiley_9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Smiley_9.TabIndex = 14
+        Me.PictureBox_Smiley_9.TabStop = False
+        '
+        'PictureBox_Emoticône_19
+        '
+        Me.PictureBox_Emoticône_19.Image = Global.Linabot.My.Resources.Resources.S_allonger
+        Me.PictureBox_Emoticône_19.Location = New System.Drawing.Point(546, 514)
+        Me.PictureBox_Emoticône_19.Name = "PictureBox_Emoticône_19"
+        Me.PictureBox_Emoticône_19.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Emoticône_19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Emoticône_19.TabIndex = 25
+        Me.PictureBox_Emoticône_19.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox_Emoticône_19, "S'allonger (/rest)")
+        Me.PictureBox_Emoticône_19.Visible = False
+        '
+        'PictureBox_Smiley_13
+        '
+        Me.PictureBox_Smiley_13.Image = Global.Linabot.My.Resources.Resources.Sérieux
+        Me.PictureBox_Smiley_13.Location = New System.Drawing.Point(438, 478)
+        Me.PictureBox_Smiley_13.Name = "PictureBox_Smiley_13"
+        Me.PictureBox_Smiley_13.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Smiley_13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Smiley_13.TabIndex = 20
+        Me.PictureBox_Smiley_13.TabStop = False
+        '
+        'PictureBox_Smiley_8
+        '
+        Me.PictureBox_Smiley_8.Image = Global.Linabot.My.Resources.Resources.Confus
+        Me.PictureBox_Smiley_8.Location = New System.Drawing.Point(258, 478)
+        Me.PictureBox_Smiley_8.Name = "PictureBox_Smiley_8"
+        Me.PictureBox_Smiley_8.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Smiley_8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Smiley_8.TabIndex = 15
+        Me.PictureBox_Smiley_8.TabStop = False
+        '
+        'PictureBox_Emoticône_13
+        '
+        Me.PictureBox_Emoticône_13.Image = Global.Linabot.My.Resources.Resources.Ciseaux
+        Me.PictureBox_Emoticône_13.Location = New System.Drawing.Point(438, 514)
+        Me.PictureBox_Emoticône_13.Name = "PictureBox_Emoticône_13"
+        Me.PictureBox_Emoticône_13.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Emoticône_13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Emoticône_13.TabIndex = 34
+        Me.PictureBox_Emoticône_13.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox_Emoticône_13, "Ciseaux (/pfc3)")
+        Me.PictureBox_Emoticône_13.Visible = False
+        '
+        'PictureBox_Emoticône_14
+        '
+        Me.PictureBox_Emoticône_14.Image = Global.Linabot.My.Resources.Resources.Croiser_les_bras
+        Me.PictureBox_Emoticône_14.Location = New System.Drawing.Point(474, 514)
+        Me.PictureBox_Emoticône_14.Name = "PictureBox_Emoticône_14"
+        Me.PictureBox_Emoticône_14.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Emoticône_14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Emoticône_14.TabIndex = 26
+        Me.PictureBox_Emoticône_14.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox_Emoticône_14, "Croiser les bras (/cross)")
+        Me.PictureBox_Emoticône_14.Visible = False
+        '
+        'PictureBox_Emoticône_12
+        '
+        Me.PictureBox_Emoticône_12.Image = Global.Linabot.My.Resources.Resources.Feuille
+        Me.PictureBox_Emoticône_12.Location = New System.Drawing.Point(402, 514)
+        Me.PictureBox_Emoticône_12.Name = "PictureBox_Emoticône_12"
+        Me.PictureBox_Emoticône_12.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Emoticône_12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Emoticône_12.TabIndex = 36
+        Me.PictureBox_Emoticône_12.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox_Emoticône_12, "Feuille (/pfc2)")
+        Me.PictureBox_Emoticône_12.Visible = False
+        '
+        'PictureBox_Smiley_12
+        '
+        Me.PictureBox_Smiley_12.Image = Global.Linabot.My.Resources.Resources.Pleure
+        Me.PictureBox_Smiley_12.Location = New System.Drawing.Point(402, 478)
+        Me.PictureBox_Smiley_12.Name = "PictureBox_Smiley_12"
+        Me.PictureBox_Smiley_12.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Smiley_12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Smiley_12.TabIndex = 21
+        Me.PictureBox_Smiley_12.TabStop = False
+        '
+        'PictureBox_Emoticône_11
+        '
+        Me.PictureBox_Emoticône_11.Image = Global.Linabot.My.Resources.Resources.Pierre
+        Me.PictureBox_Emoticône_11.Location = New System.Drawing.Point(366, 514)
+        Me.PictureBox_Emoticône_11.Name = "PictureBox_Emoticône_11"
+        Me.PictureBox_Emoticône_11.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Emoticône_11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Emoticône_11.TabIndex = 36
+        Me.PictureBox_Emoticône_11.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox_Emoticône_11, "Pierre (/pfc1)")
+        Me.PictureBox_Emoticône_11.Visible = False
+        '
+        'PictureBox_Emoticône_5
+        '
+        Me.PictureBox_Emoticône_5.Image = Global.Linabot.My.Resources.Resources.Montrer_sa_Peur
+        Me.PictureBox_Emoticône_5.Location = New System.Drawing.Point(150, 514)
+        Me.PictureBox_Emoticône_5.Name = "PictureBox_Emoticône_5"
+        Me.PictureBox_Emoticône_5.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Emoticône_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Emoticône_5.TabIndex = 30
+        Me.PictureBox_Emoticône_5.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox_Emoticône_5, "Montrer sa peur (/fear)")
+        Me.PictureBox_Emoticône_5.Visible = False
+        '
+        'PictureBox_Emoticône_3
+        '
+        Me.PictureBox_Emoticône_3.Image = Global.Linabot.My.Resources.Resources.Applaudir
+        Me.PictureBox_Emoticône_3.Location = New System.Drawing.Point(78, 514)
+        Me.PictureBox_Emoticône_3.Name = "PictureBox_Emoticône_3"
+        Me.PictureBox_Emoticône_3.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Emoticône_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Emoticône_3.TabIndex = 24
+        Me.PictureBox_Emoticône_3.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox_Emoticône_3, "Applaudir (/appl)")
+        Me.PictureBox_Emoticône_3.Visible = False
+        '
+        'PictureBox_Smiley_7
+        '
+        Me.PictureBox_Smiley_7.Image = Global.Linabot.My.Resources.Resources.___
+        Me.PictureBox_Smiley_7.Location = New System.Drawing.Point(222, 478)
+        Me.PictureBox_Smiley_7.Name = "PictureBox_Smiley_7"
+        Me.PictureBox_Smiley_7.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Smiley_7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Smiley_7.TabIndex = 16
+        Me.PictureBox_Smiley_7.TabStop = False
+        '
+        'PictureBox_Emoticône_10
+        '
+        Me.PictureBox_Emoticône_10.Image = Global.Linabot.My.Resources.Resources.Envoyer_un_baiser
+        Me.PictureBox_Emoticône_10.Location = New System.Drawing.Point(330, 514)
+        Me.PictureBox_Emoticône_10.Name = "PictureBox_Emoticône_10"
+        Me.PictureBox_Emoticône_10.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Emoticône_10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Emoticône_10.TabIndex = 29
+        Me.PictureBox_Emoticône_10.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox_Emoticône_10, "Envoyer un baiser (/kiss)")
+        Me.PictureBox_Emoticône_10.Visible = False
+        '
+        'PictureBox_Emoticône_8
+        '
+        Me.PictureBox_Emoticône_8.Image = Global.Linabot.My.Resources.Resources.Vent_de_panique
+        Me.PictureBox_Emoticône_8.Location = New System.Drawing.Point(258, 514)
+        Me.PictureBox_Emoticône_8.Name = "PictureBox_Emoticône_8"
+        Me.PictureBox_Emoticône_8.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Emoticône_8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Emoticône_8.TabIndex = 31
+        Me.PictureBox_Emoticône_8.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox_Emoticône_8, "Vent de panique (/oups)")
+        Me.PictureBox_Emoticône_8.Visible = False
+        '
+        'PictureBox_Emoticône_6
+        '
+        Me.PictureBox_Emoticône_6.Image = Global.Linabot.My.Resources.Resources.Montrer_son_arme
+        Me.PictureBox_Emoticône_6.Location = New System.Drawing.Point(186, 514)
+        Me.PictureBox_Emoticône_6.Name = "PictureBox_Emoticône_6"
+        Me.PictureBox_Emoticône_6.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Emoticône_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Emoticône_6.TabIndex = 33
+        Me.PictureBox_Emoticône_6.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox_Emoticône_6, "Montrer son arme (/weap)")
+        Me.PictureBox_Emoticône_6.Visible = False
+        '
+        'PictureBox_Smiley_11
+        '
+        Me.PictureBox_Smiley_11.Image = Global.Linabot.My.Resources.Resources.Aime
+        Me.PictureBox_Smiley_11.Location = New System.Drawing.Point(366, 478)
+        Me.PictureBox_Smiley_11.Name = "PictureBox_Smiley_11"
+        Me.PictureBox_Smiley_11.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Smiley_11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Smiley_11.TabIndex = 22
+        Me.PictureBox_Smiley_11.TabStop = False
+        '
+        'PictureBox_Emoticône_7
+        '
+        Me.PictureBox_Emoticône_7.Image = Global.Linabot.My.Resources.Resources.Jouer_de_la_flûte
+        Me.PictureBox_Emoticône_7.Location = New System.Drawing.Point(222, 514)
+        Me.PictureBox_Emoticône_7.Name = "PictureBox_Emoticône_7"
+        Me.PictureBox_Emoticône_7.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Emoticône_7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Emoticône_7.TabIndex = 28
+        Me.PictureBox_Emoticône_7.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox_Emoticône_7, "Jouer de la flûte (/pipo)")
+        Me.PictureBox_Emoticône_7.Visible = False
+        '
+        'PictureBox_Smiley_6
+        '
+        Me.PictureBox_Smiley_6.Image = Global.Linabot.My.Resources.Resources.MDR
+        Me.PictureBox_Smiley_6.Location = New System.Drawing.Point(186, 478)
+        Me.PictureBox_Smiley_6.Name = "PictureBox_Smiley_6"
+        Me.PictureBox_Smiley_6.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Smiley_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Smiley_6.TabIndex = 17
+        Me.PictureBox_Smiley_6.TabStop = False
+        '
+        'PictureBox_Smiley_10
+        '
+        Me.PictureBox_Smiley_10.Image = Global.Linabot.My.Resources.Resources.Oo
+        Me.PictureBox_Smiley_10.Location = New System.Drawing.Point(330, 478)
+        Me.PictureBox_Smiley_10.Name = "PictureBox_Smiley_10"
+        Me.PictureBox_Smiley_10.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Smiley_10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Smiley_10.TabIndex = 23
+        Me.PictureBox_Smiley_10.TabStop = False
+        '
+        'PictureBox_Smiley_5
+        '
+        Me.PictureBox_Smiley_5.Image = Global.Linabot.My.Resources.Resources.Enervé
+        Me.PictureBox_Smiley_5.Location = New System.Drawing.Point(150, 478)
+        Me.PictureBox_Smiley_5.Name = "PictureBox_Smiley_5"
+        Me.PictureBox_Smiley_5.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Smiley_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Smiley_5.TabIndex = 18
+        Me.PictureBox_Smiley_5.TabStop = False
+        '
+        'PictureBox_Smiley_4
+        '
+        Me.PictureBox_Smiley_4.Image = Global.Linabot.My.Resources.Resources.Tir_la_langue
+        Me.PictureBox_Smiley_4.Location = New System.Drawing.Point(114, 478)
+        Me.PictureBox_Smiley_4.Name = "PictureBox_Smiley_4"
+        Me.PictureBox_Smiley_4.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Smiley_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Smiley_4.TabIndex = 19
+        Me.PictureBox_Smiley_4.TabStop = False
+        '
+        'PictureBox_Smiley_3
+        '
+        Me.PictureBox_Smiley_3.Image = Global.Linabot.My.Resources.Resources.Blessé
+        Me.PictureBox_Smiley_3.Location = New System.Drawing.Point(78, 478)
+        Me.PictureBox_Smiley_3.Name = "PictureBox_Smiley_3"
+        Me.PictureBox_Smiley_3.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Smiley_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Smiley_3.TabIndex = 20
+        Me.PictureBox_Smiley_3.TabStop = False
+        '
+        'PictureBox_Emoticône_4
+        '
+        Me.PictureBox_Emoticône_4.Image = Global.Linabot.My.Resources.Resources.Colère
+        Me.PictureBox_Emoticône_4.Location = New System.Drawing.Point(114, 514)
+        Me.PictureBox_Emoticône_4.Name = "PictureBox_Emoticône_4"
+        Me.PictureBox_Emoticône_4.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Emoticône_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Emoticône_4.TabIndex = 27
+        Me.PictureBox_Emoticône_4.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox_Emoticône_4, "Colère (/mad)")
+        Me.PictureBox_Emoticône_4.Visible = False
+        '
+        'PictureBox_Smiley_2
+        '
+        Me.PictureBox_Smiley_2.Image = Global.Linabot.My.Resources.Resources.Pas_content
+        Me.PictureBox_Smiley_2.Location = New System.Drawing.Point(42, 478)
+        Me.PictureBox_Smiley_2.Name = "PictureBox_Smiley_2"
+        Me.PictureBox_Smiley_2.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Smiley_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Smiley_2.TabIndex = 21
+        Me.PictureBox_Smiley_2.TabStop = False
+        '
+        'PictureBox_Smiley_1
+        '
+        Me.PictureBox_Smiley_1.Image = Global.Linabot.My.Resources.Resources.Content
+        Me.PictureBox_Smiley_1.Location = New System.Drawing.Point(6, 478)
+        Me.PictureBox_Smiley_1.Name = "PictureBox_Smiley_1"
+        Me.PictureBox_Smiley_1.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Smiley_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Smiley_1.TabIndex = 13
+        Me.PictureBox_Smiley_1.TabStop = False
+        '
+        'PictureBox_Emoticône_1
+        '
+        Me.PictureBox_Emoticône_1.Image = Global.Linabot.My.Resources.Resources.S_asseoir
+        Me.PictureBox_Emoticône_1.Location = New System.Drawing.Point(6, 514)
+        Me.PictureBox_Emoticône_1.Name = "PictureBox_Emoticône_1"
+        Me.PictureBox_Emoticône_1.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Emoticône_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Emoticône_1.TabIndex = 35
+        Me.PictureBox_Emoticône_1.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox_Emoticône_1, "S'asseoir (/sit)")
         '
         'Button_Tchat_Envoyer
         '
@@ -532,113 +826,24 @@ Partial Class Page_Initial
         Me.Button_Tchat_Envoyer.TabIndex = 5
         Me.Button_Tchat_Envoyer.UseVisualStyleBackColor = True
         '
-        'CheckBox_Canal_Groupe_2
+        'PictureBox_Emoticône_2
         '
-        Me.CheckBox_Canal_Groupe_2.BackColor = System.Drawing.Color.Aqua
-        Me.CheckBox_Canal_Groupe_2.Checked = False
-        Me.CheckBox_Canal_Groupe_2.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox_Canal_Groupe_2.ForeColor = System.Drawing.Color.White
-        Me.CheckBox_Canal_Groupe_2.Location = New System.Drawing.Point(519, 557)
-        Me.CheckBox_Canal_Groupe_2.Name = "CheckBox_Canal_Groupe_2"
-        Me.CheckBox_Canal_Groupe_2.Size = New System.Drawing.Size(25, 19)
-        Me.CheckBox_Canal_Groupe_2.TabIndex = 11
-        '
-        'CheckBox_Canal_Communs_1
-        '
-        Me.CheckBox_Canal_Communs_1.BackColor = System.Drawing.Color.White
-        Me.CheckBox_Canal_Communs_1.Checked = False
-        Me.CheckBox_Canal_Communs_1.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox_Canal_Communs_1.ForeColor = System.Drawing.Color.White
-        Me.CheckBox_Canal_Communs_1.Location = New System.Drawing.Point(488, 557)
-        Me.CheckBox_Canal_Communs_1.Name = "CheckBox_Canal_Communs_1"
-        Me.CheckBox_Canal_Communs_1.Size = New System.Drawing.Size(25, 19)
-        Me.CheckBox_Canal_Communs_1.TabIndex = 10
-        '
-        'CheckBox_Canal_Commerce_6
-        '
-        Me.CheckBox_Canal_Commerce_6.BackColor = System.Drawing.Color.Sienna
-        Me.CheckBox_Canal_Commerce_6.Checked = False
-        Me.CheckBox_Canal_Commerce_6.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox_Canal_Commerce_6.ForeColor = System.Drawing.Color.White
-        Me.CheckBox_Canal_Commerce_6.Location = New System.Drawing.Point(643, 557)
-        Me.CheckBox_Canal_Commerce_6.Name = "CheckBox_Canal_Commerce_6"
-        Me.CheckBox_Canal_Commerce_6.Size = New System.Drawing.Size(25, 19)
-        Me.CheckBox_Canal_Commerce_6.TabIndex = 9
-        '
-        'CheckBox_Canal_Alignement_4
-        '
-        Me.CheckBox_Canal_Alignement_4.BackColor = System.Drawing.Color.Orange
-        Me.CheckBox_Canal_Alignement_4.Checked = False
-        Me.CheckBox_Canal_Alignement_4.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox_Canal_Alignement_4.ForeColor = System.Drawing.Color.White
-        Me.CheckBox_Canal_Alignement_4.Location = New System.Drawing.Point(581, 557)
-        Me.CheckBox_Canal_Alignement_4.Name = "CheckBox_Canal_Alignement_4"
-        Me.CheckBox_Canal_Alignement_4.Size = New System.Drawing.Size(25, 19)
-        Me.CheckBox_Canal_Alignement_4.TabIndex = 8
-        '
-        'CheckBox_Canal_Recrutement_5
-        '
-        Me.CheckBox_Canal_Recrutement_5.BackColor = System.Drawing.Color.Silver
-        Me.CheckBox_Canal_Recrutement_5.Checked = False
-        Me.CheckBox_Canal_Recrutement_5.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox_Canal_Recrutement_5.ForeColor = System.Drawing.Color.White
-        Me.CheckBox_Canal_Recrutement_5.Location = New System.Drawing.Point(612, 557)
-        Me.CheckBox_Canal_Recrutement_5.Name = "CheckBox_Canal_Recrutement_5"
-        Me.CheckBox_Canal_Recrutement_5.Size = New System.Drawing.Size(25, 19)
-        Me.CheckBox_Canal_Recrutement_5.TabIndex = 7
-        '
-        'CheckBox_Canal_Guilde_3
-        '
-        Me.CheckBox_Canal_Guilde_3.BackColor = System.Drawing.Color.DarkViolet
-        Me.CheckBox_Canal_Guilde_3.Checked = False
-        Me.CheckBox_Canal_Guilde_3.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox_Canal_Guilde_3.ForeColor = System.Drawing.Color.White
-        Me.CheckBox_Canal_Guilde_3.Location = New System.Drawing.Point(550, 557)
-        Me.CheckBox_Canal_Guilde_3.Name = "CheckBox_Canal_Guilde_3"
-        Me.CheckBox_Canal_Guilde_3.Size = New System.Drawing.Size(25, 19)
-        Me.CheckBox_Canal_Guilde_3.TabIndex = 6
-        '
-        'CheckBox_Canal_Information_0
-        '
-        Me.CheckBox_Canal_Information_0.BackColor = System.Drawing.Color.Lime
-        Me.CheckBox_Canal_Information_0.Checked = False
-        Me.CheckBox_Canal_Information_0.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox_Canal_Information_0.ForeColor = System.Drawing.Color.White
-        Me.CheckBox_Canal_Information_0.Location = New System.Drawing.Point(457, 557)
-        Me.CheckBox_Canal_Information_0.Name = "CheckBox_Canal_Information_0"
-        Me.CheckBox_Canal_Information_0.Size = New System.Drawing.Size(25, 19)
-        Me.CheckBox_Canal_Information_0.TabIndex = 5
-        '
-        'TextBox_Tchat
-        '
-        Me.TextBox_Tchat.BackColor = System.Drawing.Color.Transparent
-        Me.TextBox_Tchat.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.TextBox_Tchat.ForeColor = System.Drawing.Color.White
-        Me.TextBox_Tchat.Location = New System.Drawing.Point(163, 586)
-        Me.TextBox_Tchat.MaxLength = 32767
-        Me.TextBox_Tchat.MultiLine = False
-        Me.TextBox_Tchat.Name = "TextBox_Tchat"
-        Me.TextBox_Tchat.Size = New System.Drawing.Size(474, 28)
-        Me.TextBox_Tchat.TabIndex = 4
-        Me.TextBox_Tchat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.TextBox_Tchat.UseSystemPasswordChar = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(6, 557)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(23, 23)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 3
-        Me.PictureBox3.TabStop = False
+        Me.PictureBox_Emoticône_2.Image = Global.Linabot.My.Resources.Resources.Faire_un_signe_de_la_main
+        Me.PictureBox_Emoticône_2.Location = New System.Drawing.Point(42, 514)
+        Me.PictureBox_Emoticône_2.Name = "PictureBox_Emoticône_2"
+        Me.PictureBox_Emoticône_2.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox_Emoticône_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_Emoticône_2.TabIndex = 37
+        Me.PictureBox_Emoticône_2.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox_Emoticône_2, "Faire un signe de la main (/bye)")
+        Me.PictureBox_Emoticône_2.Visible = False
         '
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(35, 557)
+        Me.PictureBox2.Location = New System.Drawing.Point(6, 550)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(23, 23)
+        Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 3
         Me.PictureBox2.TabStop = False
@@ -648,7 +853,7 @@ Partial Class Page_Initial
         Me.RichTextBox_Tchat.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.RichTextBox_Tchat.Location = New System.Drawing.Point(6, 19)
         Me.RichTextBox_Tchat.Name = "RichTextBox_Tchat"
-        Me.RichTextBox_Tchat.Size = New System.Drawing.Size(662, 532)
+        Me.RichTextBox_Tchat.Size = New System.Drawing.Size(662, 453)
         Me.RichTextBox_Tchat.TabIndex = 1
         Me.RichTextBox_Tchat.Text = ""
         '
@@ -807,17 +1012,6 @@ Partial Class Page_Initial
         Me.ImageList_Caractéristique.Images.SetKeyName(24, "invocation.png")
         Me.ImageList_Caractéristique.Images.SetKeyName(25, "Corps à Corps.png")
         '
-        'Label_Caractéristique_Capital
-        '
-        Me.Label_Caractéristique_Capital.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label_Caractéristique_Capital.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label_Caractéristique_Capital.ForeColor = System.Drawing.Color.White
-        Me.Label_Caractéristique_Capital.Location = New System.Drawing.Point(504, 9)
-        Me.Label_Caractéristique_Capital.Name = "Label_Caractéristique_Capital"
-        Me.Label_Caractéristique_Capital.Size = New System.Drawing.Size(75, 23)
-        Me.Label_Caractéristique_Capital.TabIndex = 339
-        Me.Label_Caractéristique_Capital.Text = "Capital : 0"
-        '
         'TabPage_Sort
         '
         Me.TabPage_Sort.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -850,17 +1044,6 @@ Partial Class Page_Initial
         Me.PictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox14.TabIndex = 342
         Me.PictureBox14.TabStop = False
-        '
-        'Label_Sort_Capital
-        '
-        Me.Label_Sort_Capital.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label_Sort_Capital.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label_Sort_Capital.ForeColor = System.Drawing.Color.White
-        Me.Label_Sort_Capital.Location = New System.Drawing.Point(78, 3)
-        Me.Label_Sort_Capital.Name = "Label_Sort_Capital"
-        Me.Label_Sort_Capital.Size = New System.Drawing.Size(75, 23)
-        Me.Label_Sort_Capital.TabIndex = 341
-        Me.Label_Sort_Capital.Text = "Capital : 0"
         '
         'TabPage_Inventaire
         '
@@ -1132,28 +1315,6 @@ Partial Class Page_Initial
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Conditions"
         '
-        'Label_Inventaire_Affiche_Level
-        '
-        Me.Label_Inventaire_Affiche_Level.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.Label_Inventaire_Affiche_Level.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label_Inventaire_Affiche_Level.ForeColor = System.Drawing.Color.White
-        Me.Label_Inventaire_Affiche_Level.Location = New System.Drawing.Point(444, 19)
-        Me.Label_Inventaire_Affiche_Level.Name = "Label_Inventaire_Affiche_Level"
-        Me.Label_Inventaire_Affiche_Level.Size = New System.Drawing.Size(64, 23)
-        Me.Label_Inventaire_Affiche_Level.TabIndex = 341
-        Me.Label_Inventaire_Affiche_Level.Text = "Niv.0"
-        '
-        'Label_Inventaire_Affiche_Nom
-        '
-        Me.Label_Inventaire_Affiche_Nom.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.Label_Inventaire_Affiche_Nom.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label_Inventaire_Affiche_Nom.ForeColor = System.Drawing.Color.White
-        Me.Label_Inventaire_Affiche_Nom.Location = New System.Drawing.Point(16, 19)
-        Me.Label_Inventaire_Affiche_Nom.Name = "Label_Inventaire_Affiche_Nom"
-        Me.Label_Inventaire_Affiche_Nom.Size = New System.Drawing.Size(422, 23)
-        Me.Label_Inventaire_Affiche_Nom.TabIndex = 340
-        Me.Label_Inventaire_Affiche_Nom.Text = "Nom de l'item"
-        '
         'PictureBox_Inventaire_Affiche_Caractéristique
         '
         Me.PictureBox_Inventaire_Affiche_Caractéristique.Image = CType(resources.GetObject("PictureBox_Inventaire_Affiche_Caractéristique.Image"), System.Drawing.Image)
@@ -1200,21 +1361,21 @@ Partial Class Page_Initial
         'DataGridView_Map
         '
         Me.DataGridView_Map.AllowUserToAddRows = False
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView_Map.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView_Map.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView_Map.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView_Map.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView_Map.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(48, Byte), Integer))
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView_Map.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView_Map.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView_Map.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView_Map.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewImageColumn2, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewImageColumn})
         Me.DataGridView_Map.GridColor = System.Drawing.Color.Black
@@ -1374,6 +1535,255 @@ Partial Class Page_Initial
         Me.ToolTip1.InitialDelay = 1
         Me.ToolTip1.ReshowDelay = 100
         '
+        'Label_Abonnement_Dofus
+        '
+        Me.Label_Abonnement_Dofus.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label_Abonnement_Dofus.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label_Abonnement_Dofus.ForeColor = System.Drawing.Color.White
+        Me.Label_Abonnement_Dofus.Location = New System.Drawing.Point(72, 130)
+        Me.Label_Abonnement_Dofus.Name = "Label_Abonnement_Dofus"
+        Me.Label_Abonnement_Dofus.Size = New System.Drawing.Size(246, 31)
+        Me.Label_Abonnement_Dofus.TabIndex = 22
+        Me.Label_Abonnement_Dofus.Text = "Abonné jusqu'au : "
+        '
+        'Label_Kamas
+        '
+        Me.Label_Kamas.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label_Kamas.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label_Kamas.ForeColor = System.Drawing.Color.White
+        Me.Label_Kamas.Location = New System.Drawing.Point(72, 93)
+        Me.Label_Kamas.Name = "Label_Kamas"
+        Me.Label_Kamas.Size = New System.Drawing.Size(246, 31)
+        Me.Label_Kamas.TabIndex = 18
+        Me.Label_Kamas.Text = "Kamas : 0"
+        '
+        'ProgressBar_Vitalité
+        '
+        Me.ProgressBar_Vitalité.BackColor = System.Drawing.Color.Transparent
+        Me.ProgressBar_Vitalité.Location = New System.Drawing.Point(369, 19)
+        Me.ProgressBar_Vitalité.Maximum = 100
+        Me.ProgressBar_Vitalité.Name = "ProgressBar_Vitalité"
+        Me.ProgressBar_Vitalité.Size = New System.Drawing.Size(255, 31)
+        Me.ProgressBar_Vitalité.TabIndex = 10
+        Me.ProgressBar_Vitalité.Text = "RedemptionProgressBar1"
+        Me.ProgressBar_Vitalité.Value = 0
+        '
+        'ProgressBar_Energie
+        '
+        Me.ProgressBar_Energie.BackColor = System.Drawing.Color.Transparent
+        Me.ProgressBar_Energie.Location = New System.Drawing.Point(369, 130)
+        Me.ProgressBar_Energie.Maximum = 100
+        Me.ProgressBar_Energie.Name = "ProgressBar_Energie"
+        Me.ProgressBar_Energie.Size = New System.Drawing.Size(255, 31)
+        Me.ProgressBar_Energie.TabIndex = 13
+        Me.ProgressBar_Energie.Text = "RedemptionProgressBar4"
+        Me.ProgressBar_Energie.Value = 0
+        '
+        'ProgressBar_Pods
+        '
+        Me.ProgressBar_Pods.BackColor = System.Drawing.Color.Transparent
+        Me.ProgressBar_Pods.Location = New System.Drawing.Point(369, 93)
+        Me.ProgressBar_Pods.Maximum = 100
+        Me.ProgressBar_Pods.Name = "ProgressBar_Pods"
+        Me.ProgressBar_Pods.Size = New System.Drawing.Size(255, 31)
+        Me.ProgressBar_Pods.TabIndex = 12
+        Me.ProgressBar_Pods.Text = "RedemptionProgressBar3"
+        Me.ProgressBar_Pods.Value = 0
+        '
+        'ProgressBar_Expérience
+        '
+        Me.ProgressBar_Expérience.BackColor = System.Drawing.Color.Transparent
+        Me.ProgressBar_Expérience.Location = New System.Drawing.Point(369, 56)
+        Me.ProgressBar_Expérience.Maximum = 100
+        Me.ProgressBar_Expérience.Name = "ProgressBar_Expérience"
+        Me.ProgressBar_Expérience.Size = New System.Drawing.Size(255, 31)
+        Me.ProgressBar_Expérience.TabIndex = 11
+        Me.ProgressBar_Expérience.Text = "RedemptionProgressBar2"
+        Me.ProgressBar_Expérience.Value = 0
+        '
+        'Label_Niveau
+        '
+        Me.Label_Niveau.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label_Niveau.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label_Niveau.ForeColor = System.Drawing.Color.White
+        Me.Label_Niveau.Location = New System.Drawing.Point(72, 56)
+        Me.Label_Niveau.Name = "Label_Niveau"
+        Me.Label_Niveau.Size = New System.Drawing.Size(246, 31)
+        Me.Label_Niveau.TabIndex = 8
+        Me.Label_Niveau.Text = "Niveaux : 0"
+        '
+        'Label_Statut
+        '
+        Me.Label_Statut.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label_Statut.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label_Statut.ForeColor = System.Drawing.Color.Red
+        Me.Label_Statut.Location = New System.Drawing.Point(72, 19)
+        Me.Label_Statut.Name = "Label_Statut"
+        Me.Label_Statut.Size = New System.Drawing.Size(246, 31)
+        Me.Label_Statut.TabIndex = 7
+        Me.Label_Statut.Text = "Déconnecté"
+        '
+        'Toggle_Connexion
+        '
+        Me.Toggle_Connexion.BackColor = System.Drawing.Color.Transparent
+        Me.Toggle_Connexion.Checked = False
+        Me.Toggle_Connexion.ForeColor = System.Drawing.Color.White
+        Me.Toggle_Connexion.Location = New System.Drawing.Point(6, 21)
+        Me.Toggle_Connexion.Name = "Toggle_Connexion"
+        Me.Toggle_Connexion.Size = New System.Drawing.Size(60, 26)
+        Me.Toggle_Connexion.TabIndex = 6
+        Me.Toggle_Connexion.Text = "RedemptionToggle1"
+        '
+        'ComboBox_Tchat
+        '
+        Me.ComboBox_Tchat.BackColor = System.Drawing.Color.Transparent
+        Me.ComboBox_Tchat.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.ComboBox_Tchat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_Tchat.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.ComboBox_Tchat.ForeColor = System.Drawing.Color.FromArgb(CType(CType(182, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(171, Byte), Integer))
+        Me.ComboBox_Tchat.FormattingEnabled = True
+        Me.ComboBox_Tchat.ItemHeight = 18
+        Me.ComboBox_Tchat.Items.AddRange(New Object() {"Défaut", "Equipe", "Message Privée", "Groupe", "Guilde", "Alignement", "Recrutement", "Commerce"})
+        Me.ComboBox_Tchat.Location = New System.Drawing.Point(6, 586)
+        Me.ComboBox_Tchat.Name = "ComboBox_Tchat"
+        Me.ComboBox_Tchat.Size = New System.Drawing.Size(151, 24)
+        Me.ComboBox_Tchat.TabIndex = 12
+        '
+        'CheckBox_Canal_Groupe_2
+        '
+        Me.CheckBox_Canal_Groupe_2.BackColor = System.Drawing.Color.Aqua
+        Me.CheckBox_Canal_Groupe_2.Checked = False
+        Me.CheckBox_Canal_Groupe_2.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.CheckBox_Canal_Groupe_2.ForeColor = System.Drawing.Color.White
+        Me.CheckBox_Canal_Groupe_2.Location = New System.Drawing.Point(519, 557)
+        Me.CheckBox_Canal_Groupe_2.Name = "CheckBox_Canal_Groupe_2"
+        Me.CheckBox_Canal_Groupe_2.Size = New System.Drawing.Size(25, 19)
+        Me.CheckBox_Canal_Groupe_2.TabIndex = 11
+        '
+        'CheckBox_Canal_Communs_1
+        '
+        Me.CheckBox_Canal_Communs_1.BackColor = System.Drawing.Color.White
+        Me.CheckBox_Canal_Communs_1.Checked = False
+        Me.CheckBox_Canal_Communs_1.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.CheckBox_Canal_Communs_1.ForeColor = System.Drawing.Color.White
+        Me.CheckBox_Canal_Communs_1.Location = New System.Drawing.Point(488, 557)
+        Me.CheckBox_Canal_Communs_1.Name = "CheckBox_Canal_Communs_1"
+        Me.CheckBox_Canal_Communs_1.Size = New System.Drawing.Size(25, 19)
+        Me.CheckBox_Canal_Communs_1.TabIndex = 10
+        '
+        'CheckBox_Canal_Commerce_6
+        '
+        Me.CheckBox_Canal_Commerce_6.BackColor = System.Drawing.Color.Sienna
+        Me.CheckBox_Canal_Commerce_6.Checked = False
+        Me.CheckBox_Canal_Commerce_6.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.CheckBox_Canal_Commerce_6.ForeColor = System.Drawing.Color.White
+        Me.CheckBox_Canal_Commerce_6.Location = New System.Drawing.Point(643, 557)
+        Me.CheckBox_Canal_Commerce_6.Name = "CheckBox_Canal_Commerce_6"
+        Me.CheckBox_Canal_Commerce_6.Size = New System.Drawing.Size(25, 19)
+        Me.CheckBox_Canal_Commerce_6.TabIndex = 9
+        '
+        'CheckBox_Canal_Alignement_4
+        '
+        Me.CheckBox_Canal_Alignement_4.BackColor = System.Drawing.Color.Orange
+        Me.CheckBox_Canal_Alignement_4.Checked = False
+        Me.CheckBox_Canal_Alignement_4.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.CheckBox_Canal_Alignement_4.ForeColor = System.Drawing.Color.White
+        Me.CheckBox_Canal_Alignement_4.Location = New System.Drawing.Point(581, 557)
+        Me.CheckBox_Canal_Alignement_4.Name = "CheckBox_Canal_Alignement_4"
+        Me.CheckBox_Canal_Alignement_4.Size = New System.Drawing.Size(25, 19)
+        Me.CheckBox_Canal_Alignement_4.TabIndex = 8
+        '
+        'CheckBox_Canal_Recrutement_5
+        '
+        Me.CheckBox_Canal_Recrutement_5.BackColor = System.Drawing.Color.Silver
+        Me.CheckBox_Canal_Recrutement_5.Checked = False
+        Me.CheckBox_Canal_Recrutement_5.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.CheckBox_Canal_Recrutement_5.ForeColor = System.Drawing.Color.White
+        Me.CheckBox_Canal_Recrutement_5.Location = New System.Drawing.Point(612, 557)
+        Me.CheckBox_Canal_Recrutement_5.Name = "CheckBox_Canal_Recrutement_5"
+        Me.CheckBox_Canal_Recrutement_5.Size = New System.Drawing.Size(25, 19)
+        Me.CheckBox_Canal_Recrutement_5.TabIndex = 7
+        '
+        'CheckBox_Canal_Guilde_3
+        '
+        Me.CheckBox_Canal_Guilde_3.BackColor = System.Drawing.Color.DarkViolet
+        Me.CheckBox_Canal_Guilde_3.Checked = False
+        Me.CheckBox_Canal_Guilde_3.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.CheckBox_Canal_Guilde_3.ForeColor = System.Drawing.Color.White
+        Me.CheckBox_Canal_Guilde_3.Location = New System.Drawing.Point(550, 557)
+        Me.CheckBox_Canal_Guilde_3.Name = "CheckBox_Canal_Guilde_3"
+        Me.CheckBox_Canal_Guilde_3.Size = New System.Drawing.Size(25, 19)
+        Me.CheckBox_Canal_Guilde_3.TabIndex = 6
+        '
+        'CheckBox_Canal_Information_0
+        '
+        Me.CheckBox_Canal_Information_0.BackColor = System.Drawing.Color.Lime
+        Me.CheckBox_Canal_Information_0.Checked = False
+        Me.CheckBox_Canal_Information_0.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.CheckBox_Canal_Information_0.ForeColor = System.Drawing.Color.White
+        Me.CheckBox_Canal_Information_0.Location = New System.Drawing.Point(457, 557)
+        Me.CheckBox_Canal_Information_0.Name = "CheckBox_Canal_Information_0"
+        Me.CheckBox_Canal_Information_0.Size = New System.Drawing.Size(25, 19)
+        Me.CheckBox_Canal_Information_0.TabIndex = 5
+        '
+        'TextBox_Tchat
+        '
+        Me.TextBox_Tchat.BackColor = System.Drawing.Color.Transparent
+        Me.TextBox_Tchat.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.TextBox_Tchat.ForeColor = System.Drawing.Color.White
+        Me.TextBox_Tchat.Location = New System.Drawing.Point(163, 586)
+        Me.TextBox_Tchat.MaxLength = 32767
+        Me.TextBox_Tchat.MultiLine = False
+        Me.TextBox_Tchat.Name = "TextBox_Tchat"
+        Me.TextBox_Tchat.Size = New System.Drawing.Size(474, 28)
+        Me.TextBox_Tchat.TabIndex = 4
+        Me.TextBox_Tchat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.TextBox_Tchat.UseSystemPasswordChar = False
+        '
+        'Label_Caractéristique_Capital
+        '
+        Me.Label_Caractéristique_Capital.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label_Caractéristique_Capital.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label_Caractéristique_Capital.ForeColor = System.Drawing.Color.White
+        Me.Label_Caractéristique_Capital.Location = New System.Drawing.Point(504, 9)
+        Me.Label_Caractéristique_Capital.Name = "Label_Caractéristique_Capital"
+        Me.Label_Caractéristique_Capital.Size = New System.Drawing.Size(75, 23)
+        Me.Label_Caractéristique_Capital.TabIndex = 339
+        Me.Label_Caractéristique_Capital.Text = "Capital : 0"
+        '
+        'Label_Sort_Capital
+        '
+        Me.Label_Sort_Capital.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label_Sort_Capital.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label_Sort_Capital.ForeColor = System.Drawing.Color.White
+        Me.Label_Sort_Capital.Location = New System.Drawing.Point(78, 3)
+        Me.Label_Sort_Capital.Name = "Label_Sort_Capital"
+        Me.Label_Sort_Capital.Size = New System.Drawing.Size(75, 23)
+        Me.Label_Sort_Capital.TabIndex = 341
+        Me.Label_Sort_Capital.Text = "Capital : 0"
+        '
+        'Label_Inventaire_Affiche_Level
+        '
+        Me.Label_Inventaire_Affiche_Level.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.Label_Inventaire_Affiche_Level.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label_Inventaire_Affiche_Level.ForeColor = System.Drawing.Color.White
+        Me.Label_Inventaire_Affiche_Level.Location = New System.Drawing.Point(444, 19)
+        Me.Label_Inventaire_Affiche_Level.Name = "Label_Inventaire_Affiche_Level"
+        Me.Label_Inventaire_Affiche_Level.Size = New System.Drawing.Size(64, 23)
+        Me.Label_Inventaire_Affiche_Level.TabIndex = 341
+        Me.Label_Inventaire_Affiche_Level.Text = "Niv.0"
+        '
+        'Label_Inventaire_Affiche_Nom
+        '
+        Me.Label_Inventaire_Affiche_Nom.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.Label_Inventaire_Affiche_Nom.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label_Inventaire_Affiche_Nom.ForeColor = System.Drawing.Color.White
+        Me.Label_Inventaire_Affiche_Nom.Location = New System.Drawing.Point(16, 19)
+        Me.Label_Inventaire_Affiche_Nom.Name = "Label_Inventaire_Affiche_Nom"
+        Me.Label_Inventaire_Affiche_Nom.Size = New System.Drawing.Size(422, 23)
+        Me.Label_Inventaire_Affiche_Nom.TabIndex = 340
+        Me.Label_Inventaire_Affiche_Nom.Text = "Nom de l'item"
+        '
         'Page_Initial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1386,7 +1796,6 @@ Partial Class Page_Initial
         Me.TabPage_Tchat.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1394,7 +1803,38 @@ Partial Class Page_Initial
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Emoticône_21, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Smiley_15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Smiley_14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Emoticône_9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Emoticône_15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Smiley_9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Emoticône_19, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Smiley_13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Smiley_8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Emoticône_13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Emoticône_14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Emoticône_12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Smiley_12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Emoticône_11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Emoticône_5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Emoticône_3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Smiley_7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Emoticône_10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Emoticône_8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Emoticône_6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Smiley_11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Emoticône_7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Smiley_6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Smiley_10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Smiley_5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Smiley_4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Smiley_3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Emoticône_4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Smiley_2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Smiley_1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Emoticône_1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_Emoticône_2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage_Caractéristique.ResumeLayout(False)
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1449,7 +1889,6 @@ Partial Class Page_Initial
     Friend WithEvents ImageList_Initial As ImageList
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TextBox_Tchat As RedemptionTextBox
-    Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents RichTextBox_Tchat As RichTextBox
     Friend WithEvents CheckBox_Canal_Groupe_2 As RedemptionCheckBox
@@ -1488,8 +1927,6 @@ Partial Class Page_Initial
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents PictureBox12 As PictureBox
     Friend WithEvents Label_Abonnement_Dofus As RedemptionLabel
-    Friend WithEvents PictureBox11 As PictureBox
-    Friend WithEvents RedemptionLabel2 As RedemptionLabel
     Friend WithEvents PictureBox10 As PictureBox
     Friend WithEvents Label_Kamas As RedemptionLabel
     Friend WithEvents PictureBox13 As PictureBox
@@ -1532,4 +1969,36 @@ Partial Class Page_Initial
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewImageColumn As DataGridViewImageColumn
     Friend WithEvents ComboBox_Tchat As RedemptionComboBox
+    Friend WithEvents PictureBox_Smiley_1 As PictureBox
+    Friend WithEvents PictureBox_Emoticône_15 As PictureBox
+    Friend WithEvents PictureBox_Smiley_15 As PictureBox
+    Friend WithEvents PictureBox_Emoticône_12 As PictureBox
+    Friend WithEvents PictureBox_Emoticône_5 As PictureBox
+    Friend WithEvents PictureBox_Smiley_14 As PictureBox
+    Friend WithEvents PictureBox_Emoticône_19 As PictureBox
+    Friend WithEvents PictureBox_Smiley_9 As PictureBox
+    Friend WithEvents PictureBox_Emoticône_6 As PictureBox
+    Friend WithEvents PictureBox_Smiley_13 As PictureBox
+    Friend WithEvents PictureBox_Emoticône_14 As PictureBox
+    Friend WithEvents PictureBox_Smiley_8 As PictureBox
+    Friend WithEvents PictureBox_Emoticône_1 As PictureBox
+    Friend WithEvents PictureBox_Smiley_12 As PictureBox
+    Friend WithEvents PictureBox_Emoticône_4 As PictureBox
+    Friend WithEvents PictureBox_Smiley_7 As PictureBox
+    Friend WithEvents PictureBox_Emoticône_2 As PictureBox
+    Friend WithEvents PictureBox_Smiley_11 As PictureBox
+    Friend WithEvents PictureBox_Emoticône_7 As PictureBox
+    Friend WithEvents PictureBox_Smiley_6 As PictureBox
+    Friend WithEvents PictureBox_Emoticône_9 As PictureBox
+    Friend WithEvents PictureBox_Smiley_10 As PictureBox
+    Friend WithEvents PictureBox_Emoticône_10 As PictureBox
+    Friend WithEvents PictureBox_Smiley_5 As PictureBox
+    Friend WithEvents PictureBox_Emoticône_8 As PictureBox
+    Friend WithEvents PictureBox_Smiley_4 As PictureBox
+    Friend WithEvents PictureBox_Emoticône_13 As PictureBox
+    Friend WithEvents PictureBox_Smiley_3 As PictureBox
+    Friend WithEvents PictureBox_Emoticône_11 As PictureBox
+    Friend WithEvents PictureBox_Smiley_2 As PictureBox
+    Friend WithEvents PictureBox_Emoticône_3 As PictureBox
+    Friend WithEvents PictureBox_Emoticône_21 As PictureBox
 End Class

@@ -157,4 +157,100 @@
   <data name="icons8_email_send_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-email-send-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Aime" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Aime.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Applaudir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Applaudir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blessé" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blessé.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Champion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Champion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ciseaux" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ciseaux.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Colère" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Colère.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Confus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Confus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Content" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Content.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Croiser_les_bras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Croiser les bras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Enervé" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Enervé.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Envoyer_un_baiser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Envoyer un baiser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Faire_un_signe_de_la_main" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Faire un signe de la main.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Feuille" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Feuille.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jouer_de_la_flûte" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jouer de la flûte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MDR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MDR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Montrer_du_doigt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Montrer du doigt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Montrer_sa_Peur" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Montrer sa Peur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Montrer_son_arme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Montrer son arme.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mort" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mort.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Oo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Oo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pas_content" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pas content.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pierre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pierre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pleure" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pleure.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="saluer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\saluer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Souris" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Souris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_allonger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S'allonger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_asseoir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S'asseoir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sérieux" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sérieux.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tir_la_langue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tir la langue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Vent_de_panique" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vent de panique.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="___" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\^^'.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
