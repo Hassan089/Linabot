@@ -62,6 +62,11 @@ Linabot
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Linabot.My.Resources.Resources.Caractéristique">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Linabot.My.Resources.Resources.Champion">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
@@ -197,6 +202,11 @@ Linabot
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Linabot.My.Resources.Resources.Question">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Linabot.My.Resources.Resources.S_allonger">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
@@ -213,6 +223,11 @@ Linabot
 </summary>
 </member>
 <member name="P:Linabot.My.Resources.Resources.Sérieux">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Linabot.My.Resources.Resources.Sort">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>

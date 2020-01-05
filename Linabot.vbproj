@@ -73,6 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Caractéristique\Caractéristique.vb" />
     <Compile Include="Caractéristique\Caractéristiques_Information.vb" />
     <Compile Include="Classe Control\Picture_Box.vb">
       <SubType>Component</SubType>
@@ -326,6 +327,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Champion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question_mark_grey.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1294.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1296.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1 %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2182.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2188.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

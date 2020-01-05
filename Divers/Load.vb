@@ -6,6 +6,7 @@ Module Load
 
     Public Version As String
 
+    Public Dico_Caractéristique As New Dictionary(Of String, Dictionary(Of String, String()))
     Public Dico_Personnage As New Dictionary(Of Integer, String())
     Public Dico_Serveur As New Dictionary(Of String, String())
     Public Liste_Des_Objets As New Dictionary(Of Integer, String())
@@ -154,6 +155,55 @@ Module Load
         Catch ex As Exception
             '  Erreur_Fichier(0, "LoadPNJ", ex.Message)
         End Try
+    End Sub
+
+    Public Sub Load_Caractéristique()
+        Try
+
+            Dico_Caractéristique.Clear()
+
+            Dim monStreamReader As New StreamReader("Data/Caractéristique.txt")
+
+            Do Until monStreamReader.EndOfStream
+
+                Dim Ligne As String = monStreamReader.ReadLine
+
+                If Ligne <> "" Then
+
+                    'Je split les informations des caractéristique.
+                    Dim Separation() As String = Split(Ligne, "|")
+
+                    If Dico_Caractéristique.ContainsKey(Separation(0)) Then
+
+                        Dico_Caractéristique(Separation(0)).Add( 'Classe
+                                                                Separation(1), 'Caractéristique
+                                                                {Separation(2), Separation(3), Separation(4), Separation(5), Separation(6)}) 'Les infos de la caractéristique
+
+                    Else
+
+                        Dico_Caractéristique.Add(Separation(0), New Dictionary(Of String, String()) From 'Classe
+                                                 {
+                                                    {
+                                                        Separation(1), 'Caractéristique
+                                                            {
+                                                                Separation(2), Separation(3), Separation(4), Separation(5), Separation(6)
+                                                            }
+                                                    }
+                                                 })
+
+                    End If
+
+                End If
+            Loop
+
+            monStreamReader.Close()
+
+        Catch ex As Exception
+
+            Erreur_Fichier(0, "Load_Caractéristique", ex.Message)
+
+        End Try
+
     End Sub
 
 End Module

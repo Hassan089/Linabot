@@ -17,7 +17,11 @@
         Name = ID_Unique
 
         'Je charge l'image qui correspond à l'ID de l'objet
-        Load(Application.StartupPath & "\Image/" & ID_Objet & ".png")
+        If IO.File.Exists(Application.StartupPath & "\Image\" & Liste_Des_Objets(ID_Objet).GetValue(2) & "/" & ID_Objet & ".png") Then
+            Load(Application.StartupPath & "\Image\" & Liste_Des_Objets(ID_Objet).GetValue(2) & "/" & ID_Objet & ".png")
+        Else
+            Image = My.Resources.Question
+        End If
 
         AddHandler MouseMove, Sub(Sender As Object, E As MouseEventArgs)
                                   BackColor = Color.FromArgb(43, 44, 48)

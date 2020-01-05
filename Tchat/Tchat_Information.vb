@@ -4,7 +4,10 @@ Module Tchat_Information
 
     Public Sub Canaux_Dofus(ByVal Index As Integer, ByVal Message As String)
 
-        With Comptes(Index)._User   'cC+*#%!$:?pi^
+        With Comptes(Index)._User
+
+            'cC +                *#%!$:?pi^
+            'cC Active/Désactive Les canaux
 
             Try
 
@@ -62,7 +65,10 @@ Module Tchat_Information
 
         With Comptes(Index)
 
-            Try 'cMK%|ID_Joueur|Nom_Personnage|Message|
+            'cMK %     | 01234567  | Linaculer     | J'aime les pates |
+            'cMK Canal | ID Joueur | Nom du joueur | Message          | ?
+
+            Try
 
                 Message(3) = AsciiDecoder(Message(3))
 
@@ -480,175 +486,323 @@ Module Tchat_Information
 
     'A REFAIRE
     Public Sub Dofus_Information_InGame(ByVal Index As Integer, ByVal Information As String)
+
         With Comptes(Index)
+
+            'Im 1165
+            'Im Numéro du texte a affiché
+
             Try
-                'Im1165
-                Dim Separation() As String
 
-                Select Case Mid(Information, 3, 4)
-                    Case "1202" 'Im1201;[Seydlex] 
-                        Separation = Split(Information, ";")
-                        EcritureMessage(Index, "[Modérateur]", "Vous allez être banni par le modérateur " & Separation(1) & ".", Color.Red)
-                       ' Modérateur_Ban(Index)
-                    Case "1184"
-                        Separation = Split(Information, ";")
-                        EcritureMessage(Index, "[Combat]", Separation(1) & " vient de se reconnecter en combat.", Color.Red)
+                'Je prend toutes les informations après le "Im"
+                Information = Mid(Information, 3)
+
+                'Je sélectionne selon si y'a une information à afficher ou non via le signe ";"
+                If Information.Contains(";") Then
+
+                    Dim Separation() As String = Split(Information, ";")
+
+                    Select Case Separation(0)
+
+                        Case "1202" 'Im1201;[Seydlex] 
+
+                            EcritureMessage(Index, "[Modérateur]", "Attention un modérateur vous surveille : " & Separation(1) & ".", Color.Red)
+
+                            'Modérateur_Ban(Index)
+
+                        Case "1184" 'Im1184;Linaculer
+
+                            EcritureMessage(Index, "[Combat]", Separation(1) & " vient de se reconnecter en combat.", Color.Red)
                        ' .En_Combat = 1
-                    Case "1183"
-                        EcritureMessage(Index, "[Dofus]", "La zone 'Incarnam' fonctionne sur plusieurs instances, pour éviter qu'un trop grand nombre de joueurs soient présent dans cette zone de petite taille. Ceci signifie qu'il existe plusieurs 'Incarnam' en parallèle, afin qu'il n'y ait pas plus d'un certain nombre de joueurs dans la même instance. Vous pouvez donc ne pas être dans le même 'Incarnam' que vos amis, pour les rejoindre, vous pouvez utiliser la liste d'amis, et vous retrouver instantanément à leurs côtés, à conditions qu'ils soient eux aussi dans Incarnam en dehors des grottes et donjons.", Color.Red)
-                    Case "1182"
-                    Case "1177"
-                        EcritureMessage(Index, "[Dofus]", "Vous avez trop d'objets dans votre inventaire, vous ne pouvez pas les voir tous. (1000 objets maximum)", Color.Red)
-                    Case "1175"
-                        EcritureMessage(Index, "[Combat]", "Impossible de lancer ce sort actuellement.", Color.Red)
-                    Case "1174"
-                        EcritureMessage(Index, "[Combat]", "Un obstacle géne le passage.", Color.Red)
-                    Case "1170" 'Im1170;0~4
-                        Separation = Split(Information, ";")
-                        Separation = Split(Separation(1), "~")
-                        EcritureMessage(Index, "[Combat]", "Vous avez '" & Separation(0) & "' PA, hors il vous en faut minimum '" & Separation(1) & "' PA pour lancer ce sort.", Color.Red)
-                    Case "1168"
-                        EcritureMessage(Index, "[Dofus]", "Vous ne pouvez pas poser plus de " & Mid(Information, 8) & " percepteur(s) par zone.", Color.Red)
-                    Case "1167"
-                        EcritureMessage(Index, "[Dofus]", "Vous ne pouvez pas poser de percepteur ici avant " & Mid(Information, 8) & " minutes.", Color.Red)
-                    Case "1165"
-                        EcritureMessage(Index, "[Dofus]", "La sauvegarde du serveur est terminée. L'accès au serveur est de nouveau possible. Merci de votre compréhension.", Color.Red)
-                    Case "1164"
-                        EcritureMessage(Index, "[Dofus]", "Une sauvegarde du serveur est en cours... Vous pouvez continuer de jouer, mais l'accès au serveur est temporairement bloqué. La connexion sera de nouveau possible d'ici quelques instants. Merci de votre patience.", Color.Red)
-                    Case "1159"
-                        EcritureMessage(Index, "[Dofus]", "Vous êtes à court de potion d'enclos de guilde.", Color.Red)
-                        'Percepteur
-                    Case "1139"
-                        EcritureMessage(Index, "[Percepteur]", "Attention, la fenêtre d'échange se fermera automatiquement dans " & Mid(Information, 8, Information.Length) & " minutes.", Color.Red)
-                    Case "1120"
-                        EcritureMessage(Index, "[Dofus]", "Impossible d'interagir avec votre percepteur sur la carte même où vous vous êtes connecté.", Color.Red)
-                        'Dragodinde
-                    Case "1117"
-                        EcritureMessage(Index, "[Dofus]", "Impossible d'être sur une monture à l'intérieur d'une maison.", Color.Red)
-                    Case "1111"
-                        EcritureMessage(Index, "[Dragodinde]", "A peine entrée dans l'étable, votre monture s'accroupit et commence à mettre bas. Après quelques instants, vous pouvez constater que tout s'est bien passé. Vous voilà responsable de " & Mid(Information, 8, Information.Length) & " nouvelle(s) monture(s).", Color.Violet)
-                    Case "1105"
-                        EcritureMessage(Index, "[Dragodinde]", "L'étable est pleine. Vous ne pouvez conserver que 100 montures maximum.", Color.Violet)
-                    Case "1104"
-                        EcritureMessage(Index, "[Dragodinde]", "Monture désignée invalide, trop de monture dans l'étable", Color.Violet)
-                    Case "1102"
-                        EcritureMessage(Index, "[Dragodinde]", "Cellule cible invalide", Color.Violet)
-                    Case "0194"
-                        EcritureMessage(Index, "[Forgemagie]", "La magie n'a pas parfaitement fonctionné, une des caractéristiques de l'objet a baissé en puissance.", Color.Red)
-                    Case "0188" '"Im0188;player"
-                    Case "0183"
-                        EcritureMessage(Index, "[Forgemagie]", "Malgré vos talents, la magie n'opère pas et vous sentez l'échec de la transformation.", Color.Red)
-                    Case "0153"
-                        EcritureMessage(Index, "[Dofus]", "Votre adresse IP actuelle est : " & Mid(Information, 8) & ".", Color.Green)
-                    Case "0152" 'Im0152;2019~06~27~7~19~xx.xxx.xx.xx
-                        Separation = Split(Split(Information, ";")(1), "~")
-                        EcritureMessage(Index, "[Dofus]", "Précédente connexion sur votre compte effectuée le : " &
-                                        Separation(2) & "/" & Separation(1) & "/" & Separation(0) & " à " & Separation(3) & ":" & Separation(4) &
-                                        " via l'adresse IP  : " & Separation(5), Color.Green)
-                    Case "0143"
-                        Separation = Split(Information, """>")
-                        Separation = Split(Separation(1), "</")
-                        EcritureMessage(Index, "[Dofus]", "Le joueur : " & Separation(0) & " vient de se connecter.", Color.Green)
-                    Case "0118"
-                        EcritureMessage(Index, "[Craft]", "Vous n'arrivez pas à assembler correctement les ingrédients, et vous n'arrivez pas à concevoir quoi que ce soit d'utilisable cette fois.", Color.Red)
-                    Case "0117"
-                        EcritureMessage(Index, "[Forgemagie]", "Malgré vos talents, la magie n'opère pas et vous sentez l'échec de la transformation, ainsi que la diminution de la puissance de l'objet..", Color.Red)
-                    Case Else
 
-                        Select Case Mid(Information, 3, 3)
-                            Case "189"
-                                EcritureMessage(Index, "[Dofus]", "Bienvenue sur Dofus, dans le Monde des douze !" & vbCrLf &
-                                "Rappel : prenez garde, il est interdit de transmettre votre identifiant de connexion ainsi que votre mot de passe.", Color.Red)
-                            Case "172"
-                                EcritureMessage(Index, "[Hôtel de Vente]", "Cet objet n'est plus disponible à ce prix. Quelqu'un a été plus rapide...", Color.Red)
-                            Case "167"
-                                EcritureMessage(Index, "[Hôtel de Vente]", "Vous ne pouvez pas mettre plus d'objets en vente actuellement...", Color.Red)
-                            Case "165"
-                                EcritureMessage(Index, "[Hôtel de vente]", "Vous ne disposez pas d'assez de kamas pour acquitter la taxe de mise en vente...", Color.Red)
-                            Case "128"
-                                EcritureMessage(Index, "[Combat]", "En attente du joueur " & Mid(Information, 7, Information.Length) & "...", Color.Red)
-                            Case "120"
-                                EcritureMessage(Index, "[Maison]", "Cet emplacement de stockage est déjà utilisé.", Color.Red)
+                        Case "1170" 'Im1170;0~4
 
-                            Case "118" 'Im188
+                            'Je sépare les informations via ce signe "~"
+                            Separation = Split(Separation(1), "~")
+                            EcritureMessage(Index, "[Combat]", "Vous avez '" & Separation(0) & "' PA, hors il vous en faut minimum '" & Separation(1) & "' PA pour lancer ce sort.", Color.Red)
 
-                                EcritureMessage(Index, "[Dofus]", "Votre familier ne peut vous suivre tant que vous êtes sur votre monture...", Color.Red)
+                        Case "1168" 'Im1168;1
+
+                            EcritureMessage(Index, "[Dofus]", "Vous ne pouvez pas poser plus de " & Separation(1) & " percepteur(s) par zone.", Color.Red)
+
+                        Case "1167" 'Im1167;54
+
+                            EcritureMessage(Index, "[Dofus]", "Vous ne pouvez pas poser de percepteur ici avant " & Separation(1) & " minutes.", Color.Red)
+
+                        Case "1139" 'Im1139;5
+
+                            EcritureMessage(Index, "[Percepteur]", "Attention, la fenêtre d'échange se fermera automatiquement dans " & Separation(1) & " minutes.", Color.Red)
+
+                        Case "1111" 'Im1111;3
+
+                            EcritureMessage(Index, "[Dragodinde]", "A peine entrée dans l'étable, votre monture s'accroupit et commence à mettre bas. Après quelques instants, vous pouvez constater que tout s'est bien passé. Vous voilà responsable de " & Separation(1) & " nouvelle(s) monture(s).", Color.Violet)
+
+                        Case "0188" '"Im0188;player"
+
+                        Case "0153" 'Im0153;xx.xxx.xx.xx
+
+                            EcritureMessage(Index, "[Dofus]", "Votre adresse IP actuelle est : " & Separation(1) & ".", Color.Green)
+
+                        Case "0152"
+
+                            'Im0152; 2019  ~ 06   ~ 27   ~ 7     ~ 19     ~ xx.xxx.xx.xx
+                            'Im0152; Année ~ Mois ~ Jour ~ Heure ~ Minute ~ IP
+
+                            'Je sépare les informations qui se trouve dans la separation(1) par ce signe "~"
+                            Separation = Split(Separation(1), "~")
+
+                            EcritureMessage(Index, "[Dofus]", "Précédente connexion sur votre compte effectuée le : " &
+                                                Separation(2) & "/" & Separation(1) & "/" & Separation(0) & " à " & Separation(3) & ":" & Separation(4) &
+                                                " via l'adresse IP  : " & Separation(5), Color.Green)
+
+                        Case "128" 'Im128;Linaculer
+
+                            EcritureMessage(Index, "[Combat]", "En attente du joueur " & Separation(1) & "...", Color.Red)
+
+                        Case "116" 'Im116;[Seydlex]~Bot Joueur
+
+                            'Je sépare les informations via ce signe "~"
+                            Separation = Split(Separation(1), "~")
+
+                            EcritureMessage(Index, "[Modérateur]", "Vous avez été banni par " & Separation(0) & ". Motif : " & Separation(2), Color.Red)
+                            'Modérateur_Ban(Index)
+
+                        Case "115"
+
+                            EcritureMessage(Index, "(Dofus)", "Pour des raisons de maintenances, le serveur va être redémarré dans " & Separation(1), Color.Red)
 
 
-                            Case "116" 'Im116;[Seydlex]~Bot Joueur
-                                Separation = Split(Information, ";")
-                                Separation = Split(Separation(1), "~")
-                                EcritureMessage(Index, "[Modérateur]", "Vous avez été banni par " & Separation(0) & ". Motif : " & Separation(2), Color.Red)
-                                EcritureMessage(Index, "[Modérateur]", "Il y a de forte chance que se soit un report, de ce fait le bot n'a pas pu détecter le modérateur.", Color.Red)
-                               ' Modérateur_Ban(Index)
-                            Case "115"
-                                EcritureMessage(Index, "(Dofus)", "Pour des raisons de maintenances, le serveur va être redémarré dans " & Split(Information, ";")(1), Color.Red)
-                            Case "112"
-                                EcritureMessage(Index, "[Dofus]", "Vous êtes trop chargé. Jetez quelques objets afin de pouvoir bouger.", Color.Red)
-                            Case "095"
-                                ' .Bloque_Cadenas = 1
-                                EcritureMessage(Index, "[Combat]", "L'équipe n'accepte plus de personnages supplémentaires.", Color.Red)
-                            Case "093"
-                                ' .Bloque_Combat_Groupe = 1
-                                EcritureMessage(Index, "[Combat]", "Léquipe n'accepte désormais que les membres du groupe du personnage principal.", Color.Red)
-                            Case "092"
-                                EcritureMessage(Index, "[Dofus]", "Vous avez récupéré " & Mid(Information, 7, Information.Length) & " points d'énergie en vous reposant.", Color.Green)
-                            Case "073"
-                            Case "068"
-                                EcritureMessage(Index, "[Dofus]", "Lot acheté.", Color.Green)
-                            Case "065" 'Im065;300~2598~2598~1
-                                Separation = Split(Information, ";")
-                                Separation = Split(Separation(1), "~")
-                                EcritureMessage(Index, "[Dofus]", "Votre compte en banque a été crédité de " & Separation(0) & " kamas suite à la vente de '" & Liste_Des_Objets(Separation(1)).GetValue(1) & "' (x " & Separation(3) & ").", Color.Green)
-                            Case "053"
-                                EcritureMessage(Index, "[Groupe]", Split(Information, ";")(1) & " ne suit plus votre déplacement.", Color.Green)
-                            Case "052" 'Im052;Linaculer
-                                EcritureMessage(Index, "[Groupe]", Split(Information, ";")(1) & " suit votre déplacement.", Color.Green)
-                            Case "040"
-                                ' .Bloque_Spectateur = 1
-                                EcritureMessage(Index, "[Combat]", "Le mode 'Spectateur' est désactivé.", Color.Red)
-                            Case "037"
-                                EcritureMessage(Index, "[Dofus]", "Vous êtes désormais considéré comme absent.", Color.Red) '/away
-                            Case "036" 'Im036;Linaculer
-                                EcritureMessage(Index, "[Dofus]", Mid(Information, 7, Information.Length) & " vient de rejoindre le combat en spectateur.", Color.Green) '/away
-                            Case "034" 'Im034;60 
-                                ' .Mort = 1
-                                EcritureMessage(Index, "[Familier]", "Tu as perdu " & Split(Information, ";")(1) & " points d'énergie.", Color.Red)
-                                'FAMILIER
-                            Case "032"
-                                EcritureMessage(Index, "[Familier]", "Votre familier apprécie le repas.", Color.Green)
-                            Case "031"
-                                EcritureMessage(Index, "[Familier]", "Vous donnez à manger à votre familier famélique qui traînait comme un zombi. Il se force à manger mais la nourriture qu'il avale fait 3 fois son estomac et il se tord de douleur. Au moins il a mangé.", Color.Red)
-                            Case "029"
-                                EcritureMessage(Index, "[Familier]", "Vous donnez à manger à votre familier. Il semble qu'il avait très faim.", Color.Green)
-                            Case "027"
-                                EcritureMessage(Index, "[Familier]", "Vous donnez à manger à répétition à votre familier déjà obèse. Il avale quand même la ressource et fait une indigestion.", Color.Red)
-                            Case "026"
-                                EcritureMessage(Index, "[Familier]", "Vous donnez à manger à votre familier alors qu'il n'avait plus faim. Il se force pour vous faire plaisir.", Color.Red)
-                            Case "025"
-                                EcritureMessage(Index, "[Familier]", "Votre familier vous fait la fête !", Color.Green)
-                            Case "153"
-                                EcritureMessage(Index, "[Familier]", "Votre familier prend la ressource, la renifle un peu, ne semble pas convaincu et vous la rend.", Color.Red)
-                            Case "024"
-                                EcritureMessage(Index, "[Dofus]", "Tu viens de mémoriser un nouveau zaap.", Color.Green)
-                            Case "022" 'Im022;1~1568
-                                Separation = Split(Information, ";")
-                                Separation = Split(Separation(1), "~")
-                                EcritureMessage(Index, "[Dofus]", "Tu as perdu " & Separation(0) & " '" & Liste_Des_Objets(Separation(1)).GetValue(1) & "'.", Color.Red)
-                            Case Else
-                                Select Case Mid(Information, 3, 2)
-                                    Case "08" 'Im08;17293
-                                        EcritureMessage(Index, "[Dofus]", "Tu as gagné " & Mid(Information, 6, Information.Length) & " points d'expérience.", Color.Green)
-                                    Case "06"
-                                        EcritureMessage(Index, "[Dofus]", "Position sauvegardée.", Color.Green)
-                                    Case "01" 'Im01;100
-                                        EcritureMessage(Index, "[Dofus]", "Tu as récupéré " & Mid(Information, 6, Information.Length) & " points de vie.", Color.Green)
-                                End Select
-                        End Select
-                End Select
+                        Case "092" 'Im092;50
+
+                            EcritureMessage(Index, "[Dofus]", "Vous avez récupéré " & Separation(1) & " points d'énergie en vous reposant.", Color.Green)
+
+                        Case "065"
+
+                            'Im065; 300         ~ 2598     ~ 2598     ~ 1
+                            'Im065; Kamas gagné ~ ID Objet ~ ID Objet ~ Quantité
+
+                            'Je sépare les informations via ce signe "~"
+                            Separation = Split(Separation(1), "~")
+
+                            EcritureMessage(Index, "[Dofus]", "Votre compte en banque a été crédité de " & Separation(0) & " kamas suite à la vente de '" & Liste_Des_Objets(Separation(1)).GetValue(1) & "' (x " & Separation(3) & ").", Color.Green)
+
+                        Case "053" 'Im053;Linaculer
+
+                            EcritureMessage(Index, "[Groupe]", Separation(1) & " ne suit plus votre déplacement.", Color.Green)
+
+                        Case "052" 'Im052;Linaculer
+
+                            EcritureMessage(Index, "[Groupe]", Separation(1) & " suit votre déplacement.", Color.Green)
+
+                        Case "036" 'Im036;Linaculer
+
+                            EcritureMessage(Index, "[Dofus]", Separation(1) & " vient de rejoindre le combat en spectateur.", Color.Green) '/away
+
+                        Case "034" 'Im034;60 
+
+                            EcritureMessage(Index, "[Familier]", "Tu as perdu " & Separation(1) & " points d'énergie.", Color.Red)
+
+                        Case "022" 'Im022;1~1568
+
+                            'Je sépare les informations via ce signe "~"
+                            Separation = Split(Separation(1), "~")
+
+                            EcritureMessage(Index, "[Dofus]", "Tu as perdu " & Separation(0) & " '" & Liste_Des_Objets(Separation(1)).GetValue(1) & "'.", Color.Red)
+
+                        Case "08" 'Im08;17293
+
+                            EcritureMessage(Index, "[Dofus]", "Tu as gagné " & Separation(1) & " points d'expérience.", Color.Green)
+
+                        Case "01" 'Im01;100
+
+                            EcritureMessage(Index, "[Dofus]", "Tu as récupéré " & Separation(1) & " points de vie.", Color.Green)
+
+                        Case Else
+
+                            Information_Inconnu(Index, "Message_Dofus", Information)
+
+
+                    End Select
+
+                Else
+
+                    Select Case Information
+
+                        Case "1183"
+
+                            EcritureMessage(Index, "[Dofus]", "La zone 'Incarnam' fonctionne sur plusieurs instances, pour éviter qu'un trop grand nombre de joueurs soient présent dans cette zone de petite taille. Ceci signifie qu'il existe plusieurs 'Incarnam' en parallèle, afin qu'il n'y ait pas plus d'un certain nombre de joueurs dans la même instance. Vous pouvez donc ne pas être dans le même 'Incarnam' que vos amis, pour les rejoindre, vous pouvez utiliser la liste d'amis, et vous retrouver instantanément à leurs côtés, à conditions qu'ils soient eux aussi dans Incarnam en dehors des grottes et donjons.", Color.Red)
+
+                        Case "1182"
+
+                        Case "1177"
+
+                            EcritureMessage(Index, "[Dofus]", "Vous avez trop d'objets dans votre inventaire, vous ne pouvez pas les voir tous. (1000 objets maximum)", Color.Red)
+
+                        Case "1175"
+
+                            EcritureMessage(Index, "[Combat]", "Impossible de lancer ce sort actuellement.", Color.Red)
+
+                        Case "1174"
+
+                            EcritureMessage(Index, "[Combat]", "Un obstacle géne le passage.", Color.Red)
+
+                        Case "1165"
+
+                            EcritureMessage(Index, "[Dofus]", "La sauvegarde du serveur est terminée. L'accès au serveur est de nouveau possible. Merci de votre compréhension.", Color.Red)
+
+                        Case "1164"
+
+                            EcritureMessage(Index, "[Dofus]", "Une sauvegarde du serveur est en cours... Vous pouvez continuer de jouer, mais l'accès au serveur est temporairement bloqué. La connexion sera de nouveau possible d'ici quelques instants. Merci de votre patience.", Color.Red)
+
+                        Case "1159"
+
+                            EcritureMessage(Index, "[Dofus]", "Vous êtes à court de potion d'enclos de guilde.", Color.Red)
+
+                        Case "1120"
+
+                            EcritureMessage(Index, "[Dofus]", "Impossible d'interagir avec votre percepteur sur la carte même où vous vous êtes connecté.", Color.Red)
+
+                        Case "1117"
+
+                            EcritureMessage(Index, "[Dofus]", "Impossible d'être sur une monture à l'intérieur d'une maison.", Color.Red)
+
+                        Case "1105"
+
+                            EcritureMessage(Index, "[Dragodinde]", "L'étable est pleine. Vous ne pouvez conserver que 100 montures maximum.", Color.Violet)
+
+                        Case "1104"
+
+                            EcritureMessage(Index, "[Dragodinde]", "Monture désignée invalide, trop de monture dans l'étable", Color.Violet)
+
+                        Case "1102"
+
+                            EcritureMessage(Index, "[Dragodinde]", "Cellule cible invalide", Color.Violet)
+
+                        Case "0194"
+
+                            EcritureMessage(Index, "[Forgemagie]", "La magie n'a pas parfaitement fonctionné, une des caractéristiques de l'objet a baissé en puissance.", Color.Red)
+
+                        Case "0183"
+
+                            EcritureMessage(Index, "[Forgemagie]", "Malgré vos talents, la magie n'opère pas et vous sentez l'échec de la transformation.", Color.Red)
+
+                        Case "0143"
+
+                            EcritureMessage(Index, "[Dofus]", "Le joueur : " & Information & " vient de se connecter.", Color.Green)
+
+                        Case "0118"
+
+                            EcritureMessage(Index, "[Craft]", "Vous n'arrivez pas à assembler correctement les ingrédients, et vous n'arrivez pas à concevoir quoi que ce soit d'utilisable cette fois.", Color.Red)
+
+                        Case "0117"
+
+                            EcritureMessage(Index, "[Forgemagie]", "Malgré vos talents, la magie n'opère pas et vous sentez l'échec de la transformation, ainsi que la diminution de la puissance de l'objet..", Color.Red)
+
+                        Case "189"
+
+                            EcritureMessage(Index, "[Dofus]", "Bienvenue sur Dofus, dans le Monde des douze !" & vbCrLf &
+                            "Rappel : prenez garde, il est interdit de transmettre votre identifiant de connexion ainsi que votre mot de passe.", Color.Red)
+
+                        Case "172"
+
+                            EcritureMessage(Index, "[Hôtel de Vente]", "Cet objet n'est plus disponible à ce prix. Quelqu'un a été plus rapide...", Color.Red)
+
+                        Case "167"
+
+                            EcritureMessage(Index, "[Hôtel de Vente]", "Vous ne pouvez pas mettre plus d'objets en vente actuellement...", Color.Red)
+
+                        Case "165"
+
+                            EcritureMessage(Index, "[Hôtel de vente]", "Vous ne disposez pas d'assez de kamas pour acquitter la taxe de mise en vente...", Color.Red)
+
+                        Case "120"
+
+                            EcritureMessage(Index, "[Maison]", "Cet emplacement de stockage est déjà utilisé.", Color.Red)
+
+                        Case "118" 'Im188
+
+                            EcritureMessage(Index, "[Dofus]", "Votre familier ne peut vous suivre tant que vous êtes sur votre monture...", Color.Red)
+
+                        Case "112"
+
+                            EcritureMessage(Index, "[Dofus]", "Vous êtes trop chargé. Jetez quelques objets afin de pouvoir bouger.", Color.Red)
+
+                        Case "095"
+
+                            ._Combat_Cadenas_Bloqué = True
+                            EcritureMessage(Index, "[Combat]", "L'équipe n'accepte plus de personnages supplémentaires.", Color.Red)
+
+                        Case "093"
+
+                            ._Combat_Groupe_Bloqué = True
+                            EcritureMessage(Index, "[Combat]", "Léquipe n'accepte désormais que les membres du groupe du personnage principal.", Color.Red)
+
+                        Case "073"
+
+                        Case "068"
+
+                            EcritureMessage(Index, "[Dofus]", "Lot acheté.", Color.Green)
+
+                        Case "040"
+
+                            ._Combat_Spectateur_Bloqué = True
+                            EcritureMessage(Index, "[Combat]", "Le mode 'Spectateur' est désactivé.", Color.Red)
+
+                        Case "037"
+
+                            EcritureMessage(Index, "[Dofus]", "Vous êtes désormais considéré comme absent.", Color.Red) '/away
+                             'FAMILIER
+
+                        Case "032"
+
+                            EcritureMessage(Index, "[Familier]", "Votre familier apprécie le repas.", Color.Green)
+
+                        Case "031"
+
+                            EcritureMessage(Index, "[Familier]", "Vous donnez à manger à votre familier famélique qui traînait comme un zombi. Il se force à manger mais la nourriture qu'il avale fait 3 fois son estomac et il se tord de douleur. Au moins il a mangé.", Color.Red)
+
+                        Case "029"
+
+                            EcritureMessage(Index, "[Familier]", "Vous donnez à manger à votre familier. Il semble qu'il avait très faim.", Color.Green)
+
+                        Case "027"
+
+                            EcritureMessage(Index, "[Familier]", "Vous donnez à manger à répétition à votre familier déjà obèse. Il avale quand même la ressource et fait une indigestion.", Color.Red)
+
+                        Case "026"
+
+                            EcritureMessage(Index, "[Familier]", "Vous donnez à manger à votre familier alors qu'il n'avait plus faim. Il se force pour vous faire plaisir.", Color.Red)
+
+                        Case "025"
+
+                            EcritureMessage(Index, "[Familier]", "Votre familier vous fait la fête !", Color.Green)
+
+                        Case "153"
+
+                            EcritureMessage(Index, "[Familier]", "Votre familier prend la ressource, la renifle un peu, ne semble pas convaincu et vous la rend.", Color.Red)
+
+                        Case "024"
+
+                            EcritureMessage(Index, "[Dofus]", "Tu viens de mémoriser un nouveau zaap.", Color.Green)
+
+                        Case "06"
+
+                            EcritureMessage(Index, "[Dofus]", "Position sauvegardée.", Color.Green)
+
+                        Case Else
+
+                            Information_Inconnu(Index, "Message_Dofus", Information)
+
+                    End Select
+
+                End If
+
             Catch ex As Exception
+
                 Erreur_Fichier(Index, "Dofus_Information_InGame", Information)
+
             End Try
+
         End With
 
     End Sub

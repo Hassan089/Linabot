@@ -106,8 +106,10 @@ Public Class Player
         _Connecté = 0
         _En_Connexion = 0
 
+        'Classe
+        _Classe = "Crâ"
+
         'Caractéristique
-        _Up_Caractéristique = False
         _Régénération = 0
         _Pods = 0
 
@@ -198,6 +200,12 @@ Public Class Player
         'Tchat
         _En_Tchat = False
 
+        'Combat
+        _Combat_Cadenas_Bloqué = False
+        _Combat_Groupe_Bloqué = False
+        _Combat_Spectateur_Bloqué = False
+        _En_Combat = False
+        _En_Combat_Placement = False
     End Sub
 
     Public Sub e_Envoi(ByVal Sender As Object, ByVal e As Socket_EventArgs)
@@ -259,10 +267,6 @@ Public Class Player
                                         Case "E" 'ABE
 
                                             'Indique que je n'est pas asse de point pour continuer de up la caractéristique voulu.
-
-                                            'J'indique que le up de caractéristique n'est plus possible.
-                                            _Up_Caractéristique = False
-
                                             EcritureMessage(_Index, "[Caractéristique]", "Impossible de up la caractéristique.", Color.Red)
 
                                         Case Else
@@ -534,7 +538,7 @@ Public Class Player
 
                                         Case "K" 'ASK
 
-                                            'ASK|42563214 |Linaculer     |99     9|0|90    |-1      |-1      |-1      |a4dc564       ~1fd6   ~1       ~0                ~7d#63#0#0#0d0+99,7c#16#0#0#0d0+22;
+                                            'ASK|01234567 |Linaculer     |99     9|0|90    |-1      |-1      |-1      |a4dc564       ~1fd6   ~1       ~0                ~7d#63#0#0#0d0+99,7c#16#0#0#0d0+22;
                                             'ASK|ID_Joueur|Nom_Personnage|Niveau|?|?|Classe|Couleur1|Couleur2|Couleur3|ID_Unique_Item~ID_Item~Quantité~Numéro_Equipement~Caractéristiques,Caractéristiques;Item Suivant
 
                                             If _Connecté = 0 Then
@@ -548,6 +552,8 @@ Public Class Player
 
                                                 EcritureMessage(_Index, "(Info)", "Connecté au personnage : " & Separation(2) &
                                                                " (Classe = " & Dico_Personnage(Separation(6)).GetValue(2) & ") (Niveaux = " & Separation(3) & ").", Color.Green)
+
+                                                _Classe = Dico_Personnage(Separation(6)).GetValue(1)
 
                                                 EcritureMessage(_Index, "[Inventaire]", "Réception de l'inventaire.", Color.Green)
 
@@ -1510,7 +1516,7 @@ Public Class Player
 
                         Case "G"
 
-                            If Mid(e.Message, 1, 3) = "GDM" Then Socket.Envoyer("GI")
+                          '  If Mid(e.Message, 1, 3) = "GDM" Then Socket.Envoyer("GI")
 
                         Case "g"
 
@@ -1544,6 +1550,19 @@ Public Class Player
                         Case "h"
 
                         Case "I"
+
+                            Select Case Mid(e.Message, 2, 1)
+
+                                Case "m" 'Im
+
+                                    Dofus_Information_InGame(_Index, e.Message)
+
+                                Case Else
+
+                                    Information_Inconnu(_Index, "Unknow", e.Message)
+
+                            End Select
+
                         Case "i"
 
 

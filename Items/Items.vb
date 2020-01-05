@@ -533,51 +533,51 @@
 
                     Case 16 'Coiffe 
 
-                        .PictureBox_Coiffe.Load(Application.StartupPath & "\Image\Coiffe/" & ID_Objet & ".png")
+                        .PictureBox_Coiffe.Load(Application.StartupPath & "\Image\" & Liste_Des_Objets(ID_Objet).GetValue(2) & "/" & ID_Objet & ".png")
                         .PictureBox_Coiffe.Name = ID_Unique
 
                     Case 17 'Cape
 
-                        .PictureBox_Cape.Load(Application.StartupPath & "\Image\Cape/" & ID_Objet & ".png")
+                        .PictureBox_Cape.Load(Application.StartupPath & "\Image\" & Liste_Des_Objets(ID_Objet).GetValue(2) & "/" & ID_Objet & ".png")
                         .PictureBox_Cape.Name = ID_Unique
 
                     Case 9 'Anneaux
 
                         If Catégorie = 2 Then
 
-                            .PictureBox_Anneaux_1.Load(Application.StartupPath & "\Image\Anneaux/" & ID_Objet & ".png")
+                            .PictureBox_Anneaux_1.Load(Application.StartupPath & "\Image\" & Liste_Des_Objets(ID_Objet).GetValue(2) & "/" & ID_Objet & ".png")
                             .PictureBox_Anneaux_1.Name = ID_Unique
 
                         Else
 
-                            .PictureBox_Anneaux_2.Load(Application.StartupPath & "\Image\Anneaux/" & ID_Objet & ".png")
+                            .PictureBox_Anneaux_2.Load(Application.StartupPath & "\Image\" & Liste_Des_Objets(ID_Objet).GetValue(2) & "/" & ID_Objet & ".png")
                             .PictureBox_Anneaux_2.Name = ID_Unique
 
                         End If
 
                     Case 1 'Amulette
 
-                        .PictureBox_Amulette.Load(Application.StartupPath & "\Image\Amulette/" & ID_Objet & ".png")
+                        .PictureBox_Amulette.Load(Application.StartupPath & "\Image\" & Liste_Des_Objets(ID_Objet).GetValue(2) & "/" & ID_Objet & ".png")
                         .PictureBox_Amulette.Name = ID_Unique
 
                     Case 11 'Botte  
 
-                        .PictureBox_Bottes.Load(Application.StartupPath & "\Image\Botte/" & ID_Objet & ".png")
+                        .PictureBox_Bottes.Load(Application.StartupPath & "\Image\" & Liste_Des_Objets(ID_Objet).GetValue(2) & "/" & ID_Objet & ".png")
                         .PictureBox_Bottes.Name = ID_Unique
 
                     Case 10 'Ceinture    
 
-                        .PictureBox_Ceinture.Load(Application.StartupPath & "\Image\Ceinture/" & ID_Objet & ".png")
+                        .PictureBox_Ceinture.Load(Application.StartupPath & "\Image\" & Liste_Des_Objets(ID_Objet).GetValue(2) & "/" & ID_Objet & ".png")
                         .PictureBox_Ceinture.Name = ID_Unique
 
                     Case 5, 19, 8, 22, 7, 3, 4, 6, 20, 83 'Arme
 
-                        .PictureBox_CaC.Load(Application.StartupPath & "\Image\Arme/" & ID_Objet & ".png")
+                        .PictureBox_CaC.Load(Application.StartupPath & "\Image\" & Liste_Des_Objets(ID_Objet).GetValue(2) & "/" & ID_Objet & ".png")
                         .PictureBox_CaC.Name = ID_Unique
 
                     Case 18 'Familier 
 
-                        .PictureBox_Familier.Load(Application.StartupPath & "\Image\Familier/" & ID_Objet & ".png")
+                        .PictureBox_Familier.Load(Application.StartupPath & "\Image\" & Liste_Des_Objets(ID_Objet).GetValue(2) & "/" & ID_Objet & ".png")
                         .PictureBox_Familier.Name = ID_Unique
 
                     Case 23 'Dofus 9,10,11,12,13,14
@@ -590,7 +590,7 @@
 
                             If i = Catégorie Then
 
-                                Picture(i - 9).Load(Application.StartupPath & "\Image\Dofus/" & ID_Objet & ".png")
+                                Picture(i - 9).Load(Application.StartupPath & "\Image\" & Liste_Des_Objets(ID_Objet).GetValue(2) & "/" & ID_Objet & ".png")
                                 Picture(i - 9).Name = ID_Unique
 
                             End If

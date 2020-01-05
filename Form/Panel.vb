@@ -56,7 +56,7 @@ Public Class Panel
 
         Load_Mobs()
 
-
+        Load_Caractéristique()
 
     End Sub
 

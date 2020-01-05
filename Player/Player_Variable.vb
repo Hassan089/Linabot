@@ -1,7 +1,7 @@
 ﻿Partial Public Class Player
 
     'Information du compte
-    Public _Nom_De_Compte, _Mot_De_Passe, _Nom_Du_Personnage, _Serveur, _Ticket, _ID_Unique As String
+    Public _Nom_De_Compte, _Mot_De_Passe, _Nom_Du_Personnage, _Serveur, _Classe, _Ticket, _ID_Unique As String
 
     'Index
     Public _Index As Integer
@@ -18,9 +18,6 @@
 
     'Les Sockets
     Public Socket_Authentification, Socket As All_CallBack
-
-    'Caractéristique
-    Public _Up_Caractéristique As Boolean
 
     'Pods
     Public _Pods As Integer
@@ -71,6 +68,9 @@
 
     'En Tchat
     Public _En_Tchat As Boolean
+
+    'Combat
+    Public _Combat_Spectateur_Bloqué, _Combat_Groupe_Bloqué, _Combat_Cadenas_Bloqué, _En_Combat, _En_Combat_Placement As Boolean
 
 #Region "Initialise"
 

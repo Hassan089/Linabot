@@ -2,6 +2,12 @@
 
     Public Index As Integer
 
+    Private Sub Page_Initial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        AddHandler Label_Caractéristique_Capital.TextChanged, Sub() Caractéristique_Up(Index)
+
+    End Sub
+
     Private Sub Toggle_Connexion_CheckedChanged(sender As Object) Handles Toggle_Connexion.CheckedChanged
 
         Select Case Toggle_Connexion.Checked
@@ -82,6 +88,7 @@
     Private Sub Canal_CheckedChanged(sender As Object, e As MouseEventArgs) Handles CheckBox_Canal_Recrutement_5.MouseDown, CheckBox_Canal_Information_0.MouseDown, CheckBox_Canal_Guilde_3.MouseDown, CheckBox_Canal_Groupe_2.MouseDown, CheckBox_Canal_Communs_1.MouseDown, CheckBox_Canal_Commerce_6.MouseDown, CheckBox_Canal_Alignement_4.MouseDown
 
     End Sub
+
 
 #End Region
 
