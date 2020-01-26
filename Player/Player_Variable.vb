@@ -1,20 +1,24 @@
 ﻿Partial Public Class Player
 
+    Public compteur As Integer
+
+
+
     'Information du compte
-    Public _Nom_De_Compte, _Mot_De_Passe, _Nom_Du_Personnage, _Serveur, _Classe, _Ticket, _ID_Unique As String
+    Public _Nom_De_Compte, _Mot_De_Passe, _Nom_Du_Personnage, _Serveur, _Classe, _Ticket, V_ID_Unique As String
 
     'Index
-    Public _Index As Integer
+    Public V_Index As Integer
 
     'Le groupe
-    Public _Groupe As New Groupe
+    Public V_Groupe As New Groupe
 
     'La page initial + le tab_personnage pour le groupe
-    Public _User As New Page_Initial
+    Public V_User As New Page_Initial
     Dim Tab_Perso As New TabPage
 
     'Connexion
-    Public _En_Connexion, _Connecté As New Boolean
+    Public _En_Connexion, V_Connecté As New Boolean
 
     'Les Sockets
     Public Socket_Authentification, Socket As All_CallBack
@@ -32,13 +36,10 @@
     Public _Autorisation_Interraction As Boolean
     Public _Autorisation_Attaquer_Mobs As Boolean
 
-    'Equipement
-    Public _Coiffe, _Cape, _Ceinture, _Bottes, _Amulette, _Familier, _CaC, _Anneaux(1), _Dofus(5) As String
-
     'Vivant ou mort
     Public _Fantôme As Boolean
 
-    'Dialogue
+    'Dialogue (PNJ)
     Public _En_Dialogue As Boolean
     Public _Dialogue_ID_Réponse As Integer
     Public _Dialogue_Réponses_Possible As New List(Of String)
@@ -64,13 +65,34 @@
     Public _En_Enclos As Boolean
 
     'Déplacement
-    Public _En_Déplacement As Boolean
+    Public V_En_Déplacement As Boolean
+    Public V_Case_Actuelle As Integer
 
     'En Tchat
     Public _En_Tchat As Boolean
 
     'Combat
-    Public _Combat_Spectateur_Bloqué, _Combat_Groupe_Bloqué, _Combat_Cadenas_Bloqué, _En_Combat, _En_Combat_Placement As Boolean
+    Public _Combat_Spectateur_Bloqué, _Combat_Groupe_Bloqué, _Combat_Cadenas_Bloqué, V_En_Combat, V_En_Combat_Placement As Boolean
+    Public V_Combat_Equipe As Integer
+
+    'Défi
+    Public V_En_Défi As Boolean
+
+    'Map
+    Public V_Map_ID As Integer
+    Public V_Map_Bas,
+           V_Map_Haut,
+           V_Map_Gauche,
+           V_Map_Droite As Integer
+    Public V_Map_Largeur,
+           V_Map_Hauteur As Integer
+    Public V_Map_Data_Actuel(1280) As Cell
+    Public V_Path_Final As String
+
+    Public V_Modérateur,
+           V_Crocoburio As Boolean
+
+    Public V_Send As String
 
 #Region "Initialise"
 
@@ -83,13 +105,13 @@
         Form_Groupe.TabControl1.Controls.Add(Tab_Perso)
 
         'Dans le Tab_Page j'ajoute "Page_Initial"
-        Tab_Perso.Controls.Add(_User)
+        Tab_Perso.Controls.Add(V_User)
 
         'Je donne l'index aussi dans le Panel_utilisateur
-        _User.Index = Compteur
+        V_User.Index = Compteur
 
         'Puis je donne le groupe auquel il appartient.
-        _Groupe = Form_Groupe
+        V_Groupe = Form_Groupe
 
         'Je met l'image associé
         Tab_Perso.ImageKey = Image & ".png"

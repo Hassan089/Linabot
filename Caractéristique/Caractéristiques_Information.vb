@@ -4,7 +4,7 @@
 
     Public Sub Caractéristiques_Joueur(ByVal Index As Integer, ByVal Information As String)
 
-        With Comptes(Index)._User
+        With Comptes(Index).V_User
 
             Try
 
@@ -103,7 +103,7 @@
                 .ToolTip1.SetToolTip(.ProgressBar_Vitalité, Separation_Info(0) & "/" & Separation_Info(1))
 
                 'Calcul du nombre de PDVs à récupérer, Utile pour la régénération, ainsi le calcul est fait directement quand je reçoit les Caractéristiques du personnages.
-                Comptes(Index)._Régénération = Comptes(Index)._Groupe.Régénération / 100 * CInt(Separation_Info(1))
+                Comptes(Index)._Régénération = Comptes(Index).V_Groupe.Régénération / 100 * CInt(Separation_Info(1))
                 Comptes(Index)._Régénération = Comptes(Index)._Régénération - CInt(Separation_Info(0))
                 If Comptes(Index)._Régénération < 0 Then Comptes(Index)._Régénération = 0
 
@@ -162,15 +162,13 @@
 
     End Sub
 
-
-
 #End Region
 
 #Region "Pods"
 
-    Public Sub Pods_Information(ByVal Index As Integer, ByVal Information As String)
+    Public Sub S_Pods_Information(ByVal Index As Integer, ByVal Information As String)
 
-        With Comptes(Index)._User
+        With Comptes(Index).V_User
 
             'Ow 4059        | 13051
             'Ow Pods actuel | Pods Max
@@ -200,7 +198,7 @@
             EcritureMessage(Index, "[Dofus]", "Tu passe niveau " & _Niveau & "." & vbCrLf &
                                    "Tu gagnes 5 points pour faire évoluer tes caractéristiques et 1 point pour tes sorts.", Color.Green)
 
-            Comptes(Index)._User.Label_Niveau.Text = "Niveaux : " & _Niveau
+            Comptes(Index).V_User.Label_Niveau.Text = "Niveaux : " & _Niveau
 
         Catch ex As Exception
 

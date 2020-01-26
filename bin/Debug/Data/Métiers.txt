@@ -1,0 +1,33 @@
+26|Alchimiste
+16|Bijoutier
+56|Boucher
+25|Boulanger
+65|Bricoleur
+2|Bûcheron
+41|Chasseur
+62|Cordomage
+15|Cordonnier
+64|Costumage
+43|Forgemage de dague
+47|Forgemage de Hache
+45|Forgemage de marteaux
+46|Forgemage de Pelle
+44|Forgemage d'Epées
+60|Forgeur de Bouclier
+17|Forgeur de dague
+31|Forgeur de Hache
+14|Forgeur de marteaux
+20|Forgeur de Pelle
+11|Forgeur d'épées
+63|Joaillomage
+24|Mineur
+28|Paysan
+36|Pêcheur
+58|Poissonnier
+13|Sculpteur d'Arcs
+19|Sculpteur de baguette
+18|Sculpteur de bâton
+48|Forgemage d'Arcs
+49|Forgemage de baguette
+50|Forgemage de Bâton
+27|Tailleur

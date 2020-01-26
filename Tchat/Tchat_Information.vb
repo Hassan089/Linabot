@@ -4,7 +4,7 @@ Module Tchat_Information
 
     Public Sub Canaux_Dofus(ByVal Index As Integer, ByVal Message As String)
 
-        With Comptes(Index)._User
+        With Comptes(Index).V_User
 
             'cC +                *#%!$:?pi^
             'cC Active/Désactive Les canaux
@@ -114,7 +114,7 @@ Module Tchat_Information
 
                 End Select
 
-                If Message(1) = ._ID_Unique Then ._En_Tchat = False
+                If Message(1) = .V_ID_Unique Then ._En_Tchat = False
 
             Catch ex As Exception
 
@@ -158,7 +158,7 @@ Module Tchat_Information
 
     Public Sub Smiley(ByVal Index As Integer, ByVal Information As String)
 
-        With Comptes(Index)._User
+        With Comptes(Index).V_User
 
             'cS 01234567  | 1
             'cS ID Joueur | Numéro smiley
@@ -220,10 +220,10 @@ Module Tchat_Information
             Next
 
             'Je redonne ensuite dans le presse papier les infos que l'utilisateur avait.
-            If _Audio <> Nothing Then Clipboard.SetAudio(_Audio)
-            If _FileDrop <> Nothing Then Clipboard.SetFileDropList(_FileDrop)
-            If _Image <> Nothing Then Clipboard.SetImage(_Image)
-            If _Text <> Nothing Then Clipboard.SetText(_Text)
+            If Not IsNothing(_Audio) Then Clipboard.SetAudio(_Audio)
+            If Not IsNothing(_FileDrop) Then Clipboard.SetFileDropList(_FileDrop)
+            If Not IsNothing(_Image) Then Clipboard.SetImage(_Image)
+            If Not IsNothing(_Text) Then Clipboard.SetText(_Text)
 
             'Je passe la richtextbox en lecture uniquement.
             .RichTextBox_Tchat.ReadOnly = True
@@ -232,12 +232,12 @@ Module Tchat_Information
 
     End Sub
 
-    Public Sub Emoticône(ByVal Index As Integer, ByVal Information As String)
+    Public Sub S_Emoticône(ByVal Index As Integer, ByVal Information As String)
 
-        With Comptes(Index)._User
+        With Comptes(Index).V_User
 
             'eUK 01234567  | 8
-            'eUK ID Joueur | Numéro Emoticône
+            'eUK ID Joueur | Numéro Action
 
             'Je sépare les informations
             Dim Separation() As String = Split(Information, "|")
@@ -257,13 +257,14 @@ Module Tchat_Information
             If Clipboard.ContainsImage Then _Image = Clipboard.GetImage
             If Clipboard.ContainsText Then _Text = Clipboard.GetText
 
-            'Je cherche l'image associé au numéro.
+            ' 17 = mange du pain
+            ' Je cherche l'image associé au numéro.
             Dim Picture_Box() As PictureBox = { .PictureBox_Emoticône_1, .PictureBox_Emoticône_2, .PictureBox_Emoticône_3,
                                                 .PictureBox_Emoticône_4, .PictureBox_Emoticône_5, .PictureBox_Emoticône_6,
                                                 .PictureBox_Emoticône_7, .PictureBox_Emoticône_8, .PictureBox_Emoticône_9,
                                                 .PictureBox_Emoticône_10, .PictureBox_Emoticône_11, .PictureBox_Emoticône_12,
                                                 .PictureBox_Emoticône_13, .PictureBox_Emoticône_14, .PictureBox_Emoticône_15,
-                                                .PictureBox_Emoticône_19, .PictureBox_Emoticône_21}
+                                                .PictureBox_Emoticône_17, .PictureBox_Emoticône_19, .PictureBox_Emoticône_21}
 
             Dim img As Image = Picture_Box(Separation(1)).Image
 
@@ -308,7 +309,7 @@ Module Tchat_Information
 
     Public Sub Emoticône_Actuel(ByVal Index As Integer, ByVal Information As String)
 
-        With Comptes(Index)._User
+        With Comptes(Index).V_User
 
             'eL 1664                                                           | 0 
             'eL Chiffre indiquant toutes les emoticône actuellement disponible | ?
@@ -461,7 +462,7 @@ Module Tchat_Information
 
     Public Sub Emoticône_Obtenue(ByVal Index As Integer, ByVal Information As String)
 
-        With Comptes(Index)._User
+        With Comptes(Index).V_User
 
             'eA 13
             'eA Numéro de l'émoticône
@@ -476,7 +477,7 @@ Module Tchat_Information
             'Je rend la picturebox de base visible.
             Picture_Box(Mid(Information, 3)).Visible = True
 
-            EcritureMessage(Index, "[Dofus - Emoticône] - ", "Fécilitation, vous avez débloqué une nouvelle émote ! " & .ToolTip1.GetToolTip(Picture_Box(Mid(Information, 3))), Color.Green)
+            EcritureMessage(Index, "[Dofus - S_Régénération] - ", "Fécilitation, vous avez débloqué une nouvelle émote ! " & .ToolTip1.GetToolTip(Picture_Box(Mid(Information, 3))), Color.Green)
 
             '.ToolTip1.GetToolTip(Name_Control) = Récupère les infos dans l'infobulle du control que je souhaite, ou passe t'a souris sur "GetToolTip" pour avoir des infos ^^
 
@@ -554,6 +555,12 @@ Module Tchat_Information
                             EcritureMessage(Index, "[Dofus]", "Précédente connexion sur votre compte effectuée le : " &
                                                 Separation(2) & "/" & Separation(1) & "/" & Separation(0) & " à " & Separation(3) & ":" & Separation(4) &
                                                 " via l'adresse IP  : " & Separation(5), Color.Green)
+                        Case "0143" ' Im0143;Linaculer (<b><a href="asfunction:onHref,ShowPlayerPopupMenu,Linacular">Linaculeur</a></b>) 
+
+                            Separation = Split(Separation(1), " (<b><a href=""""asfunction: onHref, ShowPlayerPopupMenu, Linacular"""">")
+                            Dim V_Nom_De_Compte As String = Separation(0)
+                            Separation = Split(Separation(1), "</a></b>)")
+                            EcritureMessage(Index, "[Dofus]", "Le joueur : " & V_Nom_De_Compte & "(" & Separation(0) & ") vient de se connecter.", Color.Green)
 
                         Case "128" 'Im128;Linaculer
 

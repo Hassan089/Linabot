@@ -48,10 +48,20 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>D:\FINAL\Copie - 01-11-2019\Linabot\Linabot\bin\Debug\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpZipLib">
+      <HintPath>D:\FINAL\Copie - 01-11-2019\Linabot\Linabot\bin\Debug\SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="SwfDotNet.IO">
+      <HintPath>D:\FINAL\Copie - 01-11-2019\Linabot\Linabot\bin\Debug\SwfDotNet.IO.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -75,9 +85,22 @@
   <ItemGroup>
     <Compile Include="Caractéristique\Caractéristique.vb" />
     <Compile Include="Caractéristique\Caractéristiques_Information.vb" />
-    <Compile Include="Classe Control\Picture_Box.vb">
-      <SubType>Component</SubType>
+    <Compile Include="Classe Control\Métiers_Control.Designer.vb">
+      <DependentUpon>Métiers_Control.vb</DependentUpon>
     </Compile>
+    <Compile Include="Classe Control\Métiers_Control.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classe Control\Métiers_Recette_Control.Designer.vb">
+      <DependentUpon>Métiers_Recette_Control.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classe Control\Métiers_Recette_Control.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classe Control\Sorts_Control.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Combat\Combat_Information.vb" />
     <Compile Include="Connexion\Co_Déco_Reco.vb" />
     <Compile Include="Divers\Divers.vb" />
     <Compile Include="Divers\Load.vb" />
@@ -118,8 +141,22 @@
       <DependentUpon>Panel.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Items\Affiche_Item.vb" />
+    <Compile Include="Items\Equipement\Equipement.vb" />
+    <Compile Include="Items\Item_Caractéristique.vb" />
+    <Compile Include="Items\Item_Placement.vb" />
+    <Compile Include="Items\Item_Sol.vb" />
+    <Compile Include="Items\Item_Quantité.vb" />
     <Compile Include="Items\Items.vb" />
+    <Compile Include="Items\Item_Supprime.vb" />
+    <Compile Include="Items\Item_Utilise.vb" />
+    <Compile Include="Map\Fonctions.vb" />
+    <Compile Include="Map\Map.vb" />
+    <Compile Include="Map\Maphandler.vb" />
+    <Compile Include="Map\Map_Information.vb" />
+    <Compile Include="Map\Map_Viewer.vb" />
+    <Compile Include="Map\Pathfinding.vb" />
+    <Compile Include="Map\SwfUnpacker.vb" />
+    <Compile Include="Modérateur\Modérateur_Information.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -135,18 +172,30 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Métiers\Métiers_Information.vb" />
     <Compile Include="Player\ElgSocketEventArgs.vb" />
     <Compile Include="Player\Player.vb" />
     <Compile Include="Player\Player_Variable.vb" />
-    <Compile Include="PNJ\PNJ_Information.vb" />
+    <Compile Include="PNJ\PNJ.vb" />
     <Compile Include="Redemption.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Régénération\Régénération.vb" />
+    <Compile Include="Sorts\Sorts_Information.vb" />
     <Compile Include="Statut\Statut_Information.vb" />
     <Compile Include="Tchat\Tchat.vb" />
     <Compile Include="Tchat\Tchat_Information.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Classe Control\Métiers_Control.resx">
+      <DependentUpon>Métiers_Control.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classe Control\Métiers_Recette_Control.resx">
+      <DependentUpon>Métiers_Recette_Control.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classe Control\Sorts_Control.resx">
+      <DependentUpon>Sorts_Control.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Ajouter - Charger - Supprimer un compte\Ajouter Un Compte.resx">
       <DependentUpon>Ajouter Un Compte.vb</DependentUpon>
     </EmbeddedResource>
@@ -357,6 +406,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\2188.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\49760.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4 %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\213.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\56px-Rose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\848.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

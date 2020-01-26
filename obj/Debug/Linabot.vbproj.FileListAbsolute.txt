@@ -32,3 +32,10 @@ C:\Users\Linaculer\Desktop\Linabot\Linabot\bin\Debug\Linabot.exe.config
 C:\Users\Linaculer\Desktop\Linabot\Linabot\bin\Debug\Linabot.exe
 C:\Users\Linaculer\Desktop\Linabot\Linabot\bin\Debug\Linabot.pdb
 C:\Users\Linaculer\Desktop\Linabot\Linabot\bin\Debug\Linabot.xml
+C:\Users\Linaculer\Desktop\Linabot\Linabot\obj\Debug\Linabot.Sorts_Control.resources
+C:\Users\Linaculer\Desktop\Linabot\Linabot\obj\Debug\Linabot.Métiers_Control.resources
+C:\Users\Linaculer\Desktop\Linabot\Linabot\obj\Debug\Linabot.Métiers_Recette_Control.resources
+C:\Users\Linaculer\Desktop\Linabot\Linabot\bin\Debug\log4net.dll
+C:\Users\Linaculer\Desktop\Linabot\Linabot\bin\Debug\SharpZipLib.dll
+C:\Users\Linaculer\Desktop\Linabot\Linabot\bin\Debug\SwfDotNet.IO.dll
+C:\Users\Linaculer\Desktop\Linabot\Linabot\obj\Debug\Linabot.vbproj.CopyComplete

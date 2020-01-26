@@ -5,7 +5,7 @@
         With Comptes(Index)
 
             'Je vérifie être connecté ET que je ne suis pas en combat ou en phase de placement.
-            If ._Connecté AndAlso False = (._En_Combat AndAlso ._En_Combat_Placement) Then
+            If .V_Connecté AndAlso False = (.V_En_Combat AndAlso .V_En_Combat_Placement) Then
 
                 'Puis je créer une boucle, qui va me permettre de faire toutes les caractéristiques.
                 For i = 1 To 6
@@ -25,7 +25,7 @@
         With Comptes(Index)
 
             'Je vérifie dans ma groupbox les controles qu'il contient
-            For Each Le_Control As Control In ._User.GroupBox_Caractéristique_Automatique.Controls
+            For Each Le_Control As Control In .V_User.GroupBox_Caractéristique_Automatique.Controls
 
                 'S'il s'agit d'un numéricUpDown
                 If TypeOf Le_Control Is RedemptionNumericUpDown Then
@@ -41,12 +41,12 @@
 
                         'J'obtient la liste des textboxs
                         Dim Text_Box() As RedemptionTextBox = {
-                                                                ._User.TextBox_Caractéristique_Vitalité_Minimum_0,
-                                                                ._User.TextBox_Caractéristique_Sagesse_Minimum_1,
-                                                                ._User.TextBox_Caractéristique_Force_Minimum_2,
-                                                                ._User.TextBox_Caractéristique_Intelligence_Minimum_3,
-                                                                ._User.TextBox_Caractéristique_Chance_Minimum_4,
-                                                                ._User.TextBox_Caractéristique_Agilité_Minimum_5
+                                                                .V_User.TextBox_Caractéristique_Vitalité_Minimum_0,
+                                                                .V_User.TextBox_Caractéristique_Sagesse_Minimum_1,
+                                                                .V_User.TextBox_Caractéristique_Force_Minimum_2,
+                                                                .V_User.TextBox_Caractéristique_Intelligence_Minimum_3,
+                                                                .V_User.TextBox_Caractéristique_Chance_Minimum_4,
+                                                                .V_User.TextBox_Caractéristique_Agilité_Minimum_5
                                                               }
 
                         'J'obtient le minimum à atteindre pour la caractéristique
@@ -73,16 +73,18 @@
 
         With Comptes(Index)
 
-            For i = 0 To ._User.ListView_Caractéristique.Items.Count - 1
+            For i = 0 To .V_User.ListView_Caractéristique.Items.Count - 1
 
                 'Si la caractéristique correspond à celle voulu
-                If ._User.ListView_Caractéristique.Items(i).SubItems(0).Text = La_Caractéristique Then
+                If .V_User.ListView_Caractéristique.Items(i).SubItems(0).Text = La_Caractéristique Then
 
-                    Return ._User.ListView_Caractéristique.Items(i).SubItems(1).Text
+                    Return .V_User.ListView_Caractéristique.Items(i).SubItems(1).Text
 
                 End If
 
             Next
+
+            Return 0
 
         End With
 
@@ -107,7 +109,7 @@
                         If Caractéristique_Base > CInt(Separation(0)) AndAlso Caractéristique_Base < CInt(Separation(1)) Then
 
                             'Je récupère d'abord le nombre de point de caractéristique qu'il me reste.
-                            Dim Point_Capital As Integer = Split(._User.Label_Caractéristique_Capital.Text, " : ")(1)
+                            Dim Point_Capital As Integer = Split(.V_User.Label_Caractéristique_Capital.Text, " : ")(1)
 
                             'Je regarde ensuite si j'ai asse de point pour Up la caractéristique
                             If Point_Capital >= CInt(Separation(2)) Then
@@ -130,7 +132,7 @@
 
     End Sub
 
-    Private Sub Up_De_La_Caractéristique(ByVal Index As Integer, ByVal La_Caractéristique As String)
+    Public Sub Up_De_La_Caractéristique(ByVal Index As Integer, ByVal La_Caractéristique As String)
 
         With Comptes(Index)
 
@@ -156,36 +158,22 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     'A REFAIRE EN SIMPLIFIANT, Teste des controls
     Public Sub Caractéristique_Up1(ByVal Index As Integer)
 
         With Comptes(Index)
 
             'Je vérifie d'abord être connecté.
-            If ._Connecté Then
+            If .V_Connecté Then
 
                 'Je vérifie ensuite que je ne suis pas en combat ou en phase de placement.
-                If False = (._En_Combat AndAlso ._En_Combat_Placement) Then
+                If False = (.V_En_Combat AndAlso .V_En_Combat_Placement) Then
 
                     'Ici je créer ma boucle pour faire chaque control selon la priorité
                     For i = 1 To 6
 
                         'Je regarde si "i" correspond à l'une des priorités voulu
-                        For Each Le_Control As Control In ._User.GroupBox_Caractéristique_Automatique.Controls
+                        For Each Le_Control As Control In .V_User.GroupBox_Caractéristique_Automatique.Controls
 
                             'Si le control est belle est bien un numéricupdown
                             If TypeOf Le_Control Is RedemptionNumericUpDown Then
@@ -197,22 +185,22 @@
                                 If Numéric_Up_Down.Value = i Then
 
                                     'Alors j'obtient la liste des textboxs
-                                    Dim Text_Box() As RedemptionTextBox = { ._User.TextBox_Caractéristique_Vitalité_Minimum_0,
-                                                                            ._User.TextBox_Caractéristique_Sagesse_Minimum_1,
-                                                                            ._User.TextBox_Caractéristique_Force_Minimum_2,
-                                                                            ._User.TextBox_Caractéristique_Intelligence_Minimum_3,
-                                                                            ._User.TextBox_Caractéristique_Chance_Minimum_4,
-                                                                            ._User.TextBox_Caractéristique_Agilité_Minimum_5
+                                    Dim Text_Box() As RedemptionTextBox = { .V_User.TextBox_Caractéristique_Vitalité_Minimum_0,
+                                                                            .V_User.TextBox_Caractéristique_Sagesse_Minimum_1,
+                                                                            .V_User.TextBox_Caractéristique_Force_Minimum_2,
+                                                                            .V_User.TextBox_Caractéristique_Intelligence_Minimum_3,
+                                                                            .V_User.TextBox_Caractéristique_Chance_Minimum_4,
+                                                                            .V_User.TextBox_Caractéristique_Agilité_Minimum_5
                                                                           }
 
                                     'J'obtient ensuite la caractéristique de base dans ma listview
-                                    For e = 0 To ._User.ListView_Caractéristique.Items.Count - 1
+                                    For e = 0 To .V_User.ListView_Caractéristique.Items.Count - 1
 
                                         'Je trouve d'abord la caractéristique qui correspond à la caractéristiue à up
-                                        If ._User.ListView_Caractéristique.Items(e).SubItems(0).Text = Numéric_Up_Down.Text Then
+                                        If .V_User.ListView_Caractéristique.Items(e).SubItems(0).Text = Numéric_Up_Down.Text Then
 
                                             Dim Minimum_A_Atteindre As Integer = Text_Box(Mid(Numéric_Up_Down.Name, Len(Numéric_Up_Down.Name))).Text
-                                            Dim Caractéristique_Actuel As Integer = ._User.ListView_Caractéristique.Items(e).SubItems(1).Text
+                                            Dim Caractéristique_Actuel As Integer = .V_User.ListView_Caractéristique.Items(e).SubItems(1).Text
 
                                             'Je regarde avant si le minimum a été atteint ou non.
                                             If Caractéristique_Actuel < Minimum_A_Atteindre Then
@@ -232,7 +220,7 @@
                                                             If Caractéristique_Actuel > CInt(Separation(0)) AndAlso Caractéristique_Actuel < CInt(Separation(1)) Then
 
                                                                 'Je regarde ensuite si j'ai asse de point pour Up la caractéristique
-                                                                If CInt(Split(._User.Label_Caractéristique_Capital.Text, " : ")(1)) >= CInt(Separation(2)) Then
+                                                                If CInt(Split(.V_User.Label_Caractéristique_Capital.Text, " : ")(1)) >= CInt(Separation(2)) Then
 
                                                                     'Alors j'up la caractéristique
                                                                     Select Case Numéric_Up_Down.Text

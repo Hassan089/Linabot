@@ -1,0 +1,215 @@
+6702|Porte|Entrer|84
+6702|Porte|Acheter|97
+6702|Porte|Vendre|98
+6702|Porte|Deverrouiller|100
+6702|Porte|Modifier le prix de vente|108
+6729|Porte|Entrer|84
+6729|Porte|Acheter|97
+6729|Porte|Vendre|98
+6729|Porte|Deverrouiller|100
+6729|Porte|Modifier le prix de vente|108
+6730|Porte|Entrer|84
+6730|Porte|Acheter|97
+6730|Porte|Vendre|98
+6730|Porte|Deverrouiller|100
+6730|Porte|Modifier le prix de vente|108
+6733|Porte|Entrer|84
+6733|Porte|Acheter|97
+6733|Porte|Vendre|98
+6733|Porte|Deverrouiller|100
+6733|Porte|Modifier le prix de vente|108
+6734|Porte|Entrer|84
+6734|Porte|Acheter|97
+6734|Porte|Vendre|98
+6734|Porte|Deverrouiller|100
+6734|Porte|Modifier le prix de vente|108
+6735|Porte|Entrer|84
+6735|Porte|Acheter|97
+6735|Porte|Vendre|98
+6735|Porte|Deverrouiller|100
+6735|Porte|Modifier le prix de vente|108
+6736|Porte|Entrer|84
+6736|Porte|Acheter|97
+6736|Porte|Vendre|98
+6736|Porte|Deverrouiller|100
+6736|Porte|Modifier le prix de vente|108
+6742|Porte|Entrer|84
+6742|Porte|Acheter|97
+6742|Porte|Vendre|98
+6742|Porte|Deverrouiller|100
+6742|Porte|Modifier le prix de vente|108
+6743|Porte|Entrer|84
+6743|Porte|Acheter|97
+6743|Porte|Vendre|98
+6743|Porte|Deverrouiller|100
+6743|Porte|Modifier le prix de vente|108
+6744|Porte|Entrer|84
+6744|Porte|Acheter|97
+6744|Porte|Vendre|98
+6744|Porte|Deverrouiller|100
+6744|Porte|Modifier le prix de vente|108
+6745|Porte|Entrer|84
+6745|Porte|Acheter|97
+6745|Porte|Vendre|98
+6745|Porte|Deverrouiller|100
+6745|Porte|Modifier le prix de vente|108
+6750|Porte|Entrer|84
+6750|Porte|Acheter|97
+6750|Porte|Vendre|98
+6750|Porte|Deverrouiller|100
+6750|Porte|Modifier le prix de vente|108
+6731|Porte|Entrer|84
+6731|Porte|Acheter|97
+6731|Porte|Vendre|98
+6731|Porte|Deverrouiller|100
+6731|Porte|Modifier le prix de vente|108
+6732|Porte|Entrer|84
+6732|Porte|Acheter|97
+6732|Porte|Vendre|98
+6732|Porte|Deverrouiller|100
+6732|Porte|Modifier le prix de vente|108
+6763|Enclo|Acceder|175
+6763|Enclo|Acheter|176
+6763|Enclo|Vendre|177
+6763|Enclo|Modifier le prix de vente|178
+6766|Enclo|Acceder|175
+6766|Enclo|Acheter|176
+6766|Enclo|Vendre|177
+6766|Enclo|Modifier le prix de vente|178
+6767|Enclo|Acceder|175
+6767|Enclo|Acheter|176
+6767|Enclo|Vendre|177
+6767|Enclo|Modifier le prix de vente|178
+7000|Zaap|Utiliser|114
+7000|Zaap|Sauvegarder|44
+7026|Zaap|Utiliser|114
+7026|Zaap|Sauvegarder|44
+7029|Zaap|Utiliser|114
+7029|Zaap|Sauvegarder|44
+7350|Coffre|Ouvrir|104
+7350|Coffre|Deverrouiller|106
+7031|Zaapi|Se faire transporter|157
+7030|Zaapi|Se faire transporter|157
+7035|Liste des artisans|Consulter|170
+7020|Enclume magique|Reforger une Hache|115
+7020|Enclume magique|Reforger une Pelle|117
+7020|Enclume magique|Reforger une Epee|113
+7020|Enclume magique|Reforger un Marteau|116
+7020|Enclume magique|Reforger une Dague|1
+7020|Enclume magique|Resculpter un Arc|118
+7020|Enclume magique|Resculpter un Baton|120
+7020|Enclume magique|Resculpter une Baguette|119
+7021|Concasseur Munster|Briser un Objet|181
+7021|Concasseur Munster|Concasser des ressources|121
+7038|Atelier Magique|Ameliorer un Anneau|168
+7038|Atelier Magique|Ameliorer une Amulette|169
+7036|Machine a Coudre Magique|Ameliorer un Sac|167
+7036|Machine a Coudre Magique|Ameliorer un Chapeau|166
+7036|Machine a Coudre Magique|Ameliorer une Cape|165
+7037|Table Magique|Ameliorer des Bottes|163
+7037|Table Magique|Ameliorer une Ceinture|164
+7039|Atelier de Bricolage|Bricoler|171
+7039|Atelier de Bricolage|Confectionner une clef|182
+7007|Concasseur|Moudre|47
+7007|Concasseur|Egrener|122
+7008|Atelier|Creer un Anneau|11
+7009|Atelier|Creer une Amulette|12
+7005|Meule|Polir une Pierre|48
+7002|Moule|Fondre|32
+7019|Alambic|Preparer une Potion|23
+7012|Enclume|Forger une Pelle|21
+7012|Enclume|Forger une Hache|65
+7012|Enclume|Forger une Faux|66
+7012|Enclume|Forger une Epee|20
+7012|Enclume|Forger une Dague|18
+7012|Enclume|Forger un Marteau|19
+7012|Enclume|Forger une Pioche|67
+7012|Enclume|Reparer un Marteau|144
+7012|Enclume|Reparer une Dague|142
+7012|Enclume|Reparer une Epee|145
+7012|Enclume|Reparer une Hache|143
+7012|Enclume|Reparer une Pelle|146
+7013|Etabli|Sculpter un Baton|17
+7013|Etabli|Sculpter un Arc|15
+7013|Etabli|Sculpter une Baguette|16
+7013|Etabli|Reparer une Baguette|148
+7013|Etabli|Reparer un Baton|147
+7013|Etabli|Reparer un Arc|149
+7001|Four|Faire des bonbons|109
+7001|Four|Cuire du pain|27
+7003|Scie|Scier|101
+7025|Plan de travail|Preparer|132
+7023|Plan de Travail|Preparer une viande|134
+7011|Table de confection|Confectionner des Bottes|13
+7011|Table de confection|Confectionner une Ceinture|14
+7016|Machine a Coudre|Coudre un Chapeau|63
+7015|Machine a Coudre|Coudre un Sac|123
+7015|Machine a Coudre|Coudre une Cape|64
+7014|Machine a Coudre|Coudre un Chapeau|63
+7024|Plan de Travail|Vider|133
+7022|Plan de Travail|Preparer un poisson|135
+1862|Statue de classe|Se rendre a Incarnam|183
+1853|Statue de classe|Se rendre a Incarnam|183
+1845|Statue de classe|Se rendre a Incarnam|183
+1855|Statue de classe|Se rendre a Incarnam|183
+1856|Statue de classe|Se rendre a Incarnam|183
+1859|Statue de classe|Se rendre a Incarnam|183
+1860|Statue de classe|Se rendre a Incarnam|183
+1854|Statue de classe|Se rendre a Incarnam|183
+1857|Statue de classe|Se rendre a Incarnam|183
+1858|Statue de classe|Se rendre a Incarnam|183
+1861|Statue de classe|Se rendre a Incarnam|183
+2250|Statue de classe|Se rendre a Incarnam|183
+2319|Statue de classe|Se rendre a Incarnam|183
+7500|Frene|Couper|6
+7503|Chene|Couper|10
+7505|If|Couper|33
+7507|Ebene|Couper|34
+7509|Orme|Couper|35
+7504|Erable|Couper|37
+7508|Charme|Couper|38
+7501|Chataignier|Couper|39
+7502|Noyer|Couper|40
+7506|Merisier|Couper|41
+7541|Bombu|Couper|139|
+7542|Oliviolet|Couper|141
+7553|Bambou|Couper|154
+7552|Bambou sacre|Couper|158
+7554|Bambou sombre|Couper|155
+7557|Kaliptus|Couper|174
+7511|Ble|Faucher|45
+7512|Houblon|Faucher|46
+7513|Lin|Faucher|50
+7516|Seigle|Faucher|52
+7515|Orge|Faucher|53
+7514|Chanvre|Faucher|54
+7517|Avoine|Faucher|57
+7518|Malt|Faucher|58
+7550|Riz|Faucher|159
+7520|Fer|Collecter|24
+7522|Cuivre|Collecter|25
+7523|Bronze|Collecter|26
+7525|Kobalte|Collecter|28
+7526|Argent|Collecter|29
+7527|Or|Collecter|30
+7528|Bauxite|Collecter|31
+7521|Etain|Collecter|55
+7524|Manganese|Collecter|56
+7555|Dolomite|Collecter|161
+7556|Silicate|Collecter|162
+7513|Lin|Cueillir|68
+7514|Chanvre|Cueillir|69
+7533|Trefle a 5 feuilles|Cueillir|71
+7534|Menthe Sauvage|Cueillir|72
+7535|Orchidee Freyesque|Cueillir|73
+7536|Edelweiss|Cueillir|74
+7551|Pandouille|Cueillir|160
+7529|Petits poissons (riviere)|Pecher|124
+7530|Petits poissons (mer)|Pecher|128
+7531|Poissons (mer)|Pecher|129
+7532|Poissons (riviere)|Pecher|125
+7537|Gros poissons (riviere)|Pecher|126
+7538|Gros poissons (mer)|Pecher|130
+7539|Poissons geants (riviere)|Pecher|127
+7540|Poissons geants (mer)|Pecher|131
+7519|Puits|Puiser|102

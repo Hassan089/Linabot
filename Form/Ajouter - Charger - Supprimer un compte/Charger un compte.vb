@@ -77,7 +77,7 @@ Public Class Charger_Un_Compte
 
         'Création et ajout du form "Groupe" au panel.
         Dim Form_Groupe As New Groupe
-        Form_Groupe.Text = "_Groupe"
+        Form_Groupe.Text = "V_Groupe"
 
         'J'indique a Form_Groupe que son Parent est le panel
         Form_Groupe.MdiParent = Panel
@@ -113,8 +113,8 @@ Public Class Charger_Un_Compte
                         ._Mot_De_Passe = Separation(1)
                         ._Nom_Du_Personnage = Separation(2)
                         ._Serveur = Separation(3)
-                        ._Index = Compteur
-                        ._Groupe = Form_Groupe
+                        .V_Index = Compteur
+                        .V_Groupe = Form_Groupe
 
                         .Initialiser(Form_Groupe, Compteur, Separation(4))
 

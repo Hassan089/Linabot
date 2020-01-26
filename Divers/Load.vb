@@ -4,15 +4,19 @@ Module Load
 
     Public Comptes As New List(Of Player)
 
-    Public Version As String
-
     Public Dico_Caractéristique As New Dictionary(Of String, Dictionary(Of String, String()))
+    Public Dico_Sorts As New Dictionary(Of Integer, Dictionary(Of Integer, String()))
+    Public Dico_Métiers As New Dictionary(Of Integer, String())
     Public Dico_Personnage As New Dictionary(Of Integer, String())
     Public Dico_Serveur As New Dictionary(Of String, String())
+    Public Dico_Divers As New Dictionary(Of Integer, Dictionary(Of String, String()))
     Public Liste_Des_Objets As New Dictionary(Of Integer, String())
     Public Liste_Des_Mobs As New Dictionary(Of Integer, Dictionary(Of Integer, String()))
     Public liste_Des_Réponses_PNJs(10000) As String
     Public liste_Des_Dialogues_PNJs(10000) As String
+    Public V_liste_Des_Maps(13000) As String
+    Public V_Dico_Liste_PNJ As New Dictionary(Of Integer, String)
+    Public cases(2500) As String
 
 
     Public Sub Load_Information_Serveur()
@@ -153,10 +157,24 @@ Module Load
             Loop
             monStreamReader.Close()
         Catch ex As Exception
-            '  Erreur_Fichier(0, "LoadPNJ", ex.Message)
+            '  Erreur_Fichier(0, "S_Load_PNJ", ex.Message)
         End Try
     End Sub
-
+    Public Sub S_Load_PNJ()
+        Try
+            Dim monStreamReader As New StreamReader("Data/PNJ.txt")
+            Do Until monStreamReader.EndOfStream
+                Dim Ligne As String = monStreamReader.ReadLine
+                If Ligne <> "" Then
+                    Dim Separation() As String = Split(Ligne, "=")
+                    V_Dico_Liste_PNJ.Add(Separation(0), Separation(1))
+                End If
+            Loop
+            monStreamReader.Close()
+        Catch ex As Exception
+            '  Erreur_Fichier(0, "S_Load_PNJ", ex.Message)
+        End Try
+    End Sub
     Public Sub Load_Caractéristique()
         Try
 
@@ -201,6 +219,167 @@ Module Load
         Catch ex As Exception
 
             Erreur_Fichier(0, "Load_Caractéristique", ex.Message)
+
+        End Try
+
+    End Sub
+
+    Public Sub Load_Sorts()
+
+        Try
+            'Si le fichier sort éxiste.
+            If IO.File.Exists("Data\Sorts.txt") Then
+
+                'Je l'ouvre.
+                Dim monStreamReader As New IO.StreamReader("Data\Sorts.txt")
+
+                'Puis je regarde chaque ligne jusqu'à la fin du fichier.
+                Do Until monStreamReader.EndOfStream
+
+                    'Je met la ligne dans une variable string.
+                    Dim ligne As String = monStreamReader.ReadLine
+
+                    'Si elle n'est pas vide alors.
+                    If ligne <> "" Then
+
+                        'Je sépare les informations.
+                        Dim Separation() As String = Split(ligne, "|")
+                        '161|1|Flèche Magique|1-7|4|0-0|2|0-0|O|O|N|N|N|0-0|N|1|Classe
+                        'ID Sort | Level | Nom | PO min max | PA | Nombre de lancer par tour | Nombre de lancer par tour par joueur | Nombre de tour entre 2 lancé | PO Modifiable | Ligne de vue
+                        '| Lancer en ligne | Cellule Libre | Echec fini tour | Zone du sort | Champ d'action 'X/L/Z/N" | Next level
+
+                        If Dico_Sorts.ContainsKey(Separation(0)) Then
+
+                            Dico_Sorts(Separation(0)).Add( 'ID Sort
+                                                          Separation(1), 'Level                                                          
+                                                         Separation 'ID Sort | Level | Nom | PO min max | PA | Nombre de lancer par tour | Nombre de lancer par tour par joueur | Nombre de tour entre 2 lancé | PO Modifiable | Ligne de vue | Lancer en ligne | Cellule Libre | Echec fini tour | Zone du sort | Champ d'action 'X/L/Z/N" | Next level
+                                                          )
+
+                        Else
+
+                            Dico_Sorts.Add(Separation(0), New Dictionary(Of Integer, String()) From 'ID Sort
+                                                     {
+                                                        {
+                                                            Separation(1), 'Level
+                                                            Separation 'ID Sort | Level | Nom | PO min max | PA | Nombre de lancer par tour | Nombre de lancer par tour par joueur | Nombre de tour entre 2 lancé | PO Modifiable | Ligne de vue | Lancer en ligne | Cellule Libre | Echec fini tour | Zone du sort | Champ d'action 'X/L/Z/N" | Next level
+                                                        }
+                                                     })
+
+                        End If
+
+                    End If
+
+                Loop
+
+                'Je ferme mon fichier.
+                monStreamReader.Close()
+
+            End If
+
+        Catch ex As Exception
+
+            Erreur_Fichier(0, "Load_Sorts_Classe", ex.Message)
+
+        End Try
+
+    End Sub
+
+    Public Sub Load_Métiers()
+
+        Try
+
+            Dico_Métiers.Clear()
+
+            Dim monStreamReader As New StreamReader("Data/Métiers.txt")
+
+            Do Until monStreamReader.EndOfStream
+
+                Dim Ligne As String = monStreamReader.ReadLine
+
+                If Ligne <> "" Then
+
+                    Dim Separation() As String = Split(Ligne, "|")
+
+                    Dico_Métiers.Add(Separation(0), Separation) 'ID | ID - Nom 
+
+                End If
+            Loop
+
+            monStreamReader.Close()
+
+        Catch ex As Exception
+
+            Erreur_Fichier(0, "LoadItems", ex.Message)
+
+        End Try
+
+    End Sub
+
+    Public Sub S_Load_Divers()
+
+        Try
+
+            Dim monStreamReader As New StreamReader("Data/Divers.txt")
+
+            While monStreamReader.EndOfStream = False
+
+                Dim Separation() As String = Split(monStreamReader.ReadLine, "|")
+
+                ' ID SPRITE | Nom | Nom Action | ID action
+                If Dico_Divers.ContainsKey(Separation(0)) Then
+
+                    Dico_Divers(Separation(0)).Add( ' ID SPRITE
+                                                         Separation(2), ' Nom action                                                          
+                                                         {Separation(1), Separation(3)} ' Nom , ID action
+                                                          )
+
+                Else
+
+                    Dico_Divers.Add(Separation(0), New Dictionary(Of String, String()) From ' ID SPRITE
+                                                     {
+                                                        {
+                                                          Separation(2), ' Nom action   
+                                                          {Separation(1), Separation(3)} ' Nom , ID action
+                                                        }
+                                                     })
+
+                End If
+
+            End While
+
+            monStreamReader.Close()
+
+        Catch ex As Exception
+            Erreur_Fichier(0, "LoadRessources", ex.Message)
+        End Try
+
+    End Sub
+
+    Public Sub S_Load_Maps()
+
+        Try
+
+            Dim monStreamReader As New StreamReader("Data/Maps.txt")
+
+            Do Until monStreamReader.EndOfStream
+
+                Dim Ligne As String = monStreamReader.ReadLine
+
+                If Ligne <> "" Then
+
+                    Dim Separation() As String = Split(Ligne, ":")
+
+                    V_liste_Des_Maps(Separation(0)) = Separation(1)
+
+                End If
+
+            Loop
+
+            monStreamReader.Close()
+
+        Catch ex As Exception
+
+            Erreur_Fichier(0, "LoadMaps", ex.Message)
 
         End Try
 

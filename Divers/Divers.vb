@@ -3,7 +3,7 @@
 Module Divers
 
     Private Delegate Sub D_Divers()
-
+    Private Delegate Sub D_F_Divers()
 
     Public Function PassEnc(ByVal pwd As String, ByVal key As String) As String
         Dim l1, l2, l3, l4, l5 As Integer, l7 As String = "#1"
@@ -22,7 +22,7 @@ Module Divers
     End Function  ' Fonction du cryptage du mot de passe   'Provient de Maxoubot
 
     Public Sub EcritureMessage(ByVal Index As Integer, ByVal Indice As String, ByVal Message As String, ByVal Couleur As Color)
-        With comptes(Index)._User
+        With comptes(Index).V_User
             Try
                 If .InvokeRequired Then
                     .Invoke(New D_Divers(Sub() EcritureMessage(Index, Indice, Message, Couleur)))
@@ -44,9 +44,12 @@ Module Divers
                 If Not Directory.Exists("Erreur") Then Directory.CreateDirectory("Erreur")
 
                 EcritureMessage(Index, "[ERREUR]", "Une erreur c'est produite, veuillez envoyer le fichier créer dans 'Linabot\Fichier\Erreur\" & Name_Erreur & "' à Linaculer le roi des enculés", Color.Red)
-                Dim sw As New StreamWriter(Application.StartupPath + "\Erreur/" & ._Nom_Du_Personnage & "_" & Name_Erreur & "_" & Mid(Panel.Text.Replace(".", ""), 13) & "_" & "_" & ".txt")
+                Dim sw As New StreamWriter(Application.StartupPath + "\Erreur/" & ._Nom_Du_Personnage & "_" & Name_Erreur & "_" & Mid(Panel.Text.Replace(".", ""), 13) & "_" & .compteur & "_" & ".txt")
                 sw.Write(Erreur)
                 sw.Close()
+
+                .compteur += 1
+
             Catch ex As Exception
                 MsgBox("Erreur fichier, impossible de créer le fichier erreur : " & Name_Erreur & vbCrLf & ex.ToString)
             End Try
@@ -59,10 +62,13 @@ Module Divers
                 If Not Directory.Exists("Erreur") Then Directory.CreateDirectory("Erreur")
 
                 EcritureMessage(Index, "[ERREUR]", "Une erreur c'est produite, veuillez envoyer le fichier créer dans 'Linabot\Fichier\Erreur\" & Name_Erreur & "' à Linaculer le roi des enculés", Color.Red)
-                Dim sw As New StreamWriter(Application.StartupPath + "\Erreur/" & ._Nom_Du_Personnage & "_" & Name_Erreur & "_" & Mid(Panel.Text.Replace(".", ""), 13) & "_" & "_" & ".txt")
+                Dim sw As New StreamWriter(Application.StartupPath + "\Erreur/" & ._Nom_Du_Personnage & "_" & Name_Erreur & "_" & Mid(Panel.Text.Replace(".", ""), 13) & "_" & .compteur & "_" & ".txt")
 
                 sw.Write(Erreur)
                 sw.Close()
+
+                .compteur += 1
+
             Catch ex As Exception
                 MsgBox("Erreur fichier, impossible de créer le fichier erreur : " & Name_Erreur & vbCrLf & ex.ToString)
             End Try
@@ -268,5 +274,54 @@ Module Divers
     End Function
 
 #End Region
+
+    Public Function Copy_DatagridView(ByVal Index As Integer, ByVal row As DataGridView) As DataGridView
+
+        With Comptes(Index)
+
+            If .V_User.InvokeRequired Then
+
+                Return .V_User.Invoke(New D_F_Divers(Function() Copy_DatagridView(Index, row)))
+
+            Else
+
+                Dim Data As New DataGridView
+
+                For Each Col As DataGridViewColumn In row.Columns
+                    Data.Columns.Add(DirectCast(Col.Clone, DataGridViewColumn))
+                Next
+
+                For rowIndex As Integer = 0 To (row.Rows.Count - 1)
+                    Data.Rows.Add(row.Rows(rowIndex).Cells.Cast(Of DataGridViewCell).Select(Function(c) c.Value).ToArray)
+                    Data.Rows(rowIndex).DefaultCellStyle.BackColor = row.Rows(rowIndex).DefaultCellStyle.BackColor
+                Next
+
+                Return Data
+
+            End If
+
+        End With
+
+        Return Nothing
+
+    End Function
+
+    Public Function Initialize_Cellules_Fin_Déplacement(ByVal code As String) As Integer
+        Try
+            Dim Number As Integer = 0
+            Dim hash() As String = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "-", "_"}
+            Dim hash2() As String = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
+            Dim i As Integer = 0
+            For i = 0 To hash2.Length - 1
+                Dim j As Integer = 0
+                For j = 0 To hash.Length - 1
+                    If hash2(i) & hash(j) = code Then Return Number
+                    Number = Number + 1
+                Next
+            Next i
+        Catch ex As Exception
+        End Try
+        Return 0
+    End Function
 
 End Module

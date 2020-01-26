@@ -8,13 +8,13 @@
 
                 Case "CONNEXION"
 
-                    If ._En_Connexion = False AndAlso ._Connecté = False Then
+                    If ._En_Connexion = False AndAlso .V_Connecté = False Then
 
                         EcritureMessage(Index, "[Bot]", "Le bot va connecter le compte.", Color.Green)
 
                         .Create_Socket_Authentification()
 
-                    ElseIf ._Connecté Then
+                    ElseIf .V_Connecté Then
 
                         EcritureMessage(Index, "[Bot]", "Le bot est déjà connecté.", Color.Green)
 
@@ -26,7 +26,7 @@
 
                 Case "DECONNEXION", "DÉCONNEXION"
 
-                    If ._Connecté Then
+                    If .V_Connecté Then
 
                         .Socket.Connexion_Game(False)
 

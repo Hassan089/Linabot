@@ -54,9 +54,19 @@ Public Class Panel
 
         Load_PNJ_Réponse()
 
+        S_Load_PNJ()
+
         Load_Mobs()
 
         Load_Caractéristique()
+
+        Load_Sorts()
+
+        Load_Métiers()
+
+        S_Load_Divers()
+
+        S_Load_Maps()
 
     End Sub
 

@@ -27,7 +27,22 @@ Linabot
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Linabot.My.Resources.Resources._1211">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Linabot.My.Resources.Resources._1292">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Linabot.My.Resources.Resources._213">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Linabot.My.Resources.Resources._33006">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
@@ -42,7 +57,17 @@ Linabot
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Linabot.My.Resources.Resources._848">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Linabot.My.Resources.Resources._Option">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Linabot.My.Resources.Resources.Agilité">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
@@ -68,6 +93,11 @@ Linabot
 </summary>
 </member>
 <member name="P:Linabot.My.Resources.Resources.Champion">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Linabot.My.Resources.Resources.Chance">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
@@ -122,7 +152,22 @@ Linabot
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Linabot.My.Resources.Resources.Force">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Linabot.My.Resources.Resources.icons8_email_send_48">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Linabot.My.Resources.Resources.Intelligence">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Linabot.My.Resources.Resources.Jeter">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
@@ -197,6 +242,11 @@ Linabot
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Linabot.My.Resources.Resources.Potion">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Linabot.My.Resources.Resources.Poubelle">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
@@ -213,6 +263,11 @@ Linabot
 </summary>
 </member>
 <member name="P:Linabot.My.Resources.Resources.S_asseoir">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Linabot.My.Resources.Resources.Sagesse">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
@@ -253,6 +308,11 @@ Linabot
 </summary>
 </member>
 <member name="P:Linabot.My.Resources.Resources.Vent_de_panique">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Linabot.My.Resources.Resources.Vitalité">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
